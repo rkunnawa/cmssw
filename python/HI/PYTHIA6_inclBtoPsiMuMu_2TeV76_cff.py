@@ -6,7 +6,7 @@ configurationMetadata = cms.untracked.PSet(
         annotation = cms.untracked.string('Winter13: Pythia6+EvtGen generation of B0->Jpsi->MuMu, 2.76TeV, Z2star tune')
 )
 
-#from Configuration.GenProduction.HI.PythiaUEZ2starSettings_cfi import *
+#from Configuration.Generator.PythiaUEZ2starSettings_cfi import *
 
 # this is Z2Star -- Matt
 pythiaUESettingsBlock = cms.PSet(

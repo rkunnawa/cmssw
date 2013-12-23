@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 
-from Configuration.GenProduction.HI.PyquenTuneZ2Settings_cff import *
+from Configuration.Generator.PyquenTuneZ2Settings_cff import *
 
 cjetTrigCommon = cms.PSet(filterType = cms.untracked.string("EcalGenEvtSelector"),
                           etaMax     = cms.double(3),

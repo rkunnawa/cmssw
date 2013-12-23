@@ -1,5 +1,5 @@
 import FWCore.ParameterSet.Config as cms
-from Configuration.GenProduction.HI.PyquenTuneZ2Settings_cff import *
+from Configuration.Generator.PyquenTuneZ2Settings_cff import *
 
 hiSignal = cms.EDFilter("PyquenGeneratorFilter",
                         collisionParameters,
