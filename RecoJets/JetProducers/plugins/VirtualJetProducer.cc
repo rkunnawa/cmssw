@@ -321,7 +321,7 @@ void VirtualJetProducer::produce(edm::Event& iEvent,const edm::EventSetup& iSetu
   }
 
   // clear data
-  LogDebug("VirtualJetProducer") << "Clear data\n";
+  cout<< "Clear data\n";
   fjInputs_.clear();
   fjJets_.clear();
   inputs_.clear();  
@@ -332,14 +332,14 @@ void VirtualJetProducer::produce(edm::Event& iEvent,const edm::EventSetup& iSetu
   for (size_t i = 0; i < inputsHandle->size(); ++i) {
     inputs_.push_back(inputsHandle->ptrAt(i));
   }
-  LogDebug("VirtualJetProducer") << "Got inputs\n";
+  cout<< "Got inputs\n";
   
   // Convert candidates to fastjet::PseudoJets.
   // Also correct to Primary Vertex. Will modify fjInputs_
   // and use inputs_
   fjInputs_.reserve(inputs_.size());
   inputTowers();
-  LogDebug("VirtualJetProducer") << "Inputted towers\n";
+  cout<< "Inputted towers\n";
 
   // For Pileup subtraction using offset correction:
   // Subtract pedestal. 
@@ -348,7 +348,7 @@ void VirtualJetProducer::produce(edm::Event& iEvent,const edm::EventSetup& iSetu
      subtractor_->reset(inputs_,fjInputs_,fjJets_);
      subtractor_->calculatePedestal(fjInputs_); 
      subtractor_->subtractPedestal(fjInputs_);    
-     LogDebug("VirtualJetProducer") << "Subtracted pedestal\n";
+     cout << "Subtracted pedestal\n";
   }
   // Run algorithm. Will modify fjJets_ and allocate fjClusterSeq_. 
   // This will use fjInputs_
@@ -358,7 +358,7 @@ void VirtualJetProducer::produce(edm::Event& iEvent,const edm::EventSetup& iSetu
   //    subtractor_->setAlgorithm(fjClusterSeq_);
   // }
 
-  LogDebug("VirtualJetProducer") << "Ran algorithm\n";
+  cout << "Ran algorithm\n";
   // For Pileup subtraction using offset correction:
   // Now we find jets and need to recalculate their energy,
   // mark towers participated in jet,
@@ -366,7 +366,7 @@ void VirtualJetProducer::produce(edm::Event& iEvent,const edm::EventSetup& iSetu
   // put the initial towers collection to the jet,   
   // and subtract from initial towers in jet recalculated mean and sigma of towers 
   if ( doPUOffsetCorr_ ) {
-    LogDebug("VirtualJetProducer") << "Do PUOffsetCorr\n";
+    cout << "Do PUOffsetCorr\n";
     vector<fastjet::PseudoJet> orphanInput;
     subtractor_->calculateOrphanInput(orphanInput);
     subtractor_->calculatePedestal(orphanInput);
@@ -377,7 +377,7 @@ void VirtualJetProducer::produce(edm::Event& iEvent,const edm::EventSetup& iSetu
   // "writeJets", but can be overridden. 
   // this will use inputs_
   output( iEvent, iSetup );
-  LogDebug("VirtualJetProducer") << "Wrote jets\n";
+  cout << "Wrote jets\n";
   
   return;
 }
