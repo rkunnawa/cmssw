@@ -5,7 +5,7 @@
 # with command line options: step4 --conditions STARTHI53_V28::All -s RAW2DIGI,L1Reco,RECO --scenario HeavyIons --datatier GEN-SIM-RECO --himix --eventcontent RECODEBUG -n 100 --no_exec
 import FWCore.ParameterSet.Config as cms
 
-process = cms.Process('RECO')
+process = cms.Process('RECOSTEP1')
 
 # import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
@@ -21,8 +21,10 @@ process.load('Configuration.StandardSequences.ReconstructionHeavyIons_cff')
 process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
+process.Timing = cms.Service("Timing")
+
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(100)
+    input = cms.untracked.int32(1)
 )
 
 # Input source
@@ -47,13 +49,15 @@ process.configurationMetadata = cms.untracked.PSet(
 process.RECODEBUGoutput = cms.OutputModule("PoolOutputModule",
     splitLevel = cms.untracked.int32(0),
     eventAutoFlushCompressedSize = cms.untracked.int32(5242880),
-    outputCommands = process.FEVTDEBUGEventContent.outputCommands,
+    outputCommands = process.RECODEBUGEventContent.outputCommands,
     fileName = cms.untracked.string('step4_RECO1.root'),
     dataset = cms.untracked.PSet(
         filterName = cms.untracked.string(''),
         dataTier = cms.untracked.string('GEN-SIM-RECO')
     )
 )
+
+process.RECODEBUGoutput.outputCommands.extend(["keep *_hiRegitMuFirstStepFilter_*_*"])
 
 # Additional output definition
 

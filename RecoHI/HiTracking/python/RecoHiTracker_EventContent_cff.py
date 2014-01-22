@@ -3,7 +3,7 @@ import FWCore.ParameterSet.Config as cms
 #Full Event content 
 RecoHiTrackerFEVT = cms.PSet(
     outputCommands = cms.untracked.vstring(
-    #'keep *_hiSelectedTracks_*_*',
+    'keep *_hiSelectedTracks_*_*',
     'keep *_hiGeneralTracks_*_*', 
     'keep *_hiConformalPixelTracks_*_*',
     'keep *_hiPixel3PrimTracks_*_*', 

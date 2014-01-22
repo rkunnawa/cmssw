@@ -12,7 +12,7 @@ from RecoHI.HiMuonAlgos.RecoHiMuon_EventContent_cff import *
 # RecoHI event contents to be included by Configuration.EventContent.EventContentHeavyIons_cff
 
 RecoHIRECO = cms.PSet(
-    outputCommands = cms.untracked.vstring()
+    outputCommands = cms.untracked.vstring("keep *_*_*_RECOSTEP1")
     )
 
 RecoHIAOD = cms.PSet(
@@ -20,7 +20,7 @@ RecoHIAOD = cms.PSet(
     )
 
 RecoHIFEVT = cms.PSet(
-    outputCommands = cms.untracked.vstring()
+    outputCommands = cms.untracked.vstring("keep *_*_*_RECOSTEP1")
     )
 
 RecoHIRECO.outputCommands.extend(RecoHiTrackerRECO.outputCommands)
