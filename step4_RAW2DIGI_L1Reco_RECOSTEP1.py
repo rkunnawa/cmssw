@@ -28,7 +28,7 @@ process.maxEvents = cms.untracked.PSet(
 # Input source
 process.source = cms.Source("PoolSource",
     secondaryFileNames = cms.untracked.vstring(),
-    fileNames = cms.untracked.vstring('file:DIGI2RAW.root')
+    fileNames = cms.untracked.vstring('/store/user/pkurt/Hydjet1p8_TuneDrum_Quenched_MinBias_2760GeV/HydjetDrum_Embedded_Pyquen_DiJet80_DIGI_d20140113_0/970f9b9f00a72f4839fab8faf272d0ff/step3_DIGI_L1_DIGI2RAW_HLT_RAW2DIGI_L1Reco_99_1_nHz.root')
 )
 
 process.options = cms.untracked.PSet(
