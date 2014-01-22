@@ -51,4 +51,9 @@ reconstructionHeavyIons = cms.Sequence(localReco*globalRecoPbPb*CastorFullReco)
 reconstructionHeavyIons_wConformalPixel = cms.Sequence(localReco*globalRecoPbPb_wConformalPixel*CastorFullReco)
 reconstructionHeavyIons_HcalNZS = cms.Sequence(localReco_HcalNZS*globalRecoPbPb)
 
+reconstructionHeavyIonsStep1 = cms.Sequence(localReco*globalRecoPbPbStep1)
+reconstructionHeavyIonsStep2 = cms.Sequence(globalRecoPbPbStep2*CastorFullReco)
+
+
+
 #--------------------------------------------------------------------------

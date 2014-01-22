@@ -57,6 +57,24 @@ globalRecoPbPb_wConformalPixel = cms.Sequence(hiTracking_wConformalPixel
                               * hcalnoise
                               )
 
+globalRecoPbPbStep1 = cms.Sequence(hiTracking
+                                   * hiEcalClusters
+                                   * hiRecoJets                                   
+                                   )
+
+
+globalRecoPbPbStep2 = cms.Sequence(muonRecoPbPb
+                                   * regionalMuonRecoPbPb
+                                   * hiElectronSequence
+                                   * HiParticleFlowLocalReco
+                                   * hiEgammaSequence
+                                   * HiParticleFlowReco
+                                   * hiCentrality
+                                   * hiEvtPlane
+                                   * hcalnoise
+                                   )
+
+
 #--------------------------------------------------------------------------
 # Full sequence (LOCAL RECO + HIGH LEVEL RECO) 
 # in Configuration.StandardSequences.ReconstructionHeavyIons_cff
