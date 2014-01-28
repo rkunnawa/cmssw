@@ -1353,16 +1353,25 @@ namespace {
 			const size_t index_edge_end =
 				_edge_pseudorapidity.size() - 2;
 
-			_feature[0] = scale[0] *
-				((*_perp_fourier)[0             ][2][0][0] +
-				 (*_perp_fourier)[index_edge_end][2][0][0]);
+			_feature[0] = 0;
+			for (size_t j = 0; j < 3; j++) {
+			_feature[0] += scale[0] *
+				((*_perp_fourier)[0             ][j][0][0] +
+				 (*_perp_fourier)[index_edge_end][j][0][0]);
+			}
 			for (size_t k = 1; k < nfourier; k++) {
-				_feature[2 * k - 1] = scale[k] *
-					((*_perp_fourier)[0             ][2][k][0] +
-					 (*_perp_fourier)[index_edge_end][2][k][0]);
-				_feature[2 * k] = scale[k] *
-					((*_perp_fourier)[0             ][2][k][1] +
-					 (*_perp_fourier)[index_edge_end][2][k][1]);
+				_feature[2 * k - 1] = 0;
+				for (size_t j = 0; j < 3; j++) {
+				_feature[2 * k - 1] += scale[k] *
+					((*_perp_fourier)[0             ][j][k][0] +
+					 (*_perp_fourier)[index_edge_end][j][k][0]);
+				}
+				_feature[2 * k] = 0;
+				for (size_t j = 0; j < 3; j++) {
+				_feature[2 * k] += scale[k] *
+					((*_perp_fourier)[0             ][j][k][1] +
+					 (*_perp_fourier)[index_edge_end][j][k][1]);
+				}
 			}
 
 #if 0
