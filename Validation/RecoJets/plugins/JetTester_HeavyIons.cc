@@ -559,21 +559,23 @@ void JetTester_HeavyIons::analyze(const edm::Event& mEvent, const edm::EventSetu
 
   if (isCaloJet)
     {
-      for (unsigned ijet=0; ijet<caloJets->size(); ijet++)
-	recoJets.push_back((*caloJets)[ijet]);
+      //std::cout<<caloJets->size()<<endl;
+      for (unsigned ijet=0; ijet<caloJets->size(); ijet++) recoJets.push_back((*caloJets)[ijet]);
     }
 
   if (isJPTJet)
     {
-      for (unsigned ijet=0; ijet<jptJets->size(); ijet++)
-	recoJets.push_back((*jptJets)[ijet]);
+      //std::cout<<jptJets->size()<<endl;
+      for (unsigned ijet=0; ijet<jptJets->size(); ijet++) recoJets.push_back((*jptJets)[ijet]);
     }
 
   if (isPFJet) {
     if(std::string("Pu")==UEAlgo){
+      //std::cout<<basicJets->size()<<endl;
       for (unsigned ijet=0; ijet<basicJets->size();ijet++) recoJets.push_back((*basicJets)[ijet]);
     }
     if(std::string("Vs")==UEAlgo){
+      //std::cout<<pfJets->size()<<endl;
       for (unsigned ijet=0; ijet<pfJets->size(); ijet++) recoJets.push_back((*pfJets)[ijet]);
     }
   }
@@ -590,7 +592,7 @@ void JetTester_HeavyIons::analyze(const edm::Event& mEvent, const edm::EventSetu
   if(isPFJet)
     std::cout<<"isValid = "<<pfJets.isValid()<<endl; 
   */
-
+    
   if (isCaloJet && !caloJets.isValid()) return;
   if (isJPTJet  && !jptJets.isValid())  return;
   if (isPFJet){
@@ -610,22 +612,27 @@ void JetTester_HeavyIons::analyze(const edm::Event& mEvent, const edm::EventSetu
   int nJet_E_40 = 0;
   int nJet_B_40 = 0;
   int nJet_40 = 0;
-
+ 
   for (unsigned ijet=0; ijet<recoJets.size(); ijet++) {
+    //std::cout<<"jet iteration = "<<ijet<<endl;
     if (  (recoJets[ijet].pt() > 20.) and  (recoJets[ijet].pt() < mRecoJetPtThreshold)) {
       if (fabs(recoJets[ijet].eta()) > 1.5)
         nJet_E_20_40++;
       else
         nJet_B_20_40++;	  
     }
+    
+    //std::cout<<"pt = "<<recoJets[ijet].pt()<<endl;	  
+
     if (recoJets[ijet].pt() > mRecoJetPtThreshold) {
       //counting forward and barrel jets
+      //cout<<"inside jet pt > 10 condition"<<endl;
       if (fabs(recoJets[ijet].eta()) > 1.5)
         nJet_E_40++;
       else
         nJet_B_40++;	  
       nJet_40++;
-
+    
       if (mEta) mEta->Fill(recoJets[ijet].eta());
       if (mjetpileup) mjetpileup->Fill(recoJets[ijet].pileup());
       if (mJetArea)      mJetArea     ->Fill(recoJets[ijet].jetArea());
@@ -636,6 +643,9 @@ void JetTester_HeavyIons::analyze(const edm::Event& mEvent, const edm::EventSetu
       if (mMass)         mMass        ->Fill(recoJets[ijet].mass());
       if (mConstituents) mConstituents->Fill(recoJets[ijet].nConstituents());
 
+      //std::cout<<"eta = "<<recoJets[ijet].eta()<<endl;
+      //std::cout<<"phi = "<<recoJets[ijet].phi()<<endl;
+      //std::cout<<"entries in mConstituents = "<<mConstituents->getEntries()<<endl;
       if (ijet == 0) {
         if (mEtaFirst) mEtaFirst->Fill(recoJets[ijet].eta());
         if (mPhiFirst) mPhiFirst->Fill(recoJets[ijet].phi());
