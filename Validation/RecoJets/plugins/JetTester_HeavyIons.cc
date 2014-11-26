@@ -371,11 +371,11 @@ void JetTester_HeavyIons::bookHistograms(DQMStore::IBooker & ibooker, edm::Run c
     mPhiFirst   = ibooker.book1D("PhiFirst",   "PhiFirst",    70, -3.5,  3.5);      
     mPtFirst    = ibooker.book1D("PtFirst",    "PtFirst",    50,    0,  1000); 
     mMjj        = ibooker.book1D("Mjj",        "Mjj",        100,    0, 2000); 
-    mNJetsEta_B_20_40 = ibooker.book1D("NJetsEta_B_20_40", "NJetsEta_B 20<Pt<40",  15,    0,   15);
-    mNJetsEta_E_20_40 = ibooker.book1D("NJetsEta_E_20_40", "NJetsEta_E 20<Pt<40",  15,    0,   15);
-    mNJetsEta_B_40 = ibooker.book1D("NJetsEta_B", "NJetsEta_B 40<Pt",  15,    0,   15);
-    mNJetsEta_E_40 = ibooker.book1D("NJetsEta_E", "NJetsEta_E 40<Pt",  15,    0,   15);
-    mNJets_40 = ibooker.book1D("NJets", "NJets 40<Pt",  15,    0,   15);
+    mNJetsEta_B_20_40 = ibooker.book1D("NJetsEta_B_20_40", "NJetsEta_B 20<Pt<40",  50,    0,   50);
+    mNJetsEta_E_20_40 = ibooker.book1D("NJetsEta_E_20_40", "NJetsEta_E 20<Pt<40",  50,    0,   50);
+    mNJetsEta_B_40 = ibooker.book1D("NJetsEta_B", "NJetsEta_B 40<Pt",  50,    0,   50);
+    mNJetsEta_E_40 = ibooker.book1D("NJetsEta_E", "NJetsEta_E 40<Pt",  50,    0,   50);
+    mNJets_40 = ibooker.book1D("NJets", "NJets 40<Pt",  50,    0,   50);
     mNJets1 = ibooker.bookProfile("NJets1", "Number of jets above Pt threshold", 100, 0,  200, 100, 0, 50, "s");
     mNJets2 = ibooker.bookProfile("NJets2", "Number of jets above Pt threshold", 100, 0, 4000, 100, 0, 50, "s");
 
@@ -524,17 +524,17 @@ void JetTester_HeavyIons::analyze(const edm::Event& mEvent, const edm::EventSetu
     }  
 
 
-//  // Get the jet rho
-//  //----------------------------------------------------------------------------
-//  edm::Handle<double> pRho;
-//  mEvent.getByToken(rhoTag, pRho);
-//
-//  if (pRho.isValid())
-//    {
-//      double jetRho = *pRho;
-//
-//      if (mRho) mRho->Fill(jetRho);
-//    }
+  //  // Get the jet rho
+  //  //----------------------------------------------------------------------------
+  //  edm::Handle<double> pRho;
+  //  mEvent.getByToken(rhoTag, pRho);
+  //
+  //  if (pRho.isValid())
+  //    {
+  //      double jetRho = *pRho;
+  //
+  //      if (mRho) mRho->Fill(jetRho);
+  //    }
 
 
   // Get the Jet collection
@@ -581,15 +581,15 @@ void JetTester_HeavyIons::analyze(const edm::Event& mEvent, const edm::EventSetu
   }
 
   /*
-  std::cout<<mInputCollection.label()<<endl;
-  std::cout<<"jet type = "<<JetType<<endl;
-  std::cout<<"UE algorithm = "<<UEAlgo<<endl;
-  std::cout<<"size of jets = "<<recoJets.size()<<endl;
-  if(isCaloJet)
+    std::cout<<mInputCollection.label()<<endl;
+    std::cout<<"jet type = "<<JetType<<endl;
+    std::cout<<"UE algorithm = "<<UEAlgo<<endl;
+    std::cout<<"size of jets = "<<recoJets.size()<<endl;
+    if(isCaloJet)
     std::cout<<"isValid = "<<caloJets.isValid()<<endl; 
-  if(isJPTJet)
+    if(isJPTJet)
     std::cout<<"isValid = "<<jptJets.isValid()<<endl; 
-  if(isPFJet)
+    if(isPFJet)
     std::cout<<"isValid = "<<pfJets.isValid()<<endl; 
   */
     
@@ -599,20 +599,20 @@ void JetTester_HeavyIons::analyze(const edm::Event& mEvent, const edm::EventSetu
     if(std::string("Pu")==UEAlgo){if(!basicJets.isValid())   return;}
     if(std::string("Vs")==UEAlgo){if(!pfJets.isValid())   return;}
   }
-
-
+  
+  
   //std::cout<<"after the trip point"<<endl;
   //std::cout<<mInputCollection.label()<<endl;
   //std::cout<<"jet type = "<<JetType<<endl;
   //std::cout<<"size of jets = "<<recoJets.size()<<endl;
-
+  
   int nJet      = 0;
   int nJet_E_20_40 = 0;
   int nJet_B_20_40 = 0;
   int nJet_E_40 = 0;
   int nJet_B_40 = 0;
   int nJet_40 = 0;
- 
+  
   for (unsigned ijet=0; ijet<recoJets.size(); ijet++) {
     //std::cout<<"jet iteration = "<<ijet<<endl;
     if (  (recoJets[ijet].pt() > 20.) and  (recoJets[ijet].pt() < mRecoJetPtThreshold)) {
@@ -623,7 +623,7 @@ void JetTester_HeavyIons::analyze(const edm::Event& mEvent, const edm::EventSetu
     }
     
     //std::cout<<"pt = "<<recoJets[ijet].pt()<<endl;	  
-
+    
     if (recoJets[ijet].pt() > mRecoJetPtThreshold) {
       //counting forward and barrel jets
       //cout<<"inside jet pt > 10 condition"<<endl;
@@ -632,7 +632,7 @@ void JetTester_HeavyIons::analyze(const edm::Event& mEvent, const edm::EventSetu
       else
         nJet_B_40++;	  
       nJet_40++;
-    
+      
       if (mEta) mEta->Fill(recoJets[ijet].eta());
       if (mjetpileup) mjetpileup->Fill(recoJets[ijet].pileup());
       if (mJetArea)      mJetArea     ->Fill(recoJets[ijet].jetArea());
@@ -655,14 +655,14 @@ void JetTester_HeavyIons::analyze(const edm::Event& mEvent, const edm::EventSetu
       if (ijet == 0) {nJet++; p4tmp[0] = recoJets[ijet].p4();}
       if (ijet == 1) {nJet++; p4tmp[1] = recoJets[ijet].p4();}
       
-  //    if (isPFJet || isCaloJet) {
-  //      if (mHadEnergyInHF)       mHadEnergyInHF      ->Fill((*pfJets)[ijet].HFHadronEnergy());
-  //      if (mEmEnergyInHF)        mEmEnergyInHF       ->Fill((*pfJets)[ijet].HFEMEnergy());
-  //      if (mChargedEmEnergy)     mChargedEmEnergy    ->Fill((*pfJets)[ijet].chargedEmEnergy());
-  //      if (mChargedHadronEnergy) mChargedHadronEnergy->Fill((*pfJets)[ijet].chargedHadronEnergy());
-  //      if (mNeutralEmEnergy)     mNeutralEmEnergy    ->Fill((*pfJets)[ijet].neutralEmEnergy());
-  //      if (mNeutralHadronEnergy) mNeutralHadronEnergy->Fill((*pfJets)[ijet].neutralHadronEnergy());
-  //    }
+      //    if (isPFJet || isCaloJet) {
+      //      if (mHadEnergyInHF)       mHadEnergyInHF      ->Fill((*pfJets)[ijet].HFHadronEnergy());
+      //      if (mEmEnergyInHF)        mEmEnergyInHF       ->Fill((*pfJets)[ijet].HFEMEnergy());
+      //      if (mChargedEmEnergy)     mChargedEmEnergy    ->Fill((*pfJets)[ijet].chargedEmEnergy());
+      //      if (mChargedHadronEnergy) mChargedHadronEnergy->Fill((*pfJets)[ijet].chargedHadronEnergy());
+      //      if (mNeutralEmEnergy)     mNeutralEmEnergy    ->Fill((*pfJets)[ijet].neutralEmEnergy());
+      //      if (mNeutralHadronEnergy) mNeutralHadronEnergy->Fill((*pfJets)[ijet].neutralHadronEnergy());
+      //    }
 
 
       // ---- Calo Jet specific information ----
@@ -891,51 +891,52 @@ void JetTester_HeavyIons::analyze(const edm::Event& mEvent, const edm::EventSetu
       //JetMatchingTools jetMatching(mEvent);
 
       if (!(mInputGenCollection.label().empty())) {
-      for (GenJetCollection::const_iterator gjet=genJets->begin(); gjet!=genJets->end(); gjet++) {
-        if (fabs(gjet->eta()) > 6.) continue;  // Out of the detector 
-        if (gjet->pt() < mMatchGenPtThreshold) continue;
-        if (recoJets.size() <= 0) continue;
-        // pt response
-        //------------------------------------------------------------
-        if (!JetCorrectionService.empty()) {
-          int iMatch    =   -1;
-          double CorrdeltaRBest = 999;
-          double CorrJetPtBest  =   0;
-          for (unsigned ijet=0; ijet<recoJets.size(); ++ijet) {
-            Jet correctedJet = recoJets[ijet];
-            correctedJet.scaleEnergy(scale);
-            double CorrJetPt = correctedJet.pt();
-            if (CorrJetPt > 10) {
-              double CorrdR = deltaR(gjet->eta(), gjet->phi(), correctedJet.eta(), correctedJet.phi());
-              if (CorrdR < CorrdeltaRBest) {
-                CorrdeltaRBest = CorrdR;
-                CorrJetPtBest  = CorrJetPt;
-                iMatch = ijet;
-              }
-            }
-          }
-          if (iMatch<0) continue;
-          fillMatchHists(gjet->eta(),  gjet->phi(),  gjet->pt(), recoJets[iMatch].eta(), recoJets[iMatch].phi(),  recoJets[iMatch].pt());
+	for (GenJetCollection::const_iterator gjet=genJets->begin(); gjet!=genJets->end(); gjet++) {
+	  if (fabs(gjet->eta()) > 6.) continue;  // Out of the detector 
+	  if (gjet->pt() < mMatchGenPtThreshold) continue;
+	  if (recoJets.size() <= 0) continue;
+	  // pt response
+	  //------------------------------------------------------------
+	  if (!JetCorrectionService.empty()) {
+	    int iMatch    =   -1;
+	    double CorrdeltaRBest = 999;
+	    double CorrJetPtBest  =   0;
+	    for (unsigned ijet=0; ijet<recoJets.size(); ++ijet) {
+	      Jet correctedJet = recoJets[ijet];
+	      correctedJet.scaleEnergy(scale);
+	      double CorrJetPt = correctedJet.pt();
+	      if (CorrJetPt > 10) {
+		double CorrdR = deltaR(gjet->eta(), gjet->phi(), correctedJet.eta(), correctedJet.phi());
+		if (CorrdR < CorrdeltaRBest) {
+		  CorrdeltaRBest = CorrdR;
+		  CorrJetPtBest  = CorrJetPt;
+		  iMatch = ijet;
+		}
+	      }
+	    }
+	    if (iMatch<0) continue;
+	    fillMatchHists(gjet->eta(),  gjet->phi(),  gjet->pt(), recoJets[iMatch].eta(), recoJets[iMatch].phi(),  recoJets[iMatch].pt());
             
-          if (CorrdeltaRBest < mRThreshold) {
-            double response = CorrJetPtBest / gjet->pt();
-            
-            if      (fabs(gjet->eta()) < 1.5) mPtCorrOverGen_GenPt_B->Fill(log10(gjet->pt()), response);
-            else if (fabs(gjet->eta()) < 3.0) mPtCorrOverGen_GenPt_E->Fill(log10(gjet->pt()), response);   
-            else if (fabs(gjet->eta()) < 6.0) mPtCorrOverGen_GenPt_F->Fill(log10(gjet->pt()), response);
-            
-            if (gjet->pt() > 20) {
-              if      (gjet->pt() <  40) mPtCorrOverGen_GenEta_20_40   ->Fill(gjet->eta(), response);
-              else if (gjet->pt() <  200) mPtCorrOverGen_GenEta_40_200   ->Fill(gjet->eta(), response);
-              else if (gjet->pt() <  600) mPtCorrOverGen_GenEta_200_600  ->Fill(gjet->eta(), response);
-              else if (gjet->pt() < 1500) mPtCorrOverGen_GenEta_600_1500 ->Fill(gjet->eta(), response);
-              else if (gjet->pt() < 3500) mPtCorrOverGen_GenEta_1500_3500->Fill(gjet->eta(), response);
-            }
-          }
-        }
+	    if (CorrdeltaRBest < mRThreshold) {
+	      double response = CorrJetPtBest / gjet->pt();
+	      
+	      if      (fabs(gjet->eta()) < 1.5) mPtCorrOverGen_GenPt_B->Fill(log10(gjet->pt()), response);
+	      else if (fabs(gjet->eta()) < 3.0) mPtCorrOverGen_GenPt_E->Fill(log10(gjet->pt()), response);   
+	      else if (fabs(gjet->eta()) < 6.0) mPtCorrOverGen_GenPt_F->Fill(log10(gjet->pt()), response);
+	      
+	      if (gjet->pt() > 20) {
+		if      (gjet->pt() <  40) mPtCorrOverGen_GenEta_20_40   ->Fill(gjet->eta(), response);
+		else if (gjet->pt() <  200) mPtCorrOverGen_GenEta_40_200   ->Fill(gjet->eta(), response);
+		else if (gjet->pt() <  600) mPtCorrOverGen_GenEta_200_600  ->Fill(gjet->eta(), response);
+		else if (gjet->pt() < 1500) mPtCorrOverGen_GenEta_600_1500 ->Fill(gjet->eta(), response);
+		else if (gjet->pt() < 3500) mPtCorrOverGen_GenEta_1500_3500->Fill(gjet->eta(), response);
+	      }
+	    }
+	  }
+	}
       }
     }
-	}
+  
 }
 
 
