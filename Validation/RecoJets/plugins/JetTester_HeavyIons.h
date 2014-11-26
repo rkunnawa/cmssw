@@ -1,11 +1,13 @@
-#ifndef ValidationRecoJetsJetTester_h
-#define ValidationRecoJetsJetTester_h
+#ifndef ValidationRecoJetsJetTester_HeavyIons_h
+#define ValidationRecoJetsJetTester_HeavyIons_h
 
 // Producer for validation histograms for Calo, JPT and PF jet objects
 // F. Ratnikov, Sept. 7, 2006
 // Modified by Chiyoung Jeong, Feb. 2, 2010
 // Modified by J. Piedra, Sept. 11, 2013
 // Rewritten by Viola Sordini, Matthias Artur Weber, Robert Schoefbeck Nov./Dez. 2013
+// Modified by Raghav Kunnawalkam Elayavalli, Aug 18th 2014 to run in 72X 
+//                                          , Oct 22nd 2014 to run in 73X
 
 #include <cmath>
 #include <string>
@@ -18,6 +20,8 @@
 #include "DataFormats/JetReco/interface/JPTJet.h"
 #include "DataFormats/JetReco/interface/JPTJetCollection.h"
 #include "DataFormats/JetReco/interface/PFJet.h"
+#include "DataFormats/JetReco/interface/BasicJet.h"
+#include "DataFormats/JetReco/interface/BasicJetCollection.h"
 #include "DataFormats/Math/interface/deltaR.h"
 #include "DataFormats/METReco/interface/CaloMET.h"
 #include "DataFormats/METReco/interface/CaloMETCollection.h"
@@ -28,6 +32,7 @@
 #include "DataFormats/VertexReco/interface/Vertex.h"
 #include "DQMServices/Core/interface/DQMStore.h"
 #include "DQMServices/Core/interface/MonitorElement.h"
+#include "DQMServices/Core/interface/DQMEDAnalyzer.h"
 #include "FWCore/Framework/interface/EDAnalyzer.h"
 #include "FWCore/Framework/interface/Event.h"
 #include "FWCore/MessageLogger/interface/MessageLogger.h"
@@ -35,18 +40,21 @@
 #include "FWCore/ServiceRegistry/interface/Service.h"
 #include "FWCore/Utilities/interface/EDGetToken.h"
 #include "JetMETCorrections/Objects/interface/JetCorrector.h"
+#include "RecoJets/JetProducers/interface/JetMatchingTools.h"
 #include "SimDataFormats/GeneratorProducts/interface/HepMCProduct.h"
-#include <DQMServices/Core/interface/DQMEDAnalyzer.h>
+
 class MonitorElement;
 
-class JetTester : public thread_unsafe::DQMEDAnalyzer {
+class JetTester_HeavyIons : public DQMEDAnalyzer {
  public:
 
-  JetTester (const edm::ParameterSet&);
-  ~JetTester();
+  explicit JetTester_HeavyIons (const edm::ParameterSet&);
+  virtual ~JetTester_HeavyIons();
 
-  virtual void analyze(const edm::Event&, const edm::EventSetup&);
-  virtual void bookHistograms(DQMStore::IBooker &, edm::Run const &, edm::EventSetup const &) override;
+  virtual void analyze(const edm::Event&, const edm::EventSetup&); 
+  virtual void beginJob();
+  virtual void endJob();
+  virtual void bookHistograms(DQMStore::IBooker &, edm::Run const &, edm::EventSetup const &) ;
 
  private:
   
@@ -55,14 +63,18 @@ class JetTester : public thread_unsafe::DQMEDAnalyzer {
   
   edm::InputTag   mInputCollection;
   edm::InputTag   mInputGenCollection;
+//  edm::InputTag   rhoTag;
   std::string     mOutputFile;
   std::string     JetType;
+  std::string     UEAlgo;
 
   //Tokens
   edm::EDGetTokenT<std::vector<reco::Vertex> > pvToken_;
   edm::EDGetTokenT<CaloTowerCollection > caloTowersToken_;
   edm::EDGetTokenT<reco::CaloJetCollection> caloJetsToken_;
   edm::EDGetTokenT<reco::PFJetCollection> pfJetsToken_;
+  edm::EDGetTokenT<reco::BasicJetCollection> basicJetsToken_;
+  edm::EDGetTokenT<reco::JPTJetCollection> jptJetsToken_;
   edm::EDGetTokenT<reco::GenJetCollection> genJetsToken_;
   edm::EDGetTokenT<edm::HepMCProduct> evtToken_;
 
@@ -80,6 +92,8 @@ class JetTester : public thread_unsafe::DQMEDAnalyzer {
   MonitorElement* mHadTiming;
   MonitorElement* mEmTiming;
   MonitorElement* mJetArea;
+  MonitorElement* mjetpileup;
+
 //  MonitorElement* mRho;
 
   // Corrected jets
@@ -159,6 +173,14 @@ class JetTester : public thread_unsafe::DQMEDAnalyzer {
   MonitorElement* mNJets1;
   MonitorElement* mNJets2;
 
+//  // PFJet specific
+//  MonitorElement* mChargedEmEnergy;
+//  MonitorElement* mChargedHadronEnergy;
+//  MonitorElement* mNeutralEmEnergy;
+//  MonitorElement* mNeutralHadronEnergy;
+//  MonitorElement* mHadEnergyInHF;
+//  MonitorElement* mEmEnergyInHF;
+
   // ---- Calo Jet specific information ----
   MonitorElement* maxEInEmTowers;
   MonitorElement* maxEInHadTowers;
@@ -174,7 +196,8 @@ class JetTester : public thread_unsafe::DQMEDAnalyzer {
   MonitorElement* towersArea;
   MonitorElement* n90;
   MonitorElement* n60;
-
+  // ---- JPT Jet specific information ----
+  MonitorElement* elecMultiplicity;
   // ---- JPT or PF Jet specific information ----
   MonitorElement* muonMultiplicity;
   MonitorElement* chargedMultiplicity;
@@ -212,8 +235,10 @@ class JetTester : public thread_unsafe::DQMEDAnalyzer {
   double          mRecoJetPtThreshold;
   double          mMatchGenPtThreshold;
   double          mGenEnergyFractionThreshold;
+  double          mReverseEnergyFractionThreshold;
   double          mRThreshold;
   bool            isCaloJet;
+  bool            isJPTJet;
   bool            isPFJet;
   
 
