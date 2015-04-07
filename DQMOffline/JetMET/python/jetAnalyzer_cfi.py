@@ -453,3 +453,22 @@ jetDQMAnalyzerAkVs7PF = cms.EDAnalyzer("JetAnalyzer_HeavyIons",
                                     reverseEnergyFractionThreshold = cms.double(0.5)
 )				    			    
 '''
+
+jetDQMMatchAkPu3CaloAkVs3Calo = cms.EDAnalyzer("JetAnalyzer_HeavyIons_matching",
+                                               src_Jet1 = cms.InputTag("akPu3CaloJets"),
+                                               src_Jet2 = cms.InputTag("akVs3CaloJets"),
+                                               Jet1     = cms.untracked.string("PuCalo"),
+                                               Jet2     = cms.untracked.string("VsCalo"),
+                                               recoJetPtThreshold = cms.double(20.),
+                                               recoDelRMatch = cms.double(0.2),
+                                               recoJetEtaCut = cms.double(2.0)
+                                           )
+jetDQMMatchAkPu3PFAkVs3PF = cms.EDAnalyzer("JetAnalyzer_HeavyIons_matching",
+                                               src_Jet1 = cms.InputTag("akPu3PFJets"),
+                                               src_Jet2 = cms.InputTag("akVs3PFJets"),
+                                               Jet1     = cms.untracked.string("PuPF"),
+                                               Jet2     = cms.untracked.string("VsPF"),
+                                               recoJetPtThreshold = cms.double(20.),
+                                               recoDelRMatch = cms.double(0.2),
+                                               recoJetEtaCut = cms.double(2.0)
+                                           )

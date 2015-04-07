@@ -9,7 +9,8 @@
 //         April 6th 2015 
 //         Rutgers University, email: raghav.k.e at CERN dot CH 
 //
-// this class will be very similar to the class available in the validation suite under RecoJets/JetTester_HeavyIons 
+// The logic for the matching is taken from Pawan Kumar Netrakanti's macro analysis level macro available here
+// https://github.com/pawannetrakanti/UserCode/blob/master/JetRAA/jetmatch.C 
 //
 
 
@@ -71,9 +72,11 @@
 #include "DQMServices/Core/interface/DQMEDAnalyzer.h"
 #include <map>
 #include <string>
+#include <vector>
+#include <algorithm>
+#include <set>
+#include <utility>
 
-
-const Int_t MAXPARTICLE = 10000;
 
 class MonitorElement;
 
@@ -88,39 +91,75 @@ class JetAnalyzer_HeavyIons_matching : public DQMEDAnalyzer {
   
  private:
   
-  edm::InputTag   mInputCollection;
-  edm::InputTag   mInputPFCandCollection;
-  edm::InputTag   centrality;
+  edm::InputTag   mInputJet1Collection;
+  edm::InputTag   mInputJet2Collection;
   
   std::string     mOutputFile;
-  std::string     JetType;
-  std::string     UEAlgo;
-  edm::InputTag   Background;
+  std::string     JetType1;
+  std::string     JetType2;
   double          mRecoJetPtThreshold;
-  double          mReverseEnergyFractionThreshold;
-  double          mRThreshold;
-  std::string     JetCorrectionService;
-
+  double          mRecoDelRMatch; 
+  double          mRecoJetEtaCut; 
+  
   //Tokens
-  edm::EDGetTokenT<std::vector<reco::Vertex> > pvToken_;
-  edm::EDGetTokenT<CaloTowerCollection > caloTowersToken_;
-  edm::EDGetTokenT<reco::CaloJetCollection> caloJetsToken_;
+  edm::EDGetTokenT<reco::CaloJetCollection> caloJet1Token_;
+  edm::EDGetTokenT<reco::CaloJetCollection> caloJet2Token_;
   edm::EDGetTokenT<reco::PFJetCollection> pfJetsToken_;
   edm::EDGetTokenT<reco::BasicJetCollection> basicJetsToken_;
   edm::EDGetTokenT<reco::JPTJetCollection> jptJetsToken_;
-  edm::EDGetTokenT<reco::PFCandidateCollection> pfCandToken_; 
-  edm::EDGetTokenT<reco::CandidateView> pfCandViewToken_;
-  edm::EDGetTokenT<reco::CandidateView> caloCandViewToken_;
 
-  //edm::EDGetTokenT<reco::VoronoiMap> backgrounds_;
-  edm::EDGetTokenT<edm::ValueMap<reco::VoronoiBackground>> backgrounds_;
-  edm::EDGetTokenT<std::vector<float>> backgrounds_value_;
-  edm::EDGetTokenT<reco::Centrality> centralityToken_;
-  edm::EDGetTokenT<std::vector<reco::Vertex> > hiVertexToken_;
+  MonitorElement * mpT_ratio_Jet1Jet2;
+  MonitorElement * mpT_Jet1_matched;
+  MonitorElement * mpT_Jet2_matched;
+  MonitorElement * mpT_Jet1_unmatched;
+  MonitorElement * mpT_Jet2_unmatched; 
 
 
+  struct MyJet{
+    int   id;
+    float pt;
+    float eta;
+    float phi;
+  };
 
+
+  typedef std::pair< MyJet, MyJet > ABJetPair;
+
+  struct CompareMatchedJets {
+    //! A-B jet match
+    bool operator()(const ABJetPair &A1, const ABJetPair &A2){
+      MyJet jet1_pair1 = A1.first; //! Jet1 1st pair
+      MyJet jet2_pair1 = A1.second; //! Jet2 1st pair
+      MyJet jet1_pair2 = A2.first; //! Jet1 2nd pair
+      MyJet jet2_pair2 = A2.second; //! Jet2 2nd pair
+      float delr1 = deltaRR(jet1_pair1.eta, jet1_pair1.phi, jet2_pair1.eta, jet2_pair1.phi);
+      float delr2 = deltaRR(jet1_pair2.eta, jet1_pair2.phi, jet2_pair2.eta, jet2_pair2.phi);
+
+      return ((delr1 < delr2) && (jet1_pair1.pt > jet1_pair2.pt));
+
+    }
+  };
+
+
+  typedef std::multiset< ABJetPair, CompareMatchedJets > ABMatchedJets;
+  typedef std::multiset< ABJetPair >::iterator ABItr;
+  //typedef std::multiset< Jet >::value_type MatchedJet;
+
+const double pi = 3.14159;
+
+float deltaRR(float eta1, float phi1, float eta2, float phi2)
+{
+  float deta = eta1 - eta2;
+  float dphi = fabs(phi1 - phi2);
+  if(dphi > pi)dphi -= 2*pi;
+  float dr = sqrt(pow(deta,2) + pow(dphi,2));
+  return dr;
+}
+
+
+  
 };
+
 
 
 #endif 

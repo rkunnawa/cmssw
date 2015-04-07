@@ -597,7 +597,6 @@ void JetAnalyzer_HeavyIons::analyze(const edm::Event& mEvent, const edm::EventSe
   edm::Handle<std::vector<float>> vn_;
 
   edm::Handle<reco::Centrality> cent;
-  
 
   if (isCaloJet) mEvent.getByToken(caloJetsToken_, caloJets);
   if (isJPTJet)  mEvent.getByToken(jptJetsToken_, jptJets);
