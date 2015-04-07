@@ -145,18 +145,16 @@ class JetAnalyzer_HeavyIons_matching : public DQMEDAnalyzer {
   typedef std::multiset< ABJetPair >::iterator ABItr;
   //typedef std::multiset< Jet >::value_type MatchedJet;
 
-const double pi = 3.14159;
-
-float deltaRR(float eta1, float phi1, float eta2, float phi2)
-{
-  float deta = eta1 - eta2;
-  float dphi = fabs(phi1 - phi2);
-  if(dphi > pi)dphi -= 2*pi;
-  float dr = sqrt(pow(deta,2) + pow(dphi,2));
-  return dr;
-}
-
-
+  static float deltaRR(float eta1, float phi1, float eta2, float phi2)
+  {
+    float deta = eta1 - eta2;
+    float dphi = fabs(phi1 - phi2);
+    if(dphi > 3.14159 )dphi -= 2*3.14159;
+    float dr = sqrt(pow(deta,2) + pow(dphi,2));
+    return dr;
+  }
+  
+  
   
 };
 

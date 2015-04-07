@@ -242,7 +242,7 @@ void JetAnalyzer_HeavyIons_matching::analyze(const edm::Event& mEvent, const edm
       MyJet Aj = jetpair.first;
       MyJet Bj = jetpair.second;
 
-      float delr = deltaRR(Bj.eta, Bj.phi, Aj.eta, Aj.phi);
+      float delr = JetAnalyzer_HeavyIons_matching::deltaRR(Bj.eta, Bj.phi, Aj.eta, Aj.phi);
 
       if( delr < mRecoDelRMatch && Jet1_ID[Aj.id] == 0){
 
