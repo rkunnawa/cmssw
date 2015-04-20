@@ -89,6 +89,9 @@ class JetAnalyzer_HeavyIons_matching : public DQMEDAnalyzer {
   void analyze(const edm::Event&, const edm::EventSetup&) override; 
   void bookHistograms(DQMStore::IBooker &, edm::Run const &, edm::EventSetup const &) override;
   
+  // calojet1token = vscalo 
+  // calojet2token = pucalo 
+
  private:
   
   edm::InputTag   mInputJet1Collection;

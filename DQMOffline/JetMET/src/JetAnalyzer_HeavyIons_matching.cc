@@ -116,13 +116,15 @@ void JetAnalyzer_HeavyIons_matching::analyze(const edm::Event& mEvent, const edm
   edm::Handle<PFJetCollection>    pfJets;
   edm::Handle<BasicJetCollection> basicJets;
 
+  //std::cout<<"Jet1 = "<<JetType1<<" and Jet 2 = "<<JetType2<<std::endl;
+
   if(std::string("VsCalo") == JetType1) {
     mEvent.getByToken(caloJet1Token_, caloJet1);
     for (unsigned ijet=0; ijet<caloJet1->size(); ijet++) recoJet1.push_back((*caloJet1)[ijet]);
   }
   if(std::string("PuCalo") == JetType1) {
-    mEvent.getByToken(caloJet2Token_, caloJet2);
-    for (unsigned ijet=0; ijet<caloJet2->size(); ijet++) recoJet1.push_back((*caloJet2)[ijet]);
+    mEvent.getByToken(caloJet2Token_, caloJet1);
+    for (unsigned ijet=0; ijet<caloJet1->size(); ijet++) recoJet1.push_back((*caloJet1)[ijet]);
   }
   if(std::string("VsPF") == JetType1) {
     mEvent.getByToken(pfJetsToken_, pfJets);
@@ -134,8 +136,8 @@ void JetAnalyzer_HeavyIons_matching::analyze(const edm::Event& mEvent, const edm
   }
 
   if(std::string("VsCalo") == JetType2) {
-    mEvent.getByToken(caloJet2Token_, caloJet2);
-    for (unsigned ijet=0; ijet<caloJet1->size(); ijet++) recoJet2.push_back((*caloJet1)[ijet]);
+    mEvent.getByToken(caloJet1Token_, caloJet2);
+    for (unsigned ijet=0; ijet<caloJet2->size(); ijet++) recoJet2.push_back((*caloJet2)[ijet]);
   }
   if(std::string("PuCalo") == JetType2) {
     mEvent.getByToken(caloJet2Token_, caloJet2);
@@ -155,14 +157,23 @@ void JetAnalyzer_HeavyIons_matching::analyze(const edm::Event& mEvent, const edm
   Int_t Jet1_nref = recoJet1.size();
   Int_t Jet2_nref = recoJet2.size();
 
+  //std::cout<<"Jet1_nref = "<<recoJet1.size()<<std::endl;
+  //std::cout<<"Jet2_nref = "<<recoJet2.size()<<std::endl;
+
+  //if(Jet1_nref==0 || Jet2_nref==0) return;
+
   int jet1 = 0;
   int jet2 = 0; 
   
   std::vector <MyJet> vJet1, vJet2;
   std::vector <int> Jet1_ID(Jet1_nref), Jet2_ID(Jet2_nref);
-
+  
   
   for(unsigned ijet1 = 0; ijet1 < recoJet1.size(); ++ijet1){
+
+    //std::cout<<" pt of jet "<< ijet1 <<" in jet collection1 = "<<recoJet1[ijet1].pt()<<std::endl;
+    //std::cout<<" eta of jet "<< ijet1 <<" in jet collection1 = "<<recoJet1[ijet1].eta()<<std::endl;
+    //std::cout<<" phi of jet "<< ijet1 <<" in jet collection1 = "<<recoJet1[ijet1].phi()<<std::endl;
 
     if(recoJet1[ijet1].pt() < mRecoJetPtThreshold) continue;
     if(fabs(recoJet1[ijet1].eta()) < mRecoJetEtaCut) continue;
@@ -179,6 +190,10 @@ void JetAnalyzer_HeavyIons_matching::analyze(const edm::Event& mEvent, const edm
   }// first jet loop
 
   for(unsigned ijet2 = 0; ijet2 < recoJet2.size(); ++ijet2){
+    
+    //std::cout<<" pt of jet "<< ijet2 <<" in jet collection2 = "<<recoJet2[ijet2].pt()<<std::endl;
+    //std::cout<<" eta of jet "<< ijet2 <<" in jet collection2 = "<<recoJet2[ijet2].eta()<<std::endl;
+    //std::cout<<" phi of jet "<< ijet2 <<" in jet collection2 = "<<recoJet2[ijet2].phi()<<std::endl;
 
     if(recoJet2[ijet2].pt() < mRecoJetPtThreshold) continue;
     if(fabs(recoJet2[ijet2].eta()) < mRecoJetEtaCut) continue;
@@ -211,6 +226,7 @@ void JetAnalyzer_HeavyIons_matching::analyze(const edm::Event& mEvent, const edm
       int pj = (*iJet).id;
       
       mpT_Jet1_unmatched->Fill(recoJet1[pj].pt());
+      //std::cout<<"first unmatched Jet = "<<recoJet1[pj].pt()<<std::endl;
 
     }
 
@@ -221,7 +237,7 @@ void JetAnalyzer_HeavyIons_matching::analyze(const edm::Event& mEvent, const edm
       int cj = (*iJet).id;
 
       mpT_Jet2_unmatched->Fill(recoJet2[cj].pt());
-
+      //std::cout<<"second unmatched Jet = "<<recoJet2[cj].pt()<<std::endl;
     }
     
   }else if (bothJet1Jet2){
@@ -255,6 +271,9 @@ void JetAnalyzer_HeavyIons_matching::analyze(const edm::Event& mEvent, const edm
 	Jet2_ID[Bj.id] = 1;
 
 	matchedJets++; 
+
+	//std::cout<<"matched Jet 1 pT = "<<recoJet1[Aj.id].pt()<<std::endl;
+	//std::cout<<"matched Jet 2 pT = "<<recoJet2[Bj.id].pt()<<std::endl;
 
       }
 
