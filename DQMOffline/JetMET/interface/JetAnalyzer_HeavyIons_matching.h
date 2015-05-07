@@ -117,6 +117,21 @@ class JetAnalyzer_HeavyIons_matching : public DQMEDAnalyzer {
   MonitorElement * mpT_Jet1_unmatched;
   MonitorElement * mpT_Jet2_unmatched; 
 
+  MonitorElement * mHadEnergy_Jet1_unmatched;
+  MonitorElement * mEmEnergy_Jet1_unmatched;
+  MonitorElement * mChargedHadronEnergy_Jet1_unmatched;
+  MonitorElement * mNeutralHadronEnergy_Jet1_unmatched;
+  MonitorElement * mChargedEmEnergy_Jet1_unmatched;
+  MonitorElement * mNeutralEmEnergy_Jet1_unmatched;
+  MonitorElement * mChargedMuEnergy_Jet1_unmatched;
+
+  MonitorElement * mHadEnergy_Jet2_unmatched;
+  MonitorElement * mEmEnergy_Jet2_unmatched;
+  MonitorElement * mChargedHadronEnergy_Jet2_unmatched;
+  MonitorElement * mNeutralHadronEnergy_Jet2_unmatched;
+  MonitorElement * mChargedEmEnergy_Jet2_unmatched;
+  MonitorElement * mNeutralEmEnergy_Jet2_unmatched;
+  MonitorElement * mChargedMuEnergy_Jet2_unmatched;
 
   struct MyJet{
     int   id;
