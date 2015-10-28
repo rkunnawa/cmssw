@@ -483,8 +483,8 @@ JetAnalyzerAk5PF = cms.EDAnalyzer("JetTester",
 hiJetValidation = cms.Sequence(
     #ak2HiCleanedGenJets
     ak3HiCleanedGenJets
-    #* ak4HiCleanedGenJets 
-    #* ak5HiCleanedGenJets
+    * ak4HiCleanedGenJets 
+    * ak5HiCleanedGenJets
 
     #* iterativeCone7HiCleanedGenJets
     #* iterativeCone5HiCleanedGenJets
@@ -492,24 +492,24 @@ hiJetValidation = cms.Sequence(
     #* JetAnalyzerICPU5Calo
 
     * JetAnalyzerAkPU3Calo
-    #* JetAnalyzerAkPU4Calo
-    #* JetAnalyzerAkPU5Calo
+    * JetAnalyzerAkPU4Calo
+    * JetAnalyzerAkPU5Calo
 
     * JetAnalyzerAkPU3PF
-    #* JetAnalyzerAkPU4PF
-    #* JetAnalyzerAkPU5PF
+    * JetAnalyzerAkPU4PF
+    * JetAnalyzerAkPU5PF
     
-    #* JetAnalyzerAkVs2Calo
+    * JetAnalyzerAkVs2Calo
     * JetAnalyzerAkVs3Calo	   
-    #* JetAnalyzerAkVs4Calo	   
+    * JetAnalyzerAkVs4Calo	   
     #* JetAnalyzerAkVs5Calo	   
     #* JetAnalyzerAkVs6Calo
     #* JetAnalyzerAkVs7Calo
     
     #* JetAnalyzerAkVs2PF
     * JetAnalyzerAkVs3PF
-    #* JetAnalyzerAkVs4PF	   
-    #* JetAnalyzerAkVs5PF
+    * JetAnalyzerAkVs4PF	   
+    * JetAnalyzerAkVs5PF
     #* JetAnalyzerAkVs6PF	   
     #* JetAnalyzerAkVs7PF
 
