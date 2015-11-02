@@ -23,7 +23,7 @@ if version == '':
 
 process.source = cms.Source("PoolSource",
                             duplicateCheckMode = cms.untracked.string("noDuplicateCheck"),
-                            fileNames = cms.untracked.vstring('root://polgrid4.in2p3.fr:11001//store/user/istaslis/PyquenUnquenched_Dijet_NcollFilt_pthat80_740pre8_MCHI1_74_V4_GEN-SIM_v3/PyquenUnquenched_Dijet_NcollFilt_pthat80_753patch1_customized_RECODEBUG/fc27ae3aaa1b75922ce282ddc77e17de/step3_RAW2DIGI_L1Reco_RECO_PU_10_1_5oD.root')
+                            fileNames = cms.untracked.vstring('file:step3_RAW2DIGI_L1Reco_RECO.root')
 )
 
 # Number of events we want to process, -1 = all events
@@ -72,7 +72,7 @@ process.centralityBin.nonDefaultGlauberModel = cms.string("HydjetDrum5")
 #####################################################################################
 
 process.TFileService = cms.Service("TFileService",
-                                   fileName=cms.string("HiForest.root"))
+                                   fileName=cms.string("HiForest_753p1.root"))
 
 #####################################################################################
 # Additional Reconstruction and Analysis: Main Body

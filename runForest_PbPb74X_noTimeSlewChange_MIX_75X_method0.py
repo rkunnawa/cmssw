@@ -23,12 +23,12 @@ if version == '':
 
 process.source = cms.Source("PoolSource",
                             duplicateCheckMode = cms.untracked.string("noDuplicateCheck"),
-                            fileNames = cms.untracked.vstring('root://polgrid4.in2p3.fr:11001//store/user/istaslis/PyquenUnquenched_Dijet_NcollFilt_pthat80_740pre8_MCHI1_74_V4_GEN-SIM_v3/PyquenUnquenched_Dijet_NcollFilt_pthat80_753patch1_customized_RECODEBUG/fc27ae3aaa1b75922ce282ddc77e17de/step3_RAW2DIGI_L1Reco_RECO_PU_10_1_5oD.root')
+                            fileNames = cms.untracked.vstring('file:../../CMSSW_7_5_4/src/step3_RAW2DIGI_L1Reco_RECO_noTimeSlewChange_method0.root')
 )
 
 # Number of events we want to process, -1 = all events
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(10))
+    input = cms.untracked.int32(100))
 
 
 #####################################################################################
@@ -72,7 +72,7 @@ process.centralityBin.nonDefaultGlauberModel = cms.string("HydjetDrum5")
 #####################################################################################
 
 process.TFileService = cms.Service("TFileService",
-                                   fileName=cms.string("HiForest.root"))
+                                   fileName=cms.string("../../CMSSW_7_5_4/src/HiForest_754_noTimeSlewChange_method0.root"))
 
 #####################################################################################
 # Additional Reconstruction and Analysis: Main Body
