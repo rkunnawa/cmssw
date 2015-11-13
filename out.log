@@ -1,53 +1,255 @@
 # Conditions read from  CMS_CONDITIONS  via FrontierProd 
 DQMStore: MultiThread option is enabled
-%MSG-w CondDBESSource:  (NoModuleName) 13-Nov-2015 17:57:28 CET pre-events
+%MSG-w CondDBESSource:  (NoModuleName) 13-Nov-2015 21:14:08 CET pre-events
 [WARNING] You are reading tag "RealisticHICollisions2011_STARTHI50_mc" from V1 account "frontier://FrontierProd/CMS_COND_31X_BEAMSPOT". The concerned Conditions might be out of date.
 %MSG
-13-Nov-2015 17:57:29 CET  Initiating request to open file root://xrootd.cmsaf.mit.edu//store/user/twang/Pyquen_DiJet_pt40_5020GeV_GEN_SIM_PU_20150813/Pyquen_DiJet_pt40_5020GeV_step2_20150813/00a3c06d28c9e39d8c4f520dd28e45dd/step2_DIGI_L1_DIGI2RAW_HLT_RAW2DIGI_L1Reco_PU_100_1_oJU.root
-13-Nov-2015 17:57:33 CET  Successfully opened file root://xrootd.cmsaf.mit.edu//store/user/twang/Pyquen_DiJet_pt40_5020GeV_GEN_SIM_PU_20150813/Pyquen_DiJet_pt40_5020GeV_step2_20150813/00a3c06d28c9e39d8c4f520dd28e45dd/step2_DIGI_L1_DIGI2RAW_HLT_RAW2DIGI_L1Reco_PU_100_1_oJU.root
-disableME1a = 0
-%MSG-w XrdAdaptor:  (NoModuleName) 13-Nov-2015 17:57:43 CET pre-events
+13-Nov-2015 21:14:09 CET  Initiating request to open file root://xrootd.cmsaf.mit.edu//store/user/twang/Pyquen_DiJet_pt40_5020GeV_GEN_SIM_PU_20150813/Pyquen_DiJet_pt40_5020GeV_step2_20150813/00a3c06d28c9e39d8c4f520dd28e45dd/step2_DIGI_L1_DIGI2RAW_HLT_RAW2DIGI_L1Reco_PU_100_1_oJU.root
+13-Nov-2015 21:14:14 CET  Successfully opened file root://xrootd.cmsaf.mit.edu//store/user/twang/Pyquen_DiJet_pt40_5020GeV_GEN_SIM_PU_20150813/Pyquen_DiJet_pt40_5020GeV_step2_20150813/00a3c06d28c9e39d8c4f520dd28e45dd/step2_DIGI_L1_DIGI2RAW_HLT_RAW2DIGI_L1Reco_PU_100_1_oJU.root
+%MSG-w XrdAdaptor:  (NoModuleName) 13-Nov-2015 21:14:17 CET pre-events
 Data is now served from cmsaf.mit.edu instead of previous 
 %MSG
+disableME1a = 0
  Beginning HLTBitAnalyzer Analysis 
+In the begin job function
 Initalizing HLTConfigProvider
+In the analyze function
 OpenHLT analyser - missing collections:
 	L1 jet objects: gctInternJetProducer:Internal:ANALYSIS
 	L1 GCT HF bit counts: hltGctDigis
 	L1 GCT HF ring sums: hltGctDigis
+In the analyze function
 OpenHLT analyser - missing collections:
 	L1 jet objects: gctInternJetProducer:Internal:ANALYSIS
 	L1 GCT HF bit counts: hltGctDigis
 	L1 GCT HF ring sums: hltGctDigis
+In the analyze function
 OpenHLT analyser - missing collections:
 	L1 jet objects: gctInternJetProducer:Internal:ANALYSIS
 	L1 GCT HF bit counts: hltGctDigis
 	L1 GCT HF ring sums: hltGctDigis
+In the analyze function
 OpenHLT analyser - missing collections:
 	L1 jet objects: gctInternJetProducer:Internal:ANALYSIS
 	L1 GCT HF bit counts: hltGctDigis
 	L1 GCT HF ring sums: hltGctDigis
+In the analyze function
 OpenHLT analyser - missing collections:
 	L1 jet objects: gctInternJetProducer:Internal:ANALYSIS
 	L1 GCT HF bit counts: hltGctDigis
 	L1 GCT HF ring sums: hltGctDigis
-%MSG-w OpenHLT:  HLTBitAnalyzer:hltbitanalysis 13-Nov-2015 18:37:44 CET  Run: 1 Event: 5
+%MSG-w OpenHLT:  HLTBitAnalyzer:hltbitanalysis 13-Nov-2015 21:17:13 CET  Run: 1 Event: 5
 Maximum error count reached -- No more messages will be printed.
 %MSG
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+[2015-11-13 21:22:55.509466 +0100][Error  ][XRootD            ] [xrootd.cmsaf.mit.edu:1094] Handling error while processing kXR_open (file: /store/user/twang/Pyquen_DiJet_pt40_5020GeV_GEN_SIM_PU_20150813/Pyquen_DiJet_pt40_5020GeV_step2_20150813/00a3c06d28c9e39d8c4f520dd28e45dd/step2_DIGI_L1_DIGI2RAW_HLT_RAW2DIGI_L1Reco_PU_100_1_oJU.root?tried=xrootd19.cmsaf.mit.edu,xrootd8.cmsaf.mit.edu,xrootd17.cmsaf.mit.edu,xrootd20.cmsaf.mit.edu,xrootd18.cmsaf.mit.edu,xrootd14.cmsaf.mit.edu,xrootd10.cmsaf.mit.edu,xrootd11.cmsaf.mit.edu,xrootd15.cmsaf.mit.edu,xrootd3.cmsaf.mit.edu,xrootd9.cmsaf.mit.edu,xrootd6.cmsaf.mit.edu,xrootd16.cmsaf.mit.edu,xrootd7.cmsaf.mit.edu,xrootd4.cmsaf.mit.edu,xrootd12.cmsaf.mit.edu, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
+In the analyze function
 FastReport for run 1, process TEST
-FastReport                0.000145  Pre-Event
-FastReport                2.464168  Event
-FastReport                1.088846  all Paths
-FastReport                1.375227  all EndPaths
-FastReport                0.000325  between paths
+FastReport                0.000104  Pre-Event
+FastReport                1.922784  Event
+FastReport                1.846513  all Paths
+FastReport                0.076188  all EndPaths
+FastReport                0.000254  between paths
 
 FastReport for run 1, over all subprocesses
-FastReport                0.257112  Pre-Source
-FastReport                0.143155  Source
-FastReport                0.000145  Pre-Event
-FastReport                2.464168  Event
+FastReport                0.195425  Pre-Source
+FastReport                0.466170  Source
+FastReport                0.000104  Pre-Event
+FastReport                1.922784  Event
 
-13-Nov-2015 18:46:43 CET  Closed file root://xrootd.cmsaf.mit.edu//store/user/twang/Pyquen_DiJet_pt40_5020GeV_GEN_SIM_PU_20150813/Pyquen_DiJet_pt40_5020GeV_step2_20150813/00a3c06d28c9e39d8c4f520dd28e45dd/step2_DIGI_L1_DIGI2RAW_HLT_RAW2DIGI_L1Reco_PU_100_1_oJU.root
+13-Nov-2015 21:24:08 CET  Closed file root://xrootd.cmsaf.mit.edu//store/user/twang/Pyquen_DiJet_pt40_5020GeV_GEN_SIM_PU_20150813/Pyquen_DiJet_pt40_5020GeV_step2_20150813/00a3c06d28c9e39d8c4f520dd28e45dd/step2_DIGI_L1_DIGI2RAW_HLT_RAW2DIGI_L1Reco_PU_100_1_oJU.root
 
 TriggerSummaryProducerAOD::globalEndJob - accumulated tags:
  Overall number of Collections/Filters: 13/66
@@ -134,7 +336,7 @@ TriggerSummaryProducerAOD::globalEndJob - accumulated tags:
   65 hltTriplePuAK4CaloJet45Eta2p1::TEST
 TriggerSummaryProducerAOD::endJob.
 
-%MSG-i L1GtTrigReport:  L1GtTrigReport:hltL1GtTrigReport@endJob  13-Nov-2015 18:46:53 CET PostEndRun
+%MSG-i L1GtTrigReport:  L1GtTrigReport:hltL1GtTrigReport@endJob  13-Nov-2015 21:24:08 CET PostEndRun
 
 L1T-Report ----------       Event Summary       ----------
 L1T-Report Total number of events processed: 200
@@ -348,10 +550,10 @@ L1T-Report end!
 
 HLT-Report ---------- Event  Summary ------------
 HLT-Report Summary for Job
-HLT-Report Events total = 200 wasrun = 200 passed = 140 errors = 0
+HLT-Report Events total = 200 wasrun = 200 passed = 200 errors = 0
 
 TrigReport ---------- Event  Summary ------------
-TrigReport Events total = 200 passed = 140 failed = 60
+TrigReport Events total = 200 passed = 200 failed = 0
 
 TrigReport ---------- Path   Summary ------------
 TrigReport  Trig Bit#   Executed     Passed     Failed      Error Name
@@ -425,6 +627,7 @@ TrigReport     1   66        200          0        200          0 HLT_HIL2Mu3Eta
 TrigReport     1   67        200          0        200          0 HLT_HIL2Mu3Eta2p5_HIPhoton30Eta1p5_v1
 TrigReport     1   68        200          0        200          0 HLT_HIL2Mu3Eta2p5_HIPhoton40Eta1p5_v1
 TrigReport     1   69        200          0        200          0 HLTriggerFinalPath
+TrigReport     1   70        200        200          0          0 p
 
 TrigReport -------End-Path   Summary ------------
 TrigReport  Trig Bit#   Executed     Passed     Failed      Error Name
@@ -5024,6 +5227,10 @@ TrigReport     1   33        200        200          0          0 hltTriggerSumm
 TrigReport     1   34        200        200          0          0 hltTriggerSummaryRAW
 TrigReport     1   35        200          0        200          0 hltBoolFalse
 
+TrigReport ---------- Modules in Path: p ------------
+TrigReport  Trig Bit#    Visited     Passed     Failed      Error Name
+TrigReport     1    0        200        200          0          0 demo
+
 TrigReport ------ Modules in End-Path: HLTAnalyzerEndpath ------------
 TrigReport  Trig Bit#    Visited     Passed     Failed      Error Name
 TrigReport     0    0        200        200          0          0 csctfDigis
@@ -5064,7 +5271,6 @@ TrigReport     0   33        200        200          0          0 hltTrigReport
 TrigReport ------ Modules in End-Path: DQMOutput ------------
 TrigReport  Trig Bit#    Visited     Passed     Failed      Error Name
 TrigReport     0    0        200        200          0          0 dqmOutput
-TrigReport     0    1        200        200          0          0 output
 
 TrigReport ------ Modules in End-Path: hltBitAnalysis ------------
 TrigReport  Trig Bit#    Visited     Passed     Failed      Error Name
@@ -5305,171 +5511,172 @@ TrigReport          2          2          1          1          0 hltHIL2Mu3N10H
 TrigReport        200        200        200          0          0 hltFEDSelector
 TrigReport        200        200        200          0          0 hltTriggerSummaryAOD
 TrigReport        200        200        200          0          0 hltTriggerSummaryRAW
+TrigReport        200        200        200          0          0 demo
 TrigReport        200        200        200          0          0 TriggerResults
 TrigReport        200        200        200          0          0 hltPreAnalyzerEndpath
 TrigReport        200        200        200          0          0 hltL1GtTrigReport
 TrigReport        200        200        200          0          0 hltTrigReport
 TrigReport        200        200        200          0          0 dqmOutput
-TrigReport        200        200        200          0          0 output
 TrigReport        200        200        200          0          0 hltbitanalysis
 
 TimeReport ---------- Event  Summary ---[sec]----
-TimeReport       event loop CPU/event = 2.073876
-TimeReport      event loop Real/event = 14.700953
-TimeReport     sum Streams Real/event = 2.607444
-TimeReport efficiency CPU/Real/thread = 0.141071
+TimeReport       event loop CPU/event = 0.772355
+TimeReport      event loop Real/event = 2.901143
+TimeReport     sum Streams Real/event = 2.389040
+TimeReport efficiency CPU/Real/thread = 0.266225
 
 TimeReport ---------- Path   Summary ---[Real sec]----
 TimeReport  per event     per exec  Name
-TimeReport   0.444504     0.444504  HLTriggerFirstPath
-TimeReport   0.431335     0.431335  HLT_HIPuAK4CaloJet40_Eta5p1_v1
-TimeReport   0.000186     0.000186  HLT_HIPuAK4CaloJet60_Eta5p1_v1
-TimeReport   0.000063     0.000063  HLT_HIPuAK4CaloJet80_Eta5p1_v1
-TimeReport   0.000054     0.000054  HLT_HIPuAK4CaloJet100_Eta5p1_v1
-TimeReport   0.000004     0.000004  HLT_HIPuAK4CaloJet110_Eta5p1_v1
-TimeReport   0.000004     0.000004  HLT_HIPuAK4CaloJet120_Eta5p1_v1
-TimeReport   0.000051     0.000051  HLT_HIPuAK4CaloJet150_Eta5p1_v1
-TimeReport   0.000251     0.000251  HLT_HIPuAK4CaloJet40_Eta5p1_Cent30_100_v1
-TimeReport   0.000116     0.000116  HLT_HIPuAK4CaloJet60_Eta5p1_Cent30_100_v1
-TimeReport   0.000109     0.000109  HLT_HIPuAK4CaloJet80_Eta5p1_Cent30_100_v1
-TimeReport   0.000032     0.000032  HLT_HIPuAK4CaloJet100_Eta5p1_Cent30_100_v1
-TimeReport   0.000071     0.000071  HLT_HIPuAK4CaloJet40_Eta5p1_Cent50_100_v1
-TimeReport   0.000085     0.000085  HLT_HIPuAK4CaloJet60_Eta5p1_Cent50_100_v1
-TimeReport   0.000084     0.000084  HLT_HIPuAK4CaloJet80_Eta5p1_Cent50_100_v1
-TimeReport   0.000009     0.000009  HLT_HIPuAK4CaloJet100_Eta5p1_Cent50_100_v1
-TimeReport   0.000006     0.000006  HLT_HIPuAK4CaloJet80_Jet35_Eta1p1_v1
-TimeReport   0.000005     0.000005  HLT_HIPuAK4CaloJet80_Jet35_Eta0p7_v1
-TimeReport   0.000004     0.000004  HLT_HIPuAK4CaloJet100_Jet35_Eta1p1_v1
-TimeReport   0.000004     0.000004  HLT_HIPuAK4CaloJet100_Jet35_Eta0p7_v1
-TimeReport   0.000006     0.000006  HLT_HIPuAK4CaloJet80_45_45_Eta2p1_v1
-TimeReport   0.151212     0.151212  HLT_HISinglePhoton10_Eta1p5_v1
-TimeReport   0.000052     0.000052  HLT_HISinglePhoton15_Eta1p5_v1
-TimeReport   0.000040     0.000040  HLT_HISinglePhoton20_Eta1p5_v1
-TimeReport   0.000150     0.000150  HLT_HISinglePhoton30_Eta1p5_v1
-TimeReport   0.000058     0.000058  HLT_HISinglePhoton40_Eta1p5_v1
-TimeReport   0.000006     0.000006  HLT_HISinglePhoton50_Eta1p5_v1
-TimeReport   0.000103     0.000103  HLT_HISinglePhoton60_Eta1p5_v1
-TimeReport   0.000138     0.000138  HLT_HISinglePhoton10_Eta1p5_Cent50_100_v1
-TimeReport   0.000009     0.000009  HLT_HISinglePhoton15_Eta1p5_Cent50_100_v1
-TimeReport   0.000009     0.000009  HLT_HISinglePhoton20_Eta1p5_Cent50_100_v1
-TimeReport   0.000097     0.000097  HLT_HISinglePhoton30_Eta1p5_Cent50_100_v1
-TimeReport   0.000098     0.000098  HLT_HISinglePhoton40_Eta1p5_Cent50_100_v1
-TimeReport   0.000119     0.000119  HLT_HISinglePhoton10_Eta1p5_Cent30_100_v1
-TimeReport   0.000012     0.000012  HLT_HISinglePhoton15_Eta1p5_Cent30_100_v1
-TimeReport   0.000012     0.000012  HLT_HISinglePhoton20_Eta1p5_Cent30_100_v1
-TimeReport   0.000100     0.000100  HLT_HISinglePhoton30_Eta1p5_Cent30_100_v1
-TimeReport   0.000095     0.000095  HLT_HISinglePhoton40_Eta1p5_Cent30_100_v1
-TimeReport   0.000006     0.000006  HLT_HISinglePhoton40_Eta2p1_v1
-TimeReport   0.054392     0.054392  HLT_HISinglePhoton10_Eta3p1_v1
-TimeReport   0.000047     0.000047  HLT_HISinglePhoton15_Eta3p1_v1
-TimeReport   0.000040     0.000040  HLT_HISinglePhoton20_Eta3p1_v1
-TimeReport   0.000026     0.000026  HLT_HISinglePhoton30_Eta3p1_v1
-TimeReport   0.000004     0.000004  HLT_HISinglePhoton40_Eta3p1_v1
-TimeReport   0.000004     0.000004  HLT_HISinglePhoton50_Eta3p1_v1
-TimeReport   0.000055     0.000055  HLT_HISinglePhoton60_Eta3p1_v1
-TimeReport   0.000009     0.000009  HLT_HISinglePhoton10_Eta3p1_Cent50_100_v1
-TimeReport   0.000008     0.000008  HLT_HISinglePhoton15_Eta3p1_Cent50_100_v1
-TimeReport   0.000008     0.000008  HLT_HISinglePhoton20_Eta3p1_Cent50_100_v1
-TimeReport   0.000015     0.000015  HLT_HISinglePhoton30_Eta3p1_Cent50_100_v1
-TimeReport   0.000030     0.000030  HLT_HISinglePhoton40_Eta3p1_Cent50_100_v1
-TimeReport   0.000012     0.000012  HLT_HISinglePhoton10_Eta3p1_Cent30_100_v1
-TimeReport   0.000031     0.000031  HLT_HISinglePhoton15_Eta3p1_Cent30_100_v1
-TimeReport   0.000010     0.000010  HLT_HISinglePhoton20_Eta3p1_Cent30_100_v1
-TimeReport   0.000012     0.000012  HLT_HISinglePhoton30_Eta3p1_Cent30_100_v1
-TimeReport   0.000018     0.000018  HLT_HISinglePhoton40_Eta3p1_Cent30_100_v1
-TimeReport   0.000256     0.000256  HLT_HIDoublePhoton15_Eta1p5_Mass50_1000_v1
-TimeReport   0.000029     0.000029  HLT_HIDoublePhoton15_Eta1p5_Mass50_1000_R9HECut_v1
-TimeReport   0.000032     0.000032  HLT_HIDoublePhoton15_Eta2p1_Mass50_1000_R9Cut_v1
-TimeReport   0.000091     0.000091  HLT_HIDoublePhoton15_Eta2p5_Mass50_1000_R9SigmaHECut_v1
-TimeReport   0.002353     0.002353  HLT_HIL2Mu3Eta2p5_PuAK4CaloJet40Eta2p1_v1
-TimeReport   0.000060     0.000060  HLT_HIL2Mu3Eta2p5_PuAK4CaloJet60Eta2p1_v1
-TimeReport   0.000055     0.000055  HLT_HIL2Mu3Eta2p5_PuAK4CaloJet80Eta2p1_v1
-TimeReport   0.000004     0.000004  HLT_HIL2Mu3Eta2p5_PuAK4CaloJet100Eta2p1_v1
-TimeReport   0.000004     0.000004  HLT_HIL2Mu3Eta2p5_HIPhoton10Eta1p5_v1
-TimeReport   0.000003     0.000003  HLT_HIL2Mu3Eta2p5_HIPhoton15Eta1p5_v1
-TimeReport   0.000003     0.000003  HLT_HIL2Mu3Eta2p5_HIPhoton20Eta1p5_v1
-TimeReport   0.000060     0.000060  HLT_HIL2Mu3Eta2p5_HIPhoton30Eta1p5_v1
-TimeReport   0.000050     0.000050  HLT_HIL2Mu3Eta2p5_HIPhoton40Eta1p5_v1
-TimeReport   0.001482     0.001482  HLTriggerFinalPath
+TimeReport   1.370569     1.370569  HLTriggerFirstPath
+TimeReport   0.315343     0.315343  HLT_HIPuAK4CaloJet40_Eta5p1_v1
+TimeReport   0.000133     0.000133  HLT_HIPuAK4CaloJet60_Eta5p1_v1
+TimeReport   0.000049     0.000049  HLT_HIPuAK4CaloJet80_Eta5p1_v1
+TimeReport   0.000043     0.000043  HLT_HIPuAK4CaloJet100_Eta5p1_v1
+TimeReport   0.000003     0.000003  HLT_HIPuAK4CaloJet110_Eta5p1_v1
+TimeReport   0.000002     0.000002  HLT_HIPuAK4CaloJet120_Eta5p1_v1
+TimeReport   0.000040     0.000040  HLT_HIPuAK4CaloJet150_Eta5p1_v1
+TimeReport   0.000116     0.000116  HLT_HIPuAK4CaloJet40_Eta5p1_Cent30_100_v1
+TimeReport   0.000091     0.000091  HLT_HIPuAK4CaloJet60_Eta5p1_Cent30_100_v1
+TimeReport   0.000086     0.000086  HLT_HIPuAK4CaloJet80_Eta5p1_Cent30_100_v1
+TimeReport   0.000023     0.000023  HLT_HIPuAK4CaloJet100_Eta5p1_Cent30_100_v1
+TimeReport   0.000057     0.000057  HLT_HIPuAK4CaloJet40_Eta5p1_Cent50_100_v1
+TimeReport   0.000066     0.000066  HLT_HIPuAK4CaloJet60_Eta5p1_Cent50_100_v1
+TimeReport   0.000065     0.000065  HLT_HIPuAK4CaloJet80_Eta5p1_Cent50_100_v1
+TimeReport   0.000007     0.000007  HLT_HIPuAK4CaloJet100_Eta5p1_Cent50_100_v1
+TimeReport   0.000005     0.000005  HLT_HIPuAK4CaloJet80_Jet35_Eta1p1_v1
+TimeReport   0.000004     0.000004  HLT_HIPuAK4CaloJet80_Jet35_Eta0p7_v1
+TimeReport   0.000003     0.000003  HLT_HIPuAK4CaloJet100_Jet35_Eta1p1_v1
+TimeReport   0.000002     0.000002  HLT_HIPuAK4CaloJet100_Jet35_Eta0p7_v1
+TimeReport   0.000004     0.000004  HLT_HIPuAK4CaloJet80_45_45_Eta2p1_v1
+TimeReport   0.115764     0.115764  HLT_HISinglePhoton10_Eta1p5_v1
+TimeReport   0.000040     0.000040  HLT_HISinglePhoton15_Eta1p5_v1
+TimeReport   0.000030     0.000030  HLT_HISinglePhoton20_Eta1p5_v1
+TimeReport   0.000123     0.000123  HLT_HISinglePhoton30_Eta1p5_v1
+TimeReport   0.000045     0.000045  HLT_HISinglePhoton40_Eta1p5_v1
+TimeReport   0.000004     0.000004  HLT_HISinglePhoton50_Eta1p5_v1
+TimeReport   0.000077     0.000077  HLT_HISinglePhoton60_Eta1p5_v1
+TimeReport   0.000076     0.000076  HLT_HISinglePhoton10_Eta1p5_Cent50_100_v1
+TimeReport   0.000007     0.000007  HLT_HISinglePhoton15_Eta1p5_Cent50_100_v1
+TimeReport   0.000006     0.000006  HLT_HISinglePhoton20_Eta1p5_Cent50_100_v1
+TimeReport   0.000076     0.000076  HLT_HISinglePhoton30_Eta1p5_Cent50_100_v1
+TimeReport   0.000075     0.000075  HLT_HISinglePhoton40_Eta1p5_Cent50_100_v1
+TimeReport   0.000082     0.000082  HLT_HISinglePhoton10_Eta1p5_Cent30_100_v1
+TimeReport   0.000009     0.000009  HLT_HISinglePhoton15_Eta1p5_Cent30_100_v1
+TimeReport   0.000008     0.000008  HLT_HISinglePhoton20_Eta1p5_Cent30_100_v1
+TimeReport   0.000080     0.000080  HLT_HISinglePhoton30_Eta1p5_Cent30_100_v1
+TimeReport   0.000076     0.000076  HLT_HISinglePhoton40_Eta1p5_Cent30_100_v1
+TimeReport   0.000004     0.000004  HLT_HISinglePhoton40_Eta2p1_v1
+TimeReport   0.040034     0.040034  HLT_HISinglePhoton10_Eta3p1_v1
+TimeReport   0.000037     0.000037  HLT_HISinglePhoton15_Eta3p1_v1
+TimeReport   0.000032     0.000032  HLT_HISinglePhoton20_Eta3p1_v1
+TimeReport   0.000021     0.000021  HLT_HISinglePhoton30_Eta3p1_v1
+TimeReport   0.000003     0.000003  HLT_HISinglePhoton40_Eta3p1_v1
+TimeReport   0.000003     0.000003  HLT_HISinglePhoton50_Eta3p1_v1
+TimeReport   0.000030     0.000030  HLT_HISinglePhoton60_Eta3p1_v1
+TimeReport   0.000007     0.000007  HLT_HISinglePhoton10_Eta3p1_Cent50_100_v1
+TimeReport   0.000006     0.000006  HLT_HISinglePhoton15_Eta3p1_Cent50_100_v1
+TimeReport   0.000006     0.000006  HLT_HISinglePhoton20_Eta3p1_Cent50_100_v1
+TimeReport   0.000012     0.000012  HLT_HISinglePhoton30_Eta3p1_Cent50_100_v1
+TimeReport   0.000015     0.000015  HLT_HISinglePhoton40_Eta3p1_Cent50_100_v1
+TimeReport   0.000009     0.000009  HLT_HISinglePhoton10_Eta3p1_Cent30_100_v1
+TimeReport   0.000007     0.000007  HLT_HISinglePhoton15_Eta3p1_Cent30_100_v1
+TimeReport   0.000007     0.000007  HLT_HISinglePhoton20_Eta3p1_Cent30_100_v1
+TimeReport   0.000009     0.000009  HLT_HISinglePhoton30_Eta3p1_Cent30_100_v1
+TimeReport   0.000012     0.000012  HLT_HISinglePhoton40_Eta3p1_Cent30_100_v1
+TimeReport   0.000014     0.000014  HLT_HIDoublePhoton15_Eta1p5_Mass50_1000_v1
+TimeReport   0.000020     0.000020  HLT_HIDoublePhoton15_Eta1p5_Mass50_1000_R9HECut_v1
+TimeReport   0.000013     0.000013  HLT_HIDoublePhoton15_Eta2p1_Mass50_1000_R9Cut_v1
+TimeReport   0.000061     0.000061  HLT_HIDoublePhoton15_Eta2p5_Mass50_1000_R9SigmaHECut_v1
+TimeReport   0.001390     0.001390  HLT_HIL2Mu3Eta2p5_PuAK4CaloJet40Eta2p1_v1
+TimeReport   0.000048     0.000048  HLT_HIL2Mu3Eta2p5_PuAK4CaloJet60Eta2p1_v1
+TimeReport   0.000041     0.000041  HLT_HIL2Mu3Eta2p5_PuAK4CaloJet80Eta2p1_v1
+TimeReport   0.000003     0.000003  HLT_HIL2Mu3Eta2p5_PuAK4CaloJet100Eta2p1_v1
+TimeReport   0.000003     0.000003  HLT_HIL2Mu3Eta2p5_HIPhoton10Eta1p5_v1
+TimeReport   0.000002     0.000002  HLT_HIL2Mu3Eta2p5_HIPhoton15Eta1p5_v1
+TimeReport   0.000002     0.000002  HLT_HIL2Mu3Eta2p5_HIPhoton20Eta1p5_v1
+TimeReport   0.000046     0.000046  HLT_HIL2Mu3Eta2p5_HIPhoton30Eta1p5_v1
+TimeReport   0.000040     0.000040  HLT_HIL2Mu3Eta2p5_HIPhoton40Eta1p5_v1
+TimeReport   0.000943     0.000943  HLTriggerFinalPath
+TimeReport   0.000107     0.000107  p
 TimeReport  per event     per exec  Name
 
 TimeReport -------End-Path   Summary ---[Real sec]----
 TimeReport  per event     per exec  Name
-TimeReport   0.006848     0.006848  HLTAnalyzerEndpath
-TimeReport   1.367298     1.367298  DQMOutput
-TimeReport   0.001060     0.001060  hltBitAnalysis
+TimeReport   0.005548     0.005548  HLTAnalyzerEndpath
+TimeReport   0.069878     0.069878  DQMOutput
+TimeReport   0.000747     0.000747  hltBitAnalysis
 TimeReport  per event     per exec  Name
 
 TimeReport ---------- Modules in Path: HLTriggerFirstPath ---[Real sec]----
 TimeReport  per event    per visit  Name
-TimeReport   0.000203     0.000203  hltGetConditions
-TimeReport   0.000038     0.000038  hltGetRaw
-TimeReport   0.000018     0.000018  hltBoolFalse
+TimeReport   0.000175     0.000175  hltGetConditions
+TimeReport   0.000031     0.000031  hltGetRaw
+TimeReport   0.000004     0.000004  hltBoolFalse
 
 TimeReport ---------- Modules in Path: HLT_HIPuAK4CaloJet40_Eta5p1_v1 ---[Real sec]----
 TimeReport  per event    per visit  Name
-TimeReport   0.000012     0.000012  hltTriggerType
-TimeReport   0.000357     0.000357  csctfDigis
-TimeReport   0.000077     0.000077  dttfDigis
-TimeReport   0.000283     0.000283  gctDigis
-TimeReport   0.000232     0.000232  gtDigis
-TimeReport   0.000057     0.000057  gtEvmDigis
-TimeReport   0.004453     0.004453  siPixelDigis
-TimeReport   0.018814     0.018814  siStripDigis
-TimeReport   0.005606     0.005606  ecalDigis
-TimeReport   0.000954     0.000954  ecalPreshowerDigis
-TimeReport   0.001605     0.001605  hcalDigis
-TimeReport   0.001988     0.001988  muonCSCDigis
-TimeReport   0.000094     0.000094  muonDTDigis
-TimeReport   0.000152     0.000152  muonRPCDigis
-TimeReport   0.000139     0.000139  castorDigis
-TimeReport   0.000045     0.000045  scalersRawToDigi
-TimeReport   0.000028     0.000028  tcdsDigis
+TimeReport   0.000002     0.000002  hltTriggerType
+TimeReport   0.000128     0.000128  csctfDigis
+TimeReport   0.000047     0.000047  dttfDigis
+TimeReport   0.000163     0.000163  gctDigis
+TimeReport   0.000178     0.000178  gtDigis
+TimeReport   0.000043     0.000043  gtEvmDigis
+TimeReport   0.002981     0.002981  siPixelDigis
+TimeReport   0.014439     0.014439  siStripDigis
+TimeReport   0.004130     0.004130  ecalDigis
+TimeReport   0.000702     0.000702  ecalPreshowerDigis
+TimeReport   0.001120     0.001120  hcalDigis
+TimeReport   0.001576     0.001576  muonCSCDigis
+TimeReport   0.000068     0.000068  muonDTDigis
+TimeReport   0.000120     0.000120  muonRPCDigis
+TimeReport   0.000097     0.000097  castorDigis
+TimeReport   0.000038     0.000038  scalersRawToDigi
+TimeReport   0.000016     0.000016  tcdsDigis
 TimeReport   0.000000     0.000000  hcalDigis
-TimeReport   0.005015     0.005015  simHcalTriggerPrimitiveDigis
+TimeReport   0.003689     0.003689  simHcalTriggerPrimitiveDigis
 TimeReport   0.000000     0.000000  ecalDigis
-TimeReport   0.005198     0.005198  simRctDigis
-TimeReport   0.000244     0.000244  simRctUpgradeFormatDigis
-TimeReport   0.005852     0.005852  simCaloStage1Digis
-TimeReport   0.000092     0.000092  simCaloStage1FinalDigis
-TimeReport   0.000122     0.000122  simCaloStage1LegacyFormatDigis
-TimeReport   0.002737     0.002737  rpcTriggerReEmulDigis
-TimeReport   0.007437     0.007437  cscReEmulTriggerPrimitiveDigis
-TimeReport   0.012175     0.012175  csctfReEmulTrackDigis
-TimeReport   0.000021     0.000021  csctfReEmulDigis
-TimeReport   0.001963     0.001963  dttfReEmulDigis
-TimeReport   0.000661     0.000661  gmtReEmulDigis
-TimeReport   0.001611     0.001611  simGtDigis
-TimeReport   0.001379     0.001379  hltL1GtObjectMap
-TimeReport   0.000174     0.000174  hltL1extraParticles
-TimeReport   0.000053     0.000053  hltScalersRawToDigi
-TimeReport   0.000056     0.000056  hltOnlineBeamSpot
-TimeReport   0.000282     0.000282  hltL1sL1MinimumBiasHF1ANDv1
-TimeReport   0.000003     0.000003  hltPreHIPuAK4CaloJet40Eta5p1
-TimeReport   0.005734     0.005734  hltEcalDigis
-TimeReport   0.067265     0.067265  hltEcalUncalibRecHit
-TimeReport   0.000556     0.000556  hltEcalDetIdToBeRecovered
-TimeReport   0.007002     0.007002  hltEcalRecHit
-TimeReport   0.001471     0.001471  hltHcalDigis
-TimeReport   0.002711     0.002711  hltHbherecoMethod0
-TimeReport   0.002738     0.002738  hltHfrecoMethod0
-TimeReport   0.000348     0.000348  hltHorecoMethod0
-TimeReport   0.006358     0.006358  hltTowerMakerHcalMethod0ForAll
-TimeReport   0.066429     0.066429  hltPuAK4CaloJets
-TimeReport   0.000330     0.000330  hltPuAK4CaloJetsIDPassed
-TimeReport   0.000765     0.000765  hltFixedGridRhoFastjetAllCaloHcalMethod0
-TimeReport   0.000057     0.000057  hltAK4CaloRelativeCorrector
-TimeReport   0.000012     0.000012  hltAK4CaloAbsoluteCorrector
-TimeReport   0.000014     0.000014  hltPuAK4CaloCorrector
-TimeReport   0.002008     0.002008  hltPuAK4CaloJetsCorrected
-TimeReport   0.000110     0.000110  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000038     0.000038  hltSinglePuAK4CaloJet40Eta5p1
-TimeReport   0.010489     0.020368  hltSiStripRawToDigi
-TimeReport   0.000053     0.000102  hltSiStripZeroSuppression
-TimeReport   0.039240     0.076195  hltSiStripDigiToZSRaw
-TimeReport   0.122518     0.237899  hltSiStripRawDigiToVirginRaw
-TimeReport   0.012444     0.024163  virginRawDataRepacker
-TimeReport   0.000975     0.001894  rawDataRepacker
+TimeReport   0.003594     0.003594  simRctDigis
+TimeReport   0.000154     0.000154  simRctUpgradeFormatDigis
+TimeReport   0.004977     0.004977  simCaloStage1Digis
+TimeReport   0.000071     0.000071  simCaloStage1FinalDigis
+TimeReport   0.000100     0.000100  simCaloStage1LegacyFormatDigis
+TimeReport   0.001642     0.001642  rpcTriggerReEmulDigis
+TimeReport   0.005950     0.005950  cscReEmulTriggerPrimitiveDigis
+TimeReport   0.009351     0.009351  csctfReEmulTrackDigis
+TimeReport   0.000018     0.000018  csctfReEmulDigis
+TimeReport   0.000186     0.000186  dttfReEmulDigis
+TimeReport   0.000462     0.000462  gmtReEmulDigis
+TimeReport   0.001170     0.001170  simGtDigis
+TimeReport   0.001031     0.001031  hltL1GtObjectMap
+TimeReport   0.000130     0.000130  hltL1extraParticles
+TimeReport   0.000036     0.000036  hltScalersRawToDigi
+TimeReport   0.000026     0.000026  hltOnlineBeamSpot
+TimeReport   0.000066     0.000066  hltL1sL1MinimumBiasHF1ANDv1
+TimeReport   0.000002     0.000002  hltPreHIPuAK4CaloJet40Eta5p1
+TimeReport   0.004138     0.004138  hltEcalDigis
+TimeReport   0.044403     0.044403  hltEcalUncalibRecHit
+TimeReport   0.000409     0.000409  hltEcalDetIdToBeRecovered
+TimeReport   0.004996     0.004996  hltEcalRecHit
+TimeReport   0.001128     0.001128  hltHcalDigis
+TimeReport   0.001861     0.001861  hltHbherecoMethod0
+TimeReport   0.001798     0.001798  hltHfrecoMethod0
+TimeReport   0.000249     0.000249  hltHorecoMethod0
+TimeReport   0.004561     0.004561  hltTowerMakerHcalMethod0ForAll
+TimeReport   0.048530     0.048530  hltPuAK4CaloJets
+TimeReport   0.000245     0.000245  hltPuAK4CaloJetsIDPassed
+TimeReport   0.000615     0.000615  hltFixedGridRhoFastjetAllCaloHcalMethod0
+TimeReport   0.000028     0.000028  hltAK4CaloRelativeCorrector
+TimeReport   0.000009     0.000009  hltAK4CaloAbsoluteCorrector
+TimeReport   0.000012     0.000012  hltPuAK4CaloCorrector
+TimeReport   0.000133     0.000133  hltPuAK4CaloJetsCorrected
+TimeReport   0.000070     0.000070  hltPuAK4CaloJetsCorrectedIDPassed
+TimeReport   0.000028     0.000028  hltSinglePuAK4CaloJet40Eta5p1
+TimeReport   0.008249     0.016017  hltSiStripRawToDigi
+TimeReport   0.000043     0.000083  hltSiStripZeroSuppression
+TimeReport   0.029682     0.057636  hltSiStripDigiToZSRaw
+TimeReport   0.093494     0.181541  hltSiStripRawDigiToVirginRaw
+TimeReport   0.010051     0.019516  virginRawDataRepacker
+TimeReport   0.000751     0.001457  rawDataRepacker
 TimeReport   0.000001     0.000002  hltBoolEnd
 
 TimeReport ---------- Modules in Path: HLT_HIPuAK4CaloJet60_Eta5p1_v1 ---[Real sec]----
@@ -5510,8 +5717,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000125     0.000125  hltL1sL1SingleJet28BptxAND
-TimeReport   0.000001     0.000003  hltPreHIPuAK4CaloJet60Eta5p1
+TimeReport   0.000089     0.000089  hltL1sL1SingleJet28BptxAND
+TimeReport   0.000001     0.000002  hltPreHIPuAK4CaloJet60Eta5p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -5529,7 +5736,7 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000008     0.000022  hltSinglePuAK4CaloJet60Eta5p1
+TimeReport   0.000007     0.000020  hltSinglePuAK4CaloJet60Eta5p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -5576,8 +5783,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000041     0.000041  hltL1sL1SingleJet44BptxAND
-TimeReport   0.000000     0.000002  hltPreHIPuAK4CaloJet80Eta5p1
+TimeReport   0.000032     0.000032  hltL1sL1SingleJet44BptxAND
+TimeReport   0.000000     0.000001  hltPreHIPuAK4CaloJet80Eta5p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -5595,7 +5802,7 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000001     0.000015  hltSinglePuAK4CaloJet80Eta5p1
+TimeReport   0.000001     0.000013  hltSinglePuAK4CaloJet80Eta5p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -5642,8 +5849,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000034     0.000034  hltL1sL1SingleJet56BptxAND
-TimeReport   0.000000     0.000002  hltPreHIPuAK4CaloJet100Eta5p1
+TimeReport   0.000027     0.000027  hltL1sL1SingleJet56BptxAND
+TimeReport   0.000000     0.000001  hltPreHIPuAK4CaloJet100Eta5p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -5661,7 +5868,7 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000001     0.000018  hltSinglePuAK4CaloJet100Eta5p1
+TimeReport   0.000001     0.000015  hltSinglePuAK4CaloJet100Eta5p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -5709,7 +5916,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleJet56BptxAND
-TimeReport   0.000000     0.000002  hltPreHIPuAK4CaloJet110Eta5p1
+TimeReport   0.000000     0.000001  hltPreHIPuAK4CaloJet110Eta5p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -5727,7 +5934,7 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000001     0.000020  hltSinglePuAK4CaloJet110Eta5p1
+TimeReport   0.000000     0.000014  hltSinglePuAK4CaloJet110Eta5p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -5775,7 +5982,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleJet56BptxAND
-TimeReport   0.000000     0.000002  hltPreHIPuAK4CaloJet120Eta5p1
+TimeReport   0.000000     0.000001  hltPreHIPuAK4CaloJet120Eta5p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -5793,7 +6000,7 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000001     0.000017  hltSinglePuAK4CaloJet120Eta5p1
+TimeReport   0.000000     0.000012  hltSinglePuAK4CaloJet120Eta5p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -5840,7 +6047,7 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000033     0.000033  hltL1sL1SingleJet64BptxAND
+TimeReport   0.000026     0.000026  hltL1sL1SingleJet64BptxAND
 TimeReport   0.000000     0.000001  hltPreHIPuAK4CaloJet150Eta5p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
@@ -5859,7 +6066,7 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000000     0.000020  hltSinglePuAK4CaloJet150Eta5p1
+TimeReport   0.000000     0.000023  hltSinglePuAK4CaloJet150Eta5p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -5906,8 +6113,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000219     0.000219  hltL1sL1SingleJet16Centext30100BptxAND
-TimeReport   0.000002     0.000002  hltPreHIPuAK4CaloJet40Eta5p1Cent30100
+TimeReport   0.000090     0.000090  hltL1sL1SingleJet16Centext30100BptxAND
+TimeReport   0.000001     0.000002  hltPreHIPuAK4CaloJet40Eta5p1Cent30100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -5972,8 +6179,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000070     0.000070  hltL1sL1SingleJet28Centext30100BptxAND
-TimeReport   0.000001     0.000002  hltPreHIPuAK4CaloJet60Eta5p1Cent30100
+TimeReport   0.000056     0.000056  hltL1sL1SingleJet28Centext30100BptxAND
+TimeReport   0.000001     0.000001  hltPreHIPuAK4CaloJet60Eta5p1Cent30100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -5991,7 +6198,7 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000010     0.000013  hltSinglePuAK4CaloJet60Eta5p1
+TimeReport   0.000009     0.000011  hltSinglePuAK4CaloJet60Eta5p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -6038,8 +6245,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000063     0.000063  hltL1sL1SingleJet44Centext30100BptxAND
-TimeReport   0.000001     0.000002  hltPreHIPuAK4CaloJet80Eta5p1Cent30100
+TimeReport   0.000050     0.000050  hltL1sL1SingleJet44Centext30100BptxAND
+TimeReport   0.000001     0.000001  hltPreHIPuAK4CaloJet80Eta5p1Cent30100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -6057,7 +6264,7 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000010     0.000014  hltSinglePuAK4CaloJet80Eta5p1
+TimeReport   0.000008     0.000011  hltSinglePuAK4CaloJet80Eta5p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -6105,7 +6312,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleJet44Centext30100BptxAND
-TimeReport   0.000001     0.000002  hltPreHIPuAK4CaloJet100Eta5p1Cent30100
+TimeReport   0.000001     0.000001  hltPreHIPuAK4CaloJet100Eta5p1Cent30100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -6123,7 +6330,7 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000010     0.000013  hltSinglePuAK4CaloJet100Eta5p1
+TimeReport   0.000008     0.000012  hltSinglePuAK4CaloJet100Eta5p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -6170,8 +6377,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000049     0.000049  hltL1sL1SingleJet16Centext50100BptxAND
-TimeReport   0.000000     0.000002  hltPreHIPuAK4CaloJet40Eta5p1Cent50100
+TimeReport   0.000040     0.000040  hltL1sL1SingleJet16Centext50100BptxAND
+TimeReport   0.000000     0.000001  hltPreHIPuAK4CaloJet40Eta5p1Cent50100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -6236,8 +6443,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000060     0.000060  hltL1sL1SingleJet28Centext50100BptxAND
-TimeReport   0.000001     0.000002  hltPreHIPuAK4CaloJet60Eta5p1Cent50100
+TimeReport   0.000046     0.000046  hltL1sL1SingleJet28Centext50100BptxAND
+TimeReport   0.000001     0.000001  hltPreHIPuAK4CaloJet60Eta5p1Cent50100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -6302,8 +6509,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000059     0.000059  hltL1sL1SingleJet44Centext50100BptxAND
-TimeReport   0.000001     0.000002  hltPreHIPuAK4CaloJet80Eta5p1Cent50100
+TimeReport   0.000046     0.000046  hltL1sL1SingleJet44Centext50100BptxAND
+TimeReport   0.000001     0.000001  hltPreHIPuAK4CaloJet80Eta5p1Cent50100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -6369,7 +6576,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleJet44Centext50100BptxAND
-TimeReport   0.000001     0.000002  hltPreHIPuAK4CaloJet100Eta5p1Cent50100
+TimeReport   0.000001     0.000001  hltPreHIPuAK4CaloJet100Eta5p1Cent50100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -6435,7 +6642,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleJet44BptxAND
-TimeReport   0.000000     0.000002  hltPreHIPuAK4CaloJet80Jet35Eta1p1
+TimeReport   0.000000     0.000001  hltPreHIPuAK4CaloJet80Jet35Eta1p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -6453,8 +6660,8 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000001     0.000018  hltSinglePuAK4CaloJet80Eta1p1
-TimeReport   0.000000     0.000013  hltDoublePuAK4CaloJet35Eta1p1
+TimeReport   0.000001     0.000015  hltSinglePuAK4CaloJet80Eta1p1
+TimeReport   0.000000     0.000014  hltDoublePuAK4CaloJet35Eta1p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -6502,7 +6709,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleJet44BptxAND
-TimeReport   0.000000     0.000002  hltPreHIPuAK4CaloJet80Jet35Eta0p7
+TimeReport   0.000000     0.000001  hltPreHIPuAK4CaloJet80Jet35Eta0p7
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -6520,8 +6727,8 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000001     0.000015  hltSinglePuAK4CaloJet80Eta0p7
-TimeReport   0.000000     0.000033  hltDoublePuAK4CaloJet35Eta0p7
+TimeReport   0.000001     0.000011  hltSinglePuAK4CaloJet80Eta0p7
+TimeReport   0.000000     0.000025  hltDoublePuAK4CaloJet35Eta0p7
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -6569,7 +6776,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleJet56BptxAND
-TimeReport   0.000000     0.000002  hltPreHIPuAK4CaloJet100Jet35Eta1p1
+TimeReport   0.000000     0.000001  hltPreHIPuAK4CaloJet100Jet35Eta1p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -6587,7 +6794,7 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000001     0.000024  hltSinglePuAK4CaloJet100Eta1p1
+TimeReport   0.000000     0.000012  hltSinglePuAK4CaloJet100Eta1p1
 TimeReport   0.000000     0.000000  hltDoublePuAK4CaloJet35Eta1p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
@@ -6636,7 +6843,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleJet56BptxAND
-TimeReport   0.000000     0.000002  hltPreHIPuAK4CaloJet100Jet35Eta0p7
+TimeReport   0.000000     0.000001  hltPreHIPuAK4CaloJet100Jet35Eta0p7
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -6654,7 +6861,7 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000001     0.000018  hltSinglePuAK4CaloJet100Eta0p7
+TimeReport   0.000000     0.000012  hltSinglePuAK4CaloJet100Eta0p7
 TimeReport   0.000000     0.000000  hltDoublePuAK4CaloJet35Eta0p7
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
@@ -6703,7 +6910,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleJet44BptxAND
-TimeReport   0.000000     0.000002  hltPreHIPuAK4CaloJet804545Eta2p1
+TimeReport   0.000000     0.000001  hltPreHIPuAK4CaloJet804545Eta2p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -6721,8 +6928,8 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000001     0.000017  hltTriplePuAK4CaloJet45Eta2p1
-TimeReport   0.000000     0.000026  hltSinglePuAK4CaloJet80Eta2p1
+TimeReport   0.000001     0.000015  hltTriplePuAK4CaloJet45Eta2p1
+TimeReport   0.000000     0.000038  hltSinglePuAK4CaloJet80Eta2p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -6770,7 +6977,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1MinimumBiasHF1ANDv1
-TimeReport   0.000002     0.000002  hltPreHISinglePhoton10Eta1p5
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton10Eta1p5
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -6780,19 +6987,19 @@ TimeReport   0.000000     0.000000  hltHbherecoMethod0
 TimeReport   0.000000     0.000000  hltHfrecoMethod0
 TimeReport   0.000000     0.000000  hltHorecoMethod0
 TimeReport   0.000000     0.000000  hltTowerMakerHcalMethod0ForAll
-TimeReport   0.030835     0.030835  hltIslandBasicClustersHI
-TimeReport   0.100247     0.100247  hltHiIslandSuperClustersHI
-TimeReport   0.001614     0.001614  hltHiCorrectedIslandBarrelSuperClustersHI
-TimeReport   0.002139     0.002139  hltHiCorrectedIslandEndcapSuperClustersHI
-TimeReport   0.000202     0.000202  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
-TimeReport   0.000159     0.000159  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000026     0.000026  hltHIPhoton10Eta1p5
-TimeReport   0.001110     0.004269  hltSiStripRawToDigi
-TimeReport   0.000003     0.000012  hltSiStripZeroSuppression
-TimeReport   0.003086     0.011871  hltSiStripDigiToZSRaw
-TimeReport   0.010470     0.040269  hltSiStripRawDigiToVirginRaw
-TimeReport   0.001020     0.003922  virginRawDataRepacker
-TimeReport   0.000094     0.000362  rawDataRepacker
+TimeReport   0.021668     0.021668  hltIslandBasicClustersHI
+TimeReport   0.079950     0.079950  hltHiIslandSuperClustersHI
+TimeReport   0.001119     0.001119  hltHiCorrectedIslandBarrelSuperClustersHI
+TimeReport   0.001635     0.001635  hltHiCorrectedIslandEndcapSuperClustersHI
+TimeReport   0.000173     0.000173  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
+TimeReport   0.000060     0.000060  hltRecoHIEcalWithCleaningCandidate
+TimeReport   0.000023     0.000023  hltHIPhoton10Eta1p5
+TimeReport   0.000813     0.003127  hltSiStripRawToDigi
+TimeReport   0.000003     0.000011  hltSiStripZeroSuppression
+TimeReport   0.002279     0.008767  hltSiStripDigiToZSRaw
+TimeReport   0.007059     0.027148  hltSiStripRawDigiToVirginRaw
+TimeReport   0.000750     0.002884  virginRawDataRepacker
+TimeReport   0.000072     0.000277  rawDataRepacker
 TimeReport   0.000000     0.000000  hltBoolEnd
 
 TimeReport ---------- Modules in Path: HLT_HISinglePhoton15_Eta1p5_v1 ---[Real sec]----
@@ -6850,7 +7057,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000017     0.000017  hltHIPhoton15Eta1p5
+TimeReport   0.000013     0.000013  hltHIPhoton15Eta1p5
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -6898,7 +7105,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1MinimumBiasHF1ANDv1
-TimeReport   0.000002     0.000002  hltPreHISinglePhoton20Eta1p5
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton20Eta1p5
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -6914,7 +7121,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000014     0.000014  hltHIPhoton20Eta1p5
+TimeReport   0.000011     0.000011  hltHIPhoton20Eta1p5
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -6961,8 +7168,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000104     0.000104  hltL1sL1SingleEG7BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton30Eta1p5
+TimeReport   0.000086     0.000086  hltL1sL1SingleEG7BptxAND
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton30Eta1p5
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -6978,7 +7185,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000008     0.000013  hltHIPhoton30Eta1p5
+TimeReport   0.000008     0.000012  hltHIPhoton30Eta1p5
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -7025,8 +7232,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000037     0.000037  hltL1sL1SingleEG21BptxAND
-TimeReport   0.000000     0.000002  hltPreHISinglePhoton40Eta1p5
+TimeReport   0.000029     0.000029  hltL1sL1SingleEG21BptxAND
+TimeReport   0.000000     0.000001  hltPreHISinglePhoton40Eta1p5
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -7090,7 +7297,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG21BptxAND
-TimeReport   0.000000     0.000002  hltPreHISinglePhoton50Eta1p5
+TimeReport   0.000000     0.000001  hltPreHISinglePhoton50Eta1p5
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -7106,7 +7313,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000001     0.000018  hltHIPhoton50Eta1p5
+TimeReport   0.000001     0.000015  hltHIPhoton50Eta1p5
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -7153,8 +7360,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000047     0.000047  hltL1sL1SingleEG30BptxAND
-TimeReport   0.000002     0.000002  hltPreHISinglePhoton60Eta1p5
+TimeReport   0.000033     0.000033  hltL1sL1SingleEG30BptxAND
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton60Eta1p5
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -7170,7 +7377,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000015     0.000015  hltHIPhoton60Eta1p5
+TimeReport   0.000012     0.000012  hltHIPhoton60Eta1p5
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -7217,8 +7424,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000112     0.000112  hltL1sL1SingleEG3Centext50100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton10Eta1p5Cent50100
+TimeReport   0.000055     0.000055  hltL1sL1SingleEG3Centext50100BptxAND
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton10Eta1p5Cent50100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -7282,7 +7489,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG3Centext50100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton15Eta1p5Cent50100
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton15Eta1p5Cent50100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -7346,7 +7553,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG3Centext50100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton20Eta1p5Cent50100
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton20Eta1p5Cent50100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -7409,8 +7616,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000064     0.000064  hltL1sL1SingleEG7Centext50100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton30Eta1p5Cent50100
+TimeReport   0.000051     0.000051  hltL1sL1SingleEG7Centext50100BptxAND
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton30Eta1p5Cent50100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -7426,7 +7633,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000004     0.000007  hltHIPhoton30Eta1p5
+TimeReport   0.000003     0.000006  hltHIPhoton30Eta1p5
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -7473,8 +7680,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000060     0.000060  hltL1sL1SingleEG21Centext50100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton40Eta1p5Cent50100
+TimeReport   0.000046     0.000046  hltL1sL1SingleEG21Centext50100BptxAND
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton40Eta1p5Cent50100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -7490,7 +7697,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000007     0.000014  hltHIPhoton40Eta1p5
+TimeReport   0.000006     0.000011  hltHIPhoton40Eta1p5
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -7537,8 +7744,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000090     0.000090  hltL1sL1SingleEG3Centext30100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton10Eta1p5Cent30100
+TimeReport   0.000059     0.000059  hltL1sL1SingleEG3Centext30100BptxAND
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton10Eta1p5Cent30100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -7602,7 +7809,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG3Centext30100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton15Eta1p5Cent30100
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton15Eta1p5Cent30100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -7666,7 +7873,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG3Centext30100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton20Eta1p5Cent30100
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton20Eta1p5Cent30100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -7729,8 +7936,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000071     0.000071  hltL1sL1SingleEG7Centext30100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton30Eta1p5Cent30100
+TimeReport   0.000057     0.000057  hltL1sL1SingleEG7Centext30100BptxAND
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton30Eta1p5Cent30100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -7793,8 +8000,8 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000062     0.000062  hltL1sL1SingleEG21Centext30100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton40Eta1p5Cent30100
+TimeReport   0.000050     0.000050  hltL1sL1SingleEG21Centext30100BptxAND
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton40Eta1p5Cent30100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -7810,7 +8017,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000003     0.000004  hltHIPhoton40Eta1p5
+TimeReport   0.000003     0.000003  hltHIPhoton40Eta1p5
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -7858,7 +8065,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG21BptxAND
-TimeReport   0.000000     0.000002  hltPreHISinglePhoton40Eta2p1
+TimeReport   0.000000     0.000001  hltPreHISinglePhoton40Eta2p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -7874,7 +8081,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000001     0.000017  hltHIPhoton40Eta2p1
+TimeReport   0.000001     0.000016  hltHIPhoton40Eta2p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -7922,7 +8129,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1MinimumBiasHF1ANDv1
-TimeReport   0.000002     0.000002  hltPreHISinglePhoton10Eta3p1
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton10Eta3p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -7938,13 +8145,13 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000017     0.000017  hltHIPhoton10Eta3p1
-TimeReport   0.003259     0.005619  hltSiStripRawToDigi
-TimeReport   0.000013     0.000023  hltSiStripZeroSuppression
-TimeReport   0.011322     0.019520  hltSiStripDigiToZSRaw
-TimeReport   0.035489     0.061188  hltSiStripRawDigiToVirginRaw
-TimeReport   0.003886     0.006700  virginRawDataRepacker
-TimeReport   0.000300     0.000518  rawDataRepacker
+TimeReport   0.000015     0.000015  hltHIPhoton10Eta3p1
+TimeReport   0.002502     0.004314  hltSiStripRawToDigi
+TimeReport   0.000011     0.000018  hltSiStripZeroSuppression
+TimeReport   0.008396     0.014475  hltSiStripDigiToZSRaw
+TimeReport   0.026095     0.044992  hltSiStripRawDigiToVirginRaw
+TimeReport   0.002714     0.004679  virginRawDataRepacker
+TimeReport   0.000212     0.000366  rawDataRepacker
 TimeReport   0.000000     0.000001  hltBoolEnd
 
 TimeReport ---------- Modules in Path: HLT_HISinglePhoton15_Eta3p1_v1 ---[Real sec]----
@@ -7986,7 +8193,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1MinimumBiasHF1ANDv1
-TimeReport   0.000002     0.000002  hltPreHISinglePhoton15Eta3p1
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton15Eta3p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -8002,7 +8209,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000019     0.000019  hltHIPhoton15Eta3p1
+TimeReport   0.000015     0.000015  hltHIPhoton15Eta3p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -8050,7 +8257,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1MinimumBiasHF1ANDv1
-TimeReport   0.000002     0.000002  hltPreHISinglePhoton20Eta3p1
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton20Eta3p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -8066,7 +8273,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000014     0.000014  hltHIPhoton20Eta3p1
+TimeReport   0.000012     0.000012  hltHIPhoton20Eta3p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -8114,7 +8321,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG7BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton30Eta3p1
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton30Eta3p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -8130,7 +8337,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000009     0.000014  hltHIPhoton30Eta3p1
+TimeReport   0.000008     0.000012  hltHIPhoton30Eta3p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -8178,7 +8385,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG21BptxAND
-TimeReport   0.000000     0.000002  hltPreHISinglePhoton40Eta3p1
+TimeReport   0.000000     0.000001  hltPreHISinglePhoton40Eta3p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -8194,7 +8401,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000001     0.000017  hltHIPhoton40Eta3p1
+TimeReport   0.000001     0.000013  hltHIPhoton40Eta3p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -8242,7 +8449,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG21BptxAND
-TimeReport   0.000000     0.000002  hltPreHISinglePhoton50Eta3p1
+TimeReport   0.000000     0.000001  hltPreHISinglePhoton50Eta3p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -8258,7 +8465,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000001     0.000015  hltHIPhoton50Eta3p1
+TimeReport   0.000001     0.000013  hltHIPhoton50Eta3p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -8306,7 +8513,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG30BptxAND
-TimeReport   0.000002     0.000002  hltPreHISinglePhoton60Eta3p1
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton60Eta3p1
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -8322,7 +8529,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000014     0.000014  hltHIPhoton60Eta3p1
+TimeReport   0.000011     0.000011  hltHIPhoton60Eta3p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -8370,7 +8577,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG3Centext50100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton10Eta3p1Cent50100
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton10Eta3p1Cent50100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -8498,7 +8705,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG3Centext50100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton20Eta3p1Cent50100
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton20Eta3p1Cent50100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -8562,7 +8769,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG7Centext50100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton30Eta3p1Cent50100
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton30Eta3p1Cent50100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -8578,7 +8785,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000004     0.000008  hltHIPhoton30Eta3p1
+TimeReport   0.000003     0.000006  hltHIPhoton30Eta3p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -8626,7 +8833,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG21Centext50100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton40Eta3p1Cent50100
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton40Eta3p1Cent50100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -8642,7 +8849,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000017     0.000033  hltHIPhoton40Eta3p1
+TimeReport   0.000006     0.000011  hltHIPhoton40Eta3p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -8690,7 +8897,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG3Centext30100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton10Eta3p1Cent30100
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton10Eta3p1Cent30100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -8882,7 +9089,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG7Centext30100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton30Eta3p1Cent30100
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton30Eta3p1Cent30100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -8946,7 +9153,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG21Centext30100BptxAND
-TimeReport   0.000001     0.000002  hltPreHISinglePhoton40Eta3p1Cent30100
+TimeReport   0.000001     0.000001  hltPreHISinglePhoton40Eta3p1Cent30100
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -8962,7 +9169,7 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000003     0.000005  hltHIPhoton40Eta3p1
+TimeReport   0.000003     0.000004  hltHIPhoton40Eta3p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -9010,7 +9217,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG21BptxAND
-TimeReport   0.000000     0.000002  hltPreHIDoublePhoton15Eta1p5Mass501000
+TimeReport   0.000000     0.000001  hltPreHIDoublePhoton15Eta1p5Mass501000
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -9026,8 +9233,8 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000001     0.000019  hltHIDoublePhoton15Eta1p5
-TimeReport   0.000251     0.012531  hltHIDoublePhoton15Eta1p5Mass501000Filter
+TimeReport   0.000001     0.000017  hltHIDoublePhoton15Eta1p5
+TimeReport   0.000010     0.000497  hltHIDoublePhoton15Eta1p5Mass501000Filter
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -9075,7 +9282,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG21BptxAND
-TimeReport   0.000000     0.000002  hltPreHIDoublePhoton15Eta1p5Mass501000R9HECut
+TimeReport   0.000000     0.000001  hltPreHIDoublePhoton15Eta1p5Mass501000R9HECut
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -9093,10 +9300,10 @@ TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperCluste
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
 TimeReport   0.000000     0.000000  hltHIDoublePhoton15Eta1p5
 TimeReport   0.000000     0.000000  hltHIDoublePhoton15Eta1p5Mass501000Filter
-TimeReport   0.000010     0.001979  hltHIEgammaR9ID
-TimeReport   0.000000     0.000053  hltHIEgammaR9IDDoublePhoton15Eta1p5
-TimeReport   0.000015     0.002945  hltHIEgammaHoverE
-TimeReport   0.000000     0.000042  hltHIEgammaHOverEDoublePhoton15Eta1p5
+TimeReport   0.000007     0.001398  hltHIEgammaR9ID
+TimeReport   0.000000     0.000046  hltHIEgammaR9IDDoublePhoton15Eta1p5
+TimeReport   0.000009     0.001882  hltHIEgammaHoverE
+TimeReport   0.000000     0.000031  hltHIEgammaHOverEDoublePhoton15Eta1p5
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -9144,7 +9351,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG21BptxAND
-TimeReport   0.000000     0.000002  hltPreHIDoublePhoton15Eta2p1Mass501000R9Cut
+TimeReport   0.000000     0.000001  hltPreHIDoublePhoton15Eta2p1Mass501000R9Cut
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -9160,10 +9367,10 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000001     0.000025  hltHIDoublePhoton15Eta2p1
-TimeReport   0.000001     0.000059  hltHIDoublePhoton15Eta2p1Mass501000Filter
-TimeReport   0.000023     0.002273  hltHIEgammaR9ID
-TimeReport   0.000002     0.000247  hltHIEgammaR9IDDoublePhoton15Eta2p1
+TimeReport   0.000001     0.000014  hltHIDoublePhoton15Eta2p1
+TimeReport   0.000001     0.000045  hltHIDoublePhoton15Eta2p1Mass501000Filter
+TimeReport   0.000006     0.000645  hltHIEgammaR9ID
+TimeReport   0.000002     0.000197  hltHIEgammaR9IDDoublePhoton15Eta2p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -9211,7 +9418,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleEG21BptxAND
-TimeReport   0.000000     0.000002  hltPreHIDoublePhoton15Eta2p5Mass501000R9SigmaHECut
+TimeReport   0.000000     0.000001  hltPreHIDoublePhoton15Eta2p5Mass501000R9SigmaHECut
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -9227,14 +9434,14 @@ TimeReport   0.000000     0.000000  hltHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltHiCorrectedIslandEndcapSuperClustersHI
 TimeReport   0.000000     0.000000  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
 TimeReport   0.000000     0.000000  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000001     0.000020  hltHIDoublePhoton15Eta2p5
-TimeReport   0.000001     0.000051  hltHIDoublePhoton15Eta2p5Mass501000Filter
+TimeReport   0.000001     0.000015  hltHIDoublePhoton15Eta2p5
+TimeReport   0.000001     0.000040  hltHIDoublePhoton15Eta2p5Mass501000Filter
 TimeReport   0.000000     0.000000  hltHIEgammaR9ID
-TimeReport   0.000000     0.000025  hltHIEgammaR9IDDoublePhoton15Eta2p5
-TimeReport   0.000083     0.016695  hltHIEgammaSigmaIEtaIEtaProducer
-TimeReport   0.000000     0.000063  hltHIEgammaSigmaIEtaIEtaDoublePhoton15Eta2p5
+TimeReport   0.000000     0.000029  hltHIEgammaR9IDDoublePhoton15Eta2p5
+TimeReport   0.000056     0.011231  hltHIEgammaSigmaIEtaIEtaProducer
+TimeReport   0.000000     0.000033  hltHIEgammaSigmaIEtaIEtaDoublePhoton15Eta2p5
 TimeReport   0.000000     0.000000  hltHIEgammaHoverE
-TimeReport   0.000000     0.000042  hltHIEgammaHOverEDoublePhoton15Eta2p5
+TimeReport   0.000000     0.000033  hltHIEgammaHOverEDoublePhoton15Eta2p5
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -9281,22 +9488,22 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000047     0.000047  hltL1sL1SingleMu3MinBiasHF1AND
-TimeReport   0.000000     0.000002  hltPreHIL2Mu3Eta2p5PuAK4CaloJet40Eta2p1
-TimeReport   0.000052     0.000611  hltHIL1SingleMu3MinBiasFiltered
-TimeReport   0.000009     0.000110  hltMuonDTDigis
-TimeReport   0.000020     0.000230  hltDt1DRecHits
-TimeReport   0.000204     0.002405  hltDt4DSegments
-TimeReport   0.000363     0.004274  hltMuonCSCDigis
-TimeReport   0.000261     0.003072  hltCsc2DRecHits
-TimeReport   0.000126     0.001479  hltCscSegments
-TimeReport   0.000015     0.000181  hltMuonRPCDigis
-TimeReport   0.000014     0.000160  hltRpcRecHits
-TimeReport   0.000192     0.002264  hltL2OfflineMuonSeeds
-TimeReport   0.000070     0.000818  hltL2MuonSeeds
-TimeReport   0.000917     0.010792  hltL2Muons
-TimeReport   0.000004     0.000049  hltL2MuonCandidates
-TimeReport   0.000012     0.000143  hltHIL2Mu3N10HitQL2Filtered
+TimeReport   0.000037     0.000037  hltL1sL1SingleMu3MinBiasHF1AND
+TimeReport   0.000000     0.000001  hltPreHIL2Mu3Eta2p5PuAK4CaloJet40Eta2p1
+TimeReport   0.000051     0.000598  hltHIL1SingleMu3MinBiasFiltered
+TimeReport   0.000008     0.000091  hltMuonDTDigis
+TimeReport   0.000014     0.000168  hltDt1DRecHits
+TimeReport   0.000087     0.001028  hltDt4DSegments
+TimeReport   0.000258     0.003035  hltMuonCSCDigis
+TimeReport   0.000190     0.002235  hltCsc2DRecHits
+TimeReport   0.000069     0.000816  hltCscSegments
+TimeReport   0.000011     0.000134  hltMuonRPCDigis
+TimeReport   0.000010     0.000121  hltRpcRecHits
+TimeReport   0.000064     0.000747  hltL2OfflineMuonSeeds
+TimeReport   0.000045     0.000533  hltL2MuonSeeds
+TimeReport   0.000502     0.005902  hltL2Muons
+TimeReport   0.000003     0.000034  hltL2MuonCandidates
+TimeReport   0.000005     0.000063  hltHIL2Mu3N10HitQL2Filtered
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -9314,7 +9521,7 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000001     0.000024  hltSinglePuAK4CaloJet40Eta2p1
+TimeReport   0.000001     0.000020  hltSinglePuAK4CaloJet40Eta2p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -9361,9 +9568,9 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000036     0.000036  hltL1sL1SingleMu3SingleCenJet28
+TimeReport   0.000029     0.000029  hltL1sL1SingleMu3SingleCenJet28
 TimeReport   0.000000     0.000002  hltPreHIL2Mu3Eta2p5PuAK4CaloJet60Eta2p1
-TimeReport   0.000001     0.000020  hltHIL1SingleMu3CenJet28Filtered
+TimeReport   0.000001     0.000017  hltHIL1SingleMu3CenJet28Filtered
 TimeReport   0.000000     0.000000  hltMuonDTDigis
 TimeReport   0.000000     0.000000  hltDt1DRecHits
 TimeReport   0.000000     0.000000  hltDt4DSegments
@@ -9376,7 +9583,7 @@ TimeReport   0.000000     0.000000  hltL2OfflineMuonSeeds
 TimeReport   0.000000     0.000000  hltL2MuonSeeds
 TimeReport   0.000000     0.000000  hltL2Muons
 TimeReport   0.000000     0.000000  hltL2MuonCandidates
-TimeReport   0.000002     0.000034  hltHIL2Mu3N10HitQL2FilteredWithJet28
+TimeReport   0.000001     0.000025  hltHIL2Mu3N10HitQL2FilteredWithJet28
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -9394,7 +9601,7 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000001     0.000022  hltSinglePuAK4CaloJet60Eta2p1
+TimeReport   0.000000     0.000014  hltSinglePuAK4CaloJet60Eta2p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -9441,9 +9648,9 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000033     0.000033  hltL1sL1SingleMu3SingleCenJet40
-TimeReport   0.000000     0.000002  hltPreHIL2Mu3Eta2p5PuAK4CaloJet80Eta2p1
-TimeReport   0.000001     0.000020  hltHIL1SingleMu3CenJet40Filtered
+TimeReport   0.000025     0.000025  hltL1sL1SingleMu3SingleCenJet40
+TimeReport   0.000000     0.000001  hltPreHIL2Mu3Eta2p5PuAK4CaloJet80Eta2p1
+TimeReport   0.000000     0.000015  hltHIL1SingleMu3CenJet40Filtered
 TimeReport   0.000000     0.000000  hltMuonDTDigis
 TimeReport   0.000000     0.000000  hltDt1DRecHits
 TimeReport   0.000000     0.000000  hltDt4DSegments
@@ -9456,7 +9663,7 @@ TimeReport   0.000000     0.000000  hltL2OfflineMuonSeeds
 TimeReport   0.000000     0.000000  hltL2MuonSeeds
 TimeReport   0.000000     0.000000  hltL2Muons
 TimeReport   0.000000     0.000000  hltL2MuonCandidates
-TimeReport   0.000001     0.000031  hltHIL2Mu3N10HitQL2FilteredWithJet40
+TimeReport   0.000001     0.000022  hltHIL2Mu3N10HitQL2FilteredWithJet40
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -9474,7 +9681,7 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000000     0.000012  hltSinglePuAK4CaloJet80Eta2p1
+TimeReport   0.000000     0.000013  hltSinglePuAK4CaloJet80Eta2p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -9522,7 +9729,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleMu3SingleCenJet40
-TimeReport   0.000000     0.000002  hltPreHIL2Mu3Eta2p5PuAK4CaloJet100Eta2p1
+TimeReport   0.000000     0.000001  hltPreHIL2Mu3Eta2p5PuAK4CaloJet100Eta2p1
 TimeReport   0.000000     0.000000  hltHIL1SingleMu3CenJet40Filtered
 TimeReport   0.000000     0.000000  hltMuonDTDigis
 TimeReport   0.000000     0.000000  hltDt1DRecHits
@@ -9554,7 +9761,7 @@ TimeReport   0.000000     0.000000  hltAK4CaloAbsoluteCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloCorrector
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrected
 TimeReport   0.000000     0.000000  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000000     0.000019  hltSinglePuAK4CaloJet100Eta2p1
+TimeReport   0.000000     0.000017  hltSinglePuAK4CaloJet100Eta2p1
 TimeReport   0.000000     0.000000  hltSiStripRawToDigi
 TimeReport   0.000000     0.000000  hltSiStripZeroSuppression
 TimeReport   0.000000     0.000000  hltSiStripDigiToZSRaw
@@ -9602,7 +9809,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleMu3MinBiasHF1AND
-TimeReport   0.000000     0.000002  hltPreHIL2Mu3Eta2p5HIPhoton10Eta1p5
+TimeReport   0.000000     0.000001  hltPreHIL2Mu3Eta2p5HIPhoton10Eta1p5
 TimeReport   0.000000     0.000000  hltHIL1SingleMu3MinBiasFiltered
 TimeReport   0.000000     0.000000  hltMuonDTDigis
 TimeReport   0.000000     0.000000  hltDt1DRecHits
@@ -9680,7 +9887,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleMu3MinBiasHF1AND
-TimeReport   0.000000     0.000002  hltPreHIL2Mu3Eta2p5HIPhoton15Eta1p5
+TimeReport   0.000000     0.000001  hltPreHIL2Mu3Eta2p5HIPhoton15Eta1p5
 TimeReport   0.000000     0.000000  hltHIL1SingleMu3MinBiasFiltered
 TimeReport   0.000000     0.000000  hltMuonDTDigis
 TimeReport   0.000000     0.000000  hltDt1DRecHits
@@ -9758,7 +9965,7 @@ TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
 TimeReport   0.000000     0.000000  hltL1sL1SingleMu3MinBiasHF1AND
-TimeReport   0.000000     0.000002  hltPreHIL2Mu3Eta2p5HIPhoton20Eta1p5
+TimeReport   0.000000     0.000001  hltPreHIL2Mu3Eta2p5HIPhoton20Eta1p5
 TimeReport   0.000000     0.000000  hltHIL1SingleMu3MinBiasFiltered
 TimeReport   0.000000     0.000000  hltMuonDTDigis
 TimeReport   0.000000     0.000000  hltDt1DRecHits
@@ -9835,9 +10042,9 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000037     0.000037  hltL1sL1SingleMu3SingleEG12
-TimeReport   0.000000     0.000002  hltPreHIL2Mu3Eta2p5HIPhoton30Eta1p5
-TimeReport   0.000001     0.000023  hltHIL1SingleMu3EG12Filtered
+TimeReport   0.000029     0.000029  hltL1sL1SingleMu3SingleEG12
+TimeReport   0.000000     0.000001  hltPreHIL2Mu3Eta2p5HIPhoton30Eta1p5
+TimeReport   0.000001     0.000014  hltHIL1SingleMu3EG12Filtered
 TimeReport   0.000000     0.000000  hltMuonDTDigis
 TimeReport   0.000000     0.000000  hltDt1DRecHits
 TimeReport   0.000000     0.000000  hltDt4DSegments
@@ -9850,7 +10057,7 @@ TimeReport   0.000000     0.000000  hltL2OfflineMuonSeeds
 TimeReport   0.000000     0.000000  hltL2MuonSeeds
 TimeReport   0.000000     0.000000  hltL2Muons
 TimeReport   0.000000     0.000000  hltL2MuonCandidates
-TimeReport   0.000002     0.000034  hltHIL2Mu3N10HitQL2FilteredWithEG12
+TimeReport   0.000001     0.000023  hltHIL2Mu3N10HitQL2FilteredWithEG12
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -9913,9 +10120,9 @@ TimeReport   0.000000     0.000000  hltL1GtObjectMap
 TimeReport   0.000000     0.000000  hltL1extraParticles
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
 TimeReport   0.000000     0.000000  hltOnlineBeamSpot
-TimeReport   0.000031     0.000031  hltL1sL1SingleMu3SingleEG20
+TimeReport   0.000025     0.000025  hltL1sL1SingleMu3SingleEG20
 TimeReport   0.000000     0.000001  hltPreHIL2Mu3Eta2p5HIPhoton40Eta1p5
-TimeReport   0.000000     0.000022  hltHIL1SingleMu3EG20Filtered
+TimeReport   0.000000     0.000020  hltHIL1SingleMu3EG20Filtered
 TimeReport   0.000000     0.000000  hltMuonDTDigis
 TimeReport   0.000000     0.000000  hltDt1DRecHits
 TimeReport   0.000000     0.000000  hltDt4DSegments
@@ -9928,7 +10135,7 @@ TimeReport   0.000000     0.000000  hltL2OfflineMuonSeeds
 TimeReport   0.000000     0.000000  hltL2MuonSeeds
 TimeReport   0.000000     0.000000  hltL2Muons
 TimeReport   0.000000     0.000000  hltL2MuonCandidates
-TimeReport   0.000000     0.000038  hltHIL2Mu3N10HitQL2FilteredWithEG20
+TimeReport   0.000000     0.000029  hltHIL2Mu3N10HitQL2FilteredWithEG20
 TimeReport   0.000000     0.000000  hltEcalDigis
 TimeReport   0.000000     0.000000  hltEcalUncalibRecHit
 TimeReport   0.000000     0.000000  hltEcalDetIdToBeRecovered
@@ -9987,10 +10194,14 @@ TimeReport   0.000000     0.000000  dttfReEmulDigis
 TimeReport   0.000000     0.000000  gmtReEmulDigis
 TimeReport   0.000000     0.000000  simGtDigis
 TimeReport   0.000000     0.000000  hltScalersRawToDigi
-TimeReport   0.000145     0.000145  hltFEDSelector
-TimeReport   0.001078     0.001078  hltTriggerSummaryAOD
-TimeReport   0.000189     0.000189  hltTriggerSummaryRAW
+TimeReport   0.000132     0.000132  hltFEDSelector
+TimeReport   0.000611     0.000611  hltTriggerSummaryAOD
+TimeReport   0.000145     0.000145  hltTriggerSummaryRAW
 TimeReport   0.000000     0.000000  hltBoolFalse
+
+TimeReport ---------- Modules in Path: p ---[Real sec]----
+TimeReport  per event    per visit  Name
+TimeReport   0.000090     0.000090  demo
 TimeReport  per event    per visit  Name
 
 TimeReport ------ Modules in End-Path: HLTAnalyzerEndpath ---[Real sec]----
@@ -10027,277 +10238,276 @@ TimeReport   0.000000     0.000000  dttfReEmulDigis
 TimeReport   0.000000     0.000000  gmtReEmulDigis
 TimeReport   0.000000     0.000000  simGtDigis
 TimeReport   0.000002     0.000002  hltPreAnalyzerEndpath
-TimeReport   0.006779     0.006779  hltL1GtTrigReport
-TimeReport   0.000007     0.000007  hltTrigReport
+TimeReport   0.005502     0.005502  hltL1GtTrigReport
+TimeReport   0.000005     0.000005  hltTrigReport
 
 TimeReport ------ Modules in End-Path: DQMOutput ---[Real sec]----
 TimeReport  per event    per visit  Name
-TimeReport   0.000386     0.000386  dqmOutput
-TimeReport   1.307937     1.307937  output
+TimeReport   0.000315     0.000315  dqmOutput
 
 TimeReport ------ Modules in End-Path: hltBitAnalysis ---[Real sec]----
 TimeReport  per event    per visit  Name
-TimeReport   0.001007     0.001007  hltbitanalysis
+TimeReport   0.000714     0.000714  hltbitanalysis
 TimeReport  per event    per visit  Name
 
 TimeReport ---------- Module Summary ---[Real sec]----
 TimeReport  per event     per exec    per visit  Name
-TimeReport   0.000026     0.000026     0.000026  TriggerResults
-TimeReport   0.000203     0.000203     0.000203  hltGetConditions
-TimeReport   0.000038     0.000038     0.000038  hltGetRaw
-TimeReport   0.000018     0.000018     0.000009  hltBoolFalse
-TimeReport   0.000012     0.000012     0.000000  hltTriggerType
-TimeReport   0.000357     0.000357     0.000005  csctfDigis
-TimeReport   0.000077     0.000077     0.000001  dttfDigis
-TimeReport   0.000283     0.000283     0.000004  gctDigis
-TimeReport   0.000232     0.000232     0.000003  gtDigis
-TimeReport   0.000057     0.000057     0.000001  gtEvmDigis
-TimeReport   0.004453     0.004453     0.000064  siPixelDigis
-TimeReport   0.018814     0.018814     0.000269  siStripDigis
-TimeReport   0.005606     0.005606     0.000040  ecalDigis
-TimeReport   0.000954     0.000954     0.000014  ecalPreshowerDigis
-TimeReport   0.001605     0.001605     0.000011  hcalDigis
-TimeReport   0.001988     0.001988     0.000028  muonCSCDigis
-TimeReport   0.000094     0.000094     0.000001  muonDTDigis
-TimeReport   0.000152     0.000152     0.000002  muonRPCDigis
-TimeReport   0.000139     0.000139     0.000002  castorDigis
-TimeReport   0.000045     0.000045     0.000001  scalersRawToDigi
-TimeReport   0.000028     0.000028     0.000000  tcdsDigis
-TimeReport   0.005015     0.005015     0.000072  simHcalTriggerPrimitiveDigis
-TimeReport   0.005198     0.005198     0.000074  simRctDigis
-TimeReport   0.000244     0.000244     0.000003  simRctUpgradeFormatDigis
-TimeReport   0.005852     0.005852     0.000084  simCaloStage1Digis
-TimeReport   0.000092     0.000092     0.000001  simCaloStage1FinalDigis
-TimeReport   0.000122     0.000122     0.000002  simCaloStage1LegacyFormatDigis
-TimeReport   0.002737     0.002737     0.000039  rpcTriggerReEmulDigis
-TimeReport   0.007437     0.007437     0.000106  cscReEmulTriggerPrimitiveDigis
-TimeReport   0.012175     0.012175     0.000174  csctfReEmulTrackDigis
-TimeReport   0.000021     0.000021     0.000000  csctfReEmulDigis
-TimeReport   0.001963     0.001963     0.000028  dttfReEmulDigis
-TimeReport   0.000661     0.000661     0.000009  gmtReEmulDigis
-TimeReport   0.001611     0.001611     0.000023  simGtDigis
-TimeReport   0.001379     0.001379     0.000020  hltL1GtObjectMap
-TimeReport   0.000174     0.000174     0.000003  hltL1extraParticles
-TimeReport   0.000053     0.000053     0.000001  hltScalersRawToDigi
-TimeReport   0.000056     0.000056     0.000001  hltOnlineBeamSpot
-TimeReport   0.000282     0.000282     0.000040  hltL1sL1MinimumBiasHF1ANDv1
-TimeReport   0.000003     0.000003     0.000003  hltPreHIPuAK4CaloJet40Eta5p1
-TimeReport   0.005734     0.005734     0.000195  hltEcalDigis
-TimeReport   0.067265     0.067265     0.002284  hltEcalUncalibRecHit
-TimeReport   0.000556     0.000556     0.000019  hltEcalDetIdToBeRecovered
-TimeReport   0.007002     0.007002     0.000238  hltEcalRecHit
-TimeReport   0.001471     0.001471     0.000050  hltHcalDigis
-TimeReport   0.002711     0.002711     0.000092  hltHbherecoMethod0
-TimeReport   0.002738     0.002738     0.000093  hltHfrecoMethod0
-TimeReport   0.000348     0.000348     0.000012  hltHorecoMethod0
-TimeReport   0.006358     0.006358     0.000216  hltTowerMakerHcalMethod0ForAll
-TimeReport   0.066429     0.066429     0.009849  hltPuAK4CaloJets
-TimeReport   0.000330     0.000330     0.000049  hltPuAK4CaloJetsIDPassed
-TimeReport   0.000765     0.000765     0.000113  hltFixedGridRhoFastjetAllCaloHcalMethod0
-TimeReport   0.000057     0.000057     0.000008  hltAK4CaloRelativeCorrector
-TimeReport   0.000012     0.000012     0.000002  hltAK4CaloAbsoluteCorrector
-TimeReport   0.000014     0.000014     0.000002  hltPuAK4CaloCorrector
-TimeReport   0.002008     0.002008     0.000298  hltPuAK4CaloJetsCorrected
-TimeReport   0.000110     0.000110     0.000016  hltPuAK4CaloJetsCorrectedIDPassed
-TimeReport   0.000038     0.000038     0.000019  hltSinglePuAK4CaloJet40Eta5p1
-TimeReport   0.014858     0.021226     0.003400  hltSiStripRawToDigi
-TimeReport   0.000069     0.000099     0.000016  hltSiStripZeroSuppression
-TimeReport   0.053648     0.076641     0.012277  hltSiStripDigiToZSRaw
-TimeReport   0.168477     0.240681     0.038553  hltSiStripRawDigiToVirginRaw
-TimeReport   0.017350     0.024785     0.003970  virginRawDataRepacker
-TimeReport   0.001370     0.001957     0.000313  rawDataRepacker
-TimeReport   0.000002     0.000002     0.000000  hltBoolEnd
-TimeReport   0.000125     0.000125     0.000125  hltL1sL1SingleJet28BptxAND
-TimeReport   0.000001     0.000003     0.000003  hltPreHIPuAK4CaloJet60Eta5p1
-TimeReport   0.000017     0.000019     0.000011  hltSinglePuAK4CaloJet60Eta5p1
-TimeReport   0.000041     0.000041     0.000010  hltL1sL1SingleJet44BptxAND
-TimeReport   0.000000     0.000002     0.000002  hltPreHIPuAK4CaloJet80Eta5p1
-TimeReport   0.000011     0.000015     0.000009  hltSinglePuAK4CaloJet80Eta5p1
-TimeReport   0.000034     0.000034     0.000007  hltL1sL1SingleJet56BptxAND
-TimeReport   0.000000     0.000002     0.000002  hltPreHIPuAK4CaloJet100Eta5p1
-TimeReport   0.000010     0.000014     0.000008  hltSinglePuAK4CaloJet100Eta5p1
-TimeReport   0.000000     0.000002     0.000002  hltPreHIPuAK4CaloJet110Eta5p1
-TimeReport   0.000001     0.000020     0.000020  hltSinglePuAK4CaloJet110Eta5p1
-TimeReport   0.000000     0.000002     0.000002  hltPreHIPuAK4CaloJet120Eta5p1
-TimeReport   0.000001     0.000017     0.000017  hltSinglePuAK4CaloJet120Eta5p1
-TimeReport   0.000033     0.000033     0.000033  hltL1sL1SingleJet64BptxAND
+TimeReport   0.000025     0.000025     0.000025  TriggerResults
+TimeReport   0.000175     0.000175     0.000175  hltGetConditions
+TimeReport   0.000031     0.000031     0.000031  hltGetRaw
+TimeReport   0.000004     0.000004     0.000002  hltBoolFalse
+TimeReport   0.000002     0.000002     0.000000  hltTriggerType
+TimeReport   0.000128     0.000128     0.000002  csctfDigis
+TimeReport   0.000047     0.000047     0.000001  dttfDigis
+TimeReport   0.000163     0.000163     0.000002  gctDigis
+TimeReport   0.000178     0.000178     0.000003  gtDigis
+TimeReport   0.000043     0.000043     0.000001  gtEvmDigis
+TimeReport   0.002981     0.002981     0.000043  siPixelDigis
+TimeReport   0.014439     0.014439     0.000206  siStripDigis
+TimeReport   0.004130     0.004130     0.000029  ecalDigis
+TimeReport   0.000702     0.000702     0.000010  ecalPreshowerDigis
+TimeReport   0.001120     0.001120     0.000008  hcalDigis
+TimeReport   0.001576     0.001576     0.000023  muonCSCDigis
+TimeReport   0.000068     0.000068     0.000001  muonDTDigis
+TimeReport   0.000120     0.000120     0.000002  muonRPCDigis
+TimeReport   0.000097     0.000097     0.000001  castorDigis
+TimeReport   0.000038     0.000038     0.000001  scalersRawToDigi
+TimeReport   0.000016     0.000016     0.000000  tcdsDigis
+TimeReport   0.003689     0.003689     0.000053  simHcalTriggerPrimitiveDigis
+TimeReport   0.003594     0.003594     0.000051  simRctDigis
+TimeReport   0.000154     0.000154     0.000002  simRctUpgradeFormatDigis
+TimeReport   0.004977     0.004977     0.000071  simCaloStage1Digis
+TimeReport   0.000071     0.000071     0.000001  simCaloStage1FinalDigis
+TimeReport   0.000100     0.000100     0.000001  simCaloStage1LegacyFormatDigis
+TimeReport   0.001642     0.001642     0.000023  rpcTriggerReEmulDigis
+TimeReport   0.005950     0.005950     0.000085  cscReEmulTriggerPrimitiveDigis
+TimeReport   0.009351     0.009351     0.000134  csctfReEmulTrackDigis
+TimeReport   0.000018     0.000018     0.000000  csctfReEmulDigis
+TimeReport   0.000186     0.000186     0.000003  dttfReEmulDigis
+TimeReport   0.000462     0.000462     0.000007  gmtReEmulDigis
+TimeReport   0.001170     0.001170     0.000017  simGtDigis
+TimeReport   0.001031     0.001031     0.000015  hltL1GtObjectMap
+TimeReport   0.000130     0.000130     0.000002  hltL1extraParticles
+TimeReport   0.000036     0.000036     0.000001  hltScalersRawToDigi
+TimeReport   0.000026     0.000026     0.000000  hltOnlineBeamSpot
+TimeReport   0.000066     0.000066     0.000009  hltL1sL1MinimumBiasHF1ANDv1
+TimeReport   0.000002     0.000002     0.000002  hltPreHIPuAK4CaloJet40Eta5p1
+TimeReport   0.004138     0.004138     0.000141  hltEcalDigis
+TimeReport   0.044403     0.044403     0.001508  hltEcalUncalibRecHit
+TimeReport   0.000409     0.000409     0.000014  hltEcalDetIdToBeRecovered
+TimeReport   0.004996     0.004996     0.000170  hltEcalRecHit
+TimeReport   0.001128     0.001128     0.000038  hltHcalDigis
+TimeReport   0.001861     0.001861     0.000063  hltHbherecoMethod0
+TimeReport   0.001798     0.001798     0.000061  hltHfrecoMethod0
+TimeReport   0.000249     0.000249     0.000008  hltHorecoMethod0
+TimeReport   0.004561     0.004561     0.000155  hltTowerMakerHcalMethod0ForAll
+TimeReport   0.048530     0.048530     0.007195  hltPuAK4CaloJets
+TimeReport   0.000245     0.000245     0.000036  hltPuAK4CaloJetsIDPassed
+TimeReport   0.000615     0.000615     0.000091  hltFixedGridRhoFastjetAllCaloHcalMethod0
+TimeReport   0.000028     0.000028     0.000004  hltAK4CaloRelativeCorrector
+TimeReport   0.000009     0.000009     0.000001  hltAK4CaloAbsoluteCorrector
+TimeReport   0.000012     0.000012     0.000002  hltPuAK4CaloCorrector
+TimeReport   0.000133     0.000133     0.000020  hltPuAK4CaloJetsCorrected
+TimeReport   0.000070     0.000070     0.000010  hltPuAK4CaloJetsCorrectedIDPassed
+TimeReport   0.000028     0.000028     0.000014  hltSinglePuAK4CaloJet40Eta5p1
+TimeReport   0.011564     0.016520     0.002646  hltSiStripRawToDigi
+TimeReport   0.000056     0.000080     0.000013  hltSiStripZeroSuppression
+TimeReport   0.040358     0.057654     0.009235  hltSiStripDigiToZSRaw
+TimeReport   0.126648     0.180925     0.028981  hltSiStripRawDigiToVirginRaw
+TimeReport   0.013515     0.019307     0.003093  virginRawDataRepacker
+TimeReport   0.001035     0.001479     0.000237  rawDataRepacker
+TimeReport   0.000001     0.000002     0.000000  hltBoolEnd
+TimeReport   0.000089     0.000089     0.000089  hltL1sL1SingleJet28BptxAND
+TimeReport   0.000001     0.000002     0.000002  hltPreHIPuAK4CaloJet60Eta5p1
+TimeReport   0.000015     0.000017     0.000010  hltSinglePuAK4CaloJet60Eta5p1
+TimeReport   0.000032     0.000032     0.000008  hltL1sL1SingleJet44BptxAND
+TimeReport   0.000000     0.000001     0.000001  hltPreHIPuAK4CaloJet80Eta5p1
+TimeReport   0.000010     0.000012     0.000007  hltSinglePuAK4CaloJet80Eta5p1
+TimeReport   0.000027     0.000027     0.000005  hltL1sL1SingleJet56BptxAND
+TimeReport   0.000000     0.000001     0.000001  hltPreHIPuAK4CaloJet100Eta5p1
+TimeReport   0.000009     0.000012     0.000007  hltSinglePuAK4CaloJet100Eta5p1
+TimeReport   0.000000     0.000001     0.000001  hltPreHIPuAK4CaloJet110Eta5p1
+TimeReport   0.000000     0.000014     0.000014  hltSinglePuAK4CaloJet110Eta5p1
+TimeReport   0.000000     0.000001     0.000001  hltPreHIPuAK4CaloJet120Eta5p1
+TimeReport   0.000000     0.000012     0.000012  hltSinglePuAK4CaloJet120Eta5p1
+TimeReport   0.000026     0.000026     0.000026  hltL1sL1SingleJet64BptxAND
 TimeReport   0.000000     0.000001     0.000001  hltPreHIPuAK4CaloJet150Eta5p1
-TimeReport   0.000000     0.000020     0.000020  hltSinglePuAK4CaloJet150Eta5p1
-TimeReport   0.000219     0.000219     0.000219  hltL1sL1SingleJet16Centext30100BptxAND
-TimeReport   0.000002     0.000002     0.000002  hltPreHIPuAK4CaloJet40Eta5p1Cent30100
-TimeReport   0.000070     0.000070     0.000070  hltL1sL1SingleJet28Centext30100BptxAND
-TimeReport   0.000001     0.000002     0.000002  hltPreHIPuAK4CaloJet60Eta5p1Cent30100
-TimeReport   0.000063     0.000063     0.000031  hltL1sL1SingleJet44Centext30100BptxAND
-TimeReport   0.000001     0.000002     0.000002  hltPreHIPuAK4CaloJet80Eta5p1Cent30100
-TimeReport   0.000001     0.000002     0.000002  hltPreHIPuAK4CaloJet100Eta5p1Cent30100
-TimeReport   0.000049     0.000049     0.000049  hltL1sL1SingleJet16Centext50100BptxAND
-TimeReport   0.000000     0.000002     0.000002  hltPreHIPuAK4CaloJet40Eta5p1Cent50100
-TimeReport   0.000060     0.000060     0.000060  hltL1sL1SingleJet28Centext50100BptxAND
-TimeReport   0.000001     0.000002     0.000002  hltPreHIPuAK4CaloJet60Eta5p1Cent50100
-TimeReport   0.000059     0.000059     0.000029  hltL1sL1SingleJet44Centext50100BptxAND
-TimeReport   0.000001     0.000002     0.000002  hltPreHIPuAK4CaloJet80Eta5p1Cent50100
-TimeReport   0.000001     0.000002     0.000002  hltPreHIPuAK4CaloJet100Eta5p1Cent50100
-TimeReport   0.000000     0.000002     0.000002  hltPreHIPuAK4CaloJet80Jet35Eta1p1
-TimeReport   0.000001     0.000018     0.000018  hltSinglePuAK4CaloJet80Eta1p1
-TimeReport   0.000000     0.000013     0.000010  hltDoublePuAK4CaloJet35Eta1p1
-TimeReport   0.000000     0.000002     0.000002  hltPreHIPuAK4CaloJet80Jet35Eta0p7
-TimeReport   0.000001     0.000015     0.000015  hltSinglePuAK4CaloJet80Eta0p7
-TimeReport   0.000000     0.000033     0.000016  hltDoublePuAK4CaloJet35Eta0p7
-TimeReport   0.000000     0.000002     0.000002  hltPreHIPuAK4CaloJet100Jet35Eta1p1
-TimeReport   0.000001     0.000024     0.000024  hltSinglePuAK4CaloJet100Eta1p1
-TimeReport   0.000000     0.000002     0.000002  hltPreHIPuAK4CaloJet100Jet35Eta0p7
-TimeReport   0.000001     0.000018     0.000018  hltSinglePuAK4CaloJet100Eta0p7
-TimeReport   0.000000     0.000002     0.000002  hltPreHIPuAK4CaloJet804545Eta2p1
-TimeReport   0.000001     0.000017     0.000017  hltTriplePuAK4CaloJet45Eta2p1
-TimeReport   0.000000     0.000016     0.000016  hltSinglePuAK4CaloJet80Eta2p1
-TimeReport   0.000002     0.000002     0.000002  hltPreHISinglePhoton10Eta1p5
-TimeReport   0.030835     0.030835     0.001358  hltIslandBasicClustersHI
-TimeReport   0.100247     0.100247     0.004416  hltHiIslandSuperClustersHI
-TimeReport   0.001614     0.001614     0.000071  hltHiCorrectedIslandBarrelSuperClustersHI
-TimeReport   0.002139     0.002139     0.000094  hltHiCorrectedIslandEndcapSuperClustersHI
-TimeReport   0.000202     0.000202     0.000009  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
-TimeReport   0.000159     0.000159     0.000007  hltRecoHIEcalWithCleaningCandidate
-TimeReport   0.000026     0.000026     0.000011  hltHIPhoton10Eta1p5
+TimeReport   0.000000     0.000023     0.000023  hltSinglePuAK4CaloJet150Eta5p1
+TimeReport   0.000090     0.000090     0.000090  hltL1sL1SingleJet16Centext30100BptxAND
+TimeReport   0.000001     0.000002     0.000002  hltPreHIPuAK4CaloJet40Eta5p1Cent30100
+TimeReport   0.000056     0.000056     0.000056  hltL1sL1SingleJet28Centext30100BptxAND
+TimeReport   0.000001     0.000001     0.000001  hltPreHIPuAK4CaloJet60Eta5p1Cent30100
+TimeReport   0.000050     0.000050     0.000025  hltL1sL1SingleJet44Centext30100BptxAND
+TimeReport   0.000001     0.000001     0.000001  hltPreHIPuAK4CaloJet80Eta5p1Cent30100
+TimeReport   0.000001     0.000001     0.000001  hltPreHIPuAK4CaloJet100Eta5p1Cent30100
+TimeReport   0.000040     0.000040     0.000040  hltL1sL1SingleJet16Centext50100BptxAND
+TimeReport   0.000000     0.000001     0.000001  hltPreHIPuAK4CaloJet40Eta5p1Cent50100
+TimeReport   0.000046     0.000046     0.000046  hltL1sL1SingleJet28Centext50100BptxAND
+TimeReport   0.000001     0.000001     0.000001  hltPreHIPuAK4CaloJet60Eta5p1Cent50100
+TimeReport   0.000046     0.000046     0.000023  hltL1sL1SingleJet44Centext50100BptxAND
+TimeReport   0.000001     0.000001     0.000001  hltPreHIPuAK4CaloJet80Eta5p1Cent50100
+TimeReport   0.000001     0.000001     0.000001  hltPreHIPuAK4CaloJet100Eta5p1Cent50100
+TimeReport   0.000000     0.000001     0.000001  hltPreHIPuAK4CaloJet80Jet35Eta1p1
+TimeReport   0.000001     0.000015     0.000015  hltSinglePuAK4CaloJet80Eta1p1
+TimeReport   0.000000     0.000014     0.000011  hltDoublePuAK4CaloJet35Eta1p1
+TimeReport   0.000000     0.000001     0.000001  hltPreHIPuAK4CaloJet80Jet35Eta0p7
+TimeReport   0.000001     0.000011     0.000011  hltSinglePuAK4CaloJet80Eta0p7
+TimeReport   0.000000     0.000025     0.000012  hltDoublePuAK4CaloJet35Eta0p7
+TimeReport   0.000000     0.000001     0.000001  hltPreHIPuAK4CaloJet100Jet35Eta1p1
+TimeReport   0.000000     0.000012     0.000012  hltSinglePuAK4CaloJet100Eta1p1
+TimeReport   0.000000     0.000001     0.000001  hltPreHIPuAK4CaloJet100Jet35Eta0p7
+TimeReport   0.000000     0.000012     0.000012  hltSinglePuAK4CaloJet100Eta0p7
+TimeReport   0.000000     0.000001     0.000001  hltPreHIPuAK4CaloJet804545Eta2p1
+TimeReport   0.000001     0.000015     0.000015  hltTriplePuAK4CaloJet45Eta2p1
+TimeReport   0.000000     0.000019     0.000019  hltSinglePuAK4CaloJet80Eta2p1
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton10Eta1p5
+TimeReport   0.021668     0.021668     0.000955  hltIslandBasicClustersHI
+TimeReport   0.079950     0.079950     0.003522  hltHiIslandSuperClustersHI
+TimeReport   0.001119     0.001119     0.000049  hltHiCorrectedIslandBarrelSuperClustersHI
+TimeReport   0.001635     0.001635     0.000072  hltHiCorrectedIslandEndcapSuperClustersHI
+TimeReport   0.000173     0.000173     0.000008  hltCleanedHiCorrectedIslandBarrelSuperClustersHI
+TimeReport   0.000060     0.000060     0.000003  hltRecoHIEcalWithCleaningCandidate
+TimeReport   0.000023     0.000023     0.000010  hltHIPhoton10Eta1p5
 TimeReport   0.000002     0.000002     0.000002  hltPreHISinglePhoton15Eta1p5
-TimeReport   0.000017     0.000017     0.000007  hltHIPhoton15Eta1p5
-TimeReport   0.000002     0.000002     0.000002  hltPreHISinglePhoton20Eta1p5
-TimeReport   0.000014     0.000014     0.000006  hltHIPhoton20Eta1p5
-TimeReport   0.000104     0.000104     0.000052  hltL1sL1SingleEG7BptxAND
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton30Eta1p5
-TimeReport   0.000013     0.000013     0.000007  hltHIPhoton30Eta1p5
-TimeReport   0.000037     0.000037     0.000004  hltL1sL1SingleEG21BptxAND
-TimeReport   0.000000     0.000002     0.000002  hltPreHISinglePhoton40Eta1p5
-TimeReport   0.000011     0.000015     0.000008  hltHIPhoton40Eta1p5
-TimeReport   0.000000     0.000002     0.000002  hltPreHISinglePhoton50Eta1p5
-TimeReport   0.000001     0.000018     0.000018  hltHIPhoton50Eta1p5
-TimeReport   0.000047     0.000047     0.000023  hltL1sL1SingleEG30BptxAND
-TimeReport   0.000002     0.000002     0.000002  hltPreHISinglePhoton60Eta1p5
-TimeReport   0.000015     0.000015     0.000015  hltHIPhoton60Eta1p5
-TimeReport   0.000112     0.000112     0.000019  hltL1sL1SingleEG3Centext50100BptxAND
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton10Eta1p5Cent50100
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton15Eta1p5Cent50100
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton20Eta1p5Cent50100
-TimeReport   0.000064     0.000064     0.000032  hltL1sL1SingleEG7Centext50100BptxAND
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton30Eta1p5Cent50100
-TimeReport   0.000060     0.000060     0.000030  hltL1sL1SingleEG21Centext50100BptxAND
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton40Eta1p5Cent50100
-TimeReport   0.000090     0.000090     0.000015  hltL1sL1SingleEG3Centext30100BptxAND
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton10Eta1p5Cent30100
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton15Eta1p5Cent30100
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton20Eta1p5Cent30100
-TimeReport   0.000071     0.000071     0.000035  hltL1sL1SingleEG7Centext30100BptxAND
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton30Eta1p5Cent30100
-TimeReport   0.000062     0.000062     0.000031  hltL1sL1SingleEG21Centext30100BptxAND
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton40Eta1p5Cent30100
-TimeReport   0.000000     0.000002     0.000002  hltPreHISinglePhoton40Eta2p1
-TimeReport   0.000001     0.000017     0.000017  hltHIPhoton40Eta2p1
-TimeReport   0.000002     0.000002     0.000002  hltPreHISinglePhoton10Eta3p1
-TimeReport   0.000017     0.000017     0.000008  hltHIPhoton10Eta3p1
-TimeReport   0.000002     0.000002     0.000002  hltPreHISinglePhoton15Eta3p1
-TimeReport   0.000019     0.000019     0.000008  hltHIPhoton15Eta3p1
-TimeReport   0.000002     0.000002     0.000002  hltPreHISinglePhoton20Eta3p1
-TimeReport   0.000014     0.000014     0.000006  hltHIPhoton20Eta3p1
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton30Eta3p1
-TimeReport   0.000014     0.000014     0.000007  hltHIPhoton30Eta3p1
-TimeReport   0.000000     0.000002     0.000002  hltPreHISinglePhoton40Eta3p1
-TimeReport   0.000021     0.000028     0.000016  hltHIPhoton40Eta3p1
-TimeReport   0.000000     0.000002     0.000002  hltPreHISinglePhoton50Eta3p1
-TimeReport   0.000001     0.000015     0.000015  hltHIPhoton50Eta3p1
-TimeReport   0.000002     0.000002     0.000002  hltPreHISinglePhoton60Eta3p1
-TimeReport   0.000014     0.000014     0.000014  hltHIPhoton60Eta3p1
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton10Eta3p1Cent50100
+TimeReport   0.000013     0.000013     0.000006  hltHIPhoton15Eta1p5
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton20Eta1p5
+TimeReport   0.000011     0.000011     0.000005  hltHIPhoton20Eta1p5
+TimeReport   0.000086     0.000086     0.000043  hltL1sL1SingleEG7BptxAND
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton30Eta1p5
+TimeReport   0.000011     0.000011     0.000006  hltHIPhoton30Eta1p5
+TimeReport   0.000029     0.000029     0.000003  hltL1sL1SingleEG21BptxAND
+TimeReport   0.000000     0.000001     0.000001  hltPreHISinglePhoton40Eta1p5
+TimeReport   0.000009     0.000012     0.000007  hltHIPhoton40Eta1p5
+TimeReport   0.000000     0.000001     0.000001  hltPreHISinglePhoton50Eta1p5
+TimeReport   0.000001     0.000015     0.000015  hltHIPhoton50Eta1p5
+TimeReport   0.000033     0.000033     0.000017  hltL1sL1SingleEG30BptxAND
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton60Eta1p5
+TimeReport   0.000012     0.000012     0.000012  hltHIPhoton60Eta1p5
+TimeReport   0.000055     0.000055     0.000009  hltL1sL1SingleEG3Centext50100BptxAND
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton10Eta1p5Cent50100
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton15Eta1p5Cent50100
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton20Eta1p5Cent50100
+TimeReport   0.000051     0.000051     0.000025  hltL1sL1SingleEG7Centext50100BptxAND
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton30Eta1p5Cent50100
+TimeReport   0.000046     0.000046     0.000023  hltL1sL1SingleEG21Centext50100BptxAND
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton40Eta1p5Cent50100
+TimeReport   0.000059     0.000059     0.000010  hltL1sL1SingleEG3Centext30100BptxAND
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton10Eta1p5Cent30100
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton15Eta1p5Cent30100
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton20Eta1p5Cent30100
+TimeReport   0.000057     0.000057     0.000028  hltL1sL1SingleEG7Centext30100BptxAND
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton30Eta1p5Cent30100
+TimeReport   0.000050     0.000050     0.000025  hltL1sL1SingleEG21Centext30100BptxAND
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton40Eta1p5Cent30100
+TimeReport   0.000000     0.000001     0.000001  hltPreHISinglePhoton40Eta2p1
+TimeReport   0.000001     0.000016     0.000016  hltHIPhoton40Eta2p1
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton10Eta3p1
+TimeReport   0.000015     0.000015     0.000007  hltHIPhoton10Eta3p1
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton15Eta3p1
+TimeReport   0.000015     0.000015     0.000007  hltHIPhoton15Eta3p1
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton20Eta3p1
+TimeReport   0.000012     0.000012     0.000005  hltHIPhoton20Eta3p1
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton30Eta3p1
+TimeReport   0.000012     0.000012     0.000006  hltHIPhoton30Eta3p1
+TimeReport   0.000000     0.000001     0.000001  hltPreHISinglePhoton40Eta3p1
+TimeReport   0.000009     0.000012     0.000007  hltHIPhoton40Eta3p1
+TimeReport   0.000000     0.000001     0.000001  hltPreHISinglePhoton50Eta3p1
+TimeReport   0.000001     0.000013     0.000013  hltHIPhoton50Eta3p1
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton60Eta3p1
+TimeReport   0.000011     0.000011     0.000011  hltHIPhoton60Eta3p1
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton10Eta3p1Cent50100
 TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton15Eta3p1Cent50100
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton20Eta3p1Cent50100
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton30Eta3p1Cent50100
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton40Eta3p1Cent50100
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton10Eta3p1Cent30100
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton20Eta3p1Cent50100
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton30Eta3p1Cent50100
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton40Eta3p1Cent50100
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton10Eta3p1Cent30100
 TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton15Eta3p1Cent30100
 TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton20Eta3p1Cent30100
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton30Eta3p1Cent30100
-TimeReport   0.000001     0.000002     0.000002  hltPreHISinglePhoton40Eta3p1Cent30100
-TimeReport   0.000000     0.000002     0.000002  hltPreHIDoublePhoton15Eta1p5Mass501000
-TimeReport   0.000001     0.000019     0.000010  hltHIDoublePhoton15Eta1p5
-TimeReport   0.000251     0.012531     0.006266  hltHIDoublePhoton15Eta1p5Mass501000Filter
-TimeReport   0.000000     0.000002     0.000002  hltPreHIDoublePhoton15Eta1p5Mass501000R9HECut
-TimeReport   0.000033     0.003263     0.001305  hltHIEgammaR9ID
-TimeReport   0.000000     0.000053     0.000053  hltHIEgammaR9IDDoublePhoton15Eta1p5
-TimeReport   0.000015     0.002945     0.001473  hltHIEgammaHoverE
-TimeReport   0.000000     0.000042     0.000042  hltHIEgammaHOverEDoublePhoton15Eta1p5
-TimeReport   0.000000     0.000002     0.000002  hltPreHIDoublePhoton15Eta2p1Mass501000R9Cut
-TimeReport   0.000001     0.000025     0.000025  hltHIDoublePhoton15Eta2p1
-TimeReport   0.000001     0.000059     0.000059  hltHIDoublePhoton15Eta2p1Mass501000Filter
-TimeReport   0.000002     0.000247     0.000247  hltHIEgammaR9IDDoublePhoton15Eta2p1
-TimeReport   0.000000     0.000002     0.000002  hltPreHIDoublePhoton15Eta2p5Mass501000R9SigmaHECut
-TimeReport   0.000001     0.000020     0.000020  hltHIDoublePhoton15Eta2p5
-TimeReport   0.000001     0.000051     0.000051  hltHIDoublePhoton15Eta2p5Mass501000Filter
-TimeReport   0.000000     0.000025     0.000025  hltHIEgammaR9IDDoublePhoton15Eta2p5
-TimeReport   0.000083     0.016695     0.016695  hltHIEgammaSigmaIEtaIEtaProducer
-TimeReport   0.000000     0.000063     0.000063  hltHIEgammaSigmaIEtaIEtaDoublePhoton15Eta2p5
-TimeReport   0.000000     0.000042     0.000042  hltHIEgammaHOverEDoublePhoton15Eta2p5
-TimeReport   0.000047     0.000047     0.000012  hltL1sL1SingleMu3MinBiasHF1AND
-TimeReport   0.000000     0.000002     0.000002  hltPreHIL2Mu3Eta2p5PuAK4CaloJet40Eta2p1
-TimeReport   0.000052     0.000611     0.000153  hltHIL1SingleMu3MinBiasFiltered
-TimeReport   0.000009     0.000110     0.000019  hltMuonDTDigis
-TimeReport   0.000020     0.000230     0.000039  hltDt1DRecHits
-TimeReport   0.000204     0.002405     0.000405  hltDt4DSegments
-TimeReport   0.000363     0.004274     0.000719  hltMuonCSCDigis
-TimeReport   0.000261     0.003072     0.000517  hltCsc2DRecHits
-TimeReport   0.000126     0.001479     0.000249  hltCscSegments
-TimeReport   0.000015     0.000181     0.000031  hltMuonRPCDigis
-TimeReport   0.000014     0.000160     0.000027  hltRpcRecHits
-TimeReport   0.000192     0.002264     0.000381  hltL2OfflineMuonSeeds
-TimeReport   0.000070     0.000818     0.000138  hltL2MuonSeeds
-TimeReport   0.000917     0.010792     0.001816  hltL2Muons
-TimeReport   0.000004     0.000049     0.000008  hltL2MuonCandidates
-TimeReport   0.000012     0.000143     0.000036  hltHIL2Mu3N10HitQL2Filtered
-TimeReport   0.000001     0.000024     0.000024  hltSinglePuAK4CaloJet40Eta2p1
-TimeReport   0.000036     0.000036     0.000036  hltL1sL1SingleMu3SingleCenJet28
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton30Eta3p1Cent30100
+TimeReport   0.000001     0.000001     0.000001  hltPreHISinglePhoton40Eta3p1Cent30100
+TimeReport   0.000000     0.000001     0.000001  hltPreHIDoublePhoton15Eta1p5Mass501000
+TimeReport   0.000001     0.000017     0.000008  hltHIDoublePhoton15Eta1p5
+TimeReport   0.000010     0.000497     0.000249  hltHIDoublePhoton15Eta1p5Mass501000Filter
+TimeReport   0.000000     0.000001     0.000001  hltPreHIDoublePhoton15Eta1p5Mass501000R9HECut
+TimeReport   0.000013     0.001344     0.000538  hltHIEgammaR9ID
+TimeReport   0.000000     0.000046     0.000046  hltHIEgammaR9IDDoublePhoton15Eta1p5
+TimeReport   0.000009     0.001882     0.000941  hltHIEgammaHoverE
+TimeReport   0.000000     0.000031     0.000031  hltHIEgammaHOverEDoublePhoton15Eta1p5
+TimeReport   0.000000     0.000001     0.000001  hltPreHIDoublePhoton15Eta2p1Mass501000R9Cut
+TimeReport   0.000001     0.000014     0.000014  hltHIDoublePhoton15Eta2p1
+TimeReport   0.000001     0.000045     0.000045  hltHIDoublePhoton15Eta2p1Mass501000Filter
+TimeReport   0.000002     0.000197     0.000197  hltHIEgammaR9IDDoublePhoton15Eta2p1
+TimeReport   0.000000     0.000001     0.000001  hltPreHIDoublePhoton15Eta2p5Mass501000R9SigmaHECut
+TimeReport   0.000001     0.000015     0.000015  hltHIDoublePhoton15Eta2p5
+TimeReport   0.000001     0.000040     0.000040  hltHIDoublePhoton15Eta2p5Mass501000Filter
+TimeReport   0.000000     0.000029     0.000029  hltHIEgammaR9IDDoublePhoton15Eta2p5
+TimeReport   0.000056     0.011231     0.011231  hltHIEgammaSigmaIEtaIEtaProducer
+TimeReport   0.000000     0.000033     0.000033  hltHIEgammaSigmaIEtaIEtaDoublePhoton15Eta2p5
+TimeReport   0.000000     0.000033     0.000033  hltHIEgammaHOverEDoublePhoton15Eta2p5
+TimeReport   0.000037     0.000037     0.000009  hltL1sL1SingleMu3MinBiasHF1AND
+TimeReport   0.000000     0.000001     0.000001  hltPreHIL2Mu3Eta2p5PuAK4CaloJet40Eta2p1
+TimeReport   0.000051     0.000598     0.000150  hltHIL1SingleMu3MinBiasFiltered
+TimeReport   0.000008     0.000091     0.000015  hltMuonDTDigis
+TimeReport   0.000014     0.000168     0.000028  hltDt1DRecHits
+TimeReport   0.000087     0.001028     0.000173  hltDt4DSegments
+TimeReport   0.000258     0.003035     0.000511  hltMuonCSCDigis
+TimeReport   0.000190     0.002235     0.000376  hltCsc2DRecHits
+TimeReport   0.000069     0.000816     0.000137  hltCscSegments
+TimeReport   0.000011     0.000134     0.000023  hltMuonRPCDigis
+TimeReport   0.000010     0.000121     0.000020  hltRpcRecHits
+TimeReport   0.000064     0.000747     0.000126  hltL2OfflineMuonSeeds
+TimeReport   0.000045     0.000533     0.000090  hltL2MuonSeeds
+TimeReport   0.000502     0.005902     0.000993  hltL2Muons
+TimeReport   0.000003     0.000034     0.000006  hltL2MuonCandidates
+TimeReport   0.000005     0.000063     0.000016  hltHIL2Mu3N10HitQL2Filtered
+TimeReport   0.000001     0.000020     0.000020  hltSinglePuAK4CaloJet40Eta2p1
+TimeReport   0.000029     0.000029     0.000029  hltL1sL1SingleMu3SingleCenJet28
 TimeReport   0.000000     0.000002     0.000002  hltPreHIL2Mu3Eta2p5PuAK4CaloJet60Eta2p1
-TimeReport   0.000001     0.000020     0.000020  hltHIL1SingleMu3CenJet28Filtered
-TimeReport   0.000002     0.000034     0.000034  hltHIL2Mu3N10HitQL2FilteredWithJet28
-TimeReport   0.000001     0.000022     0.000022  hltSinglePuAK4CaloJet60Eta2p1
-TimeReport   0.000033     0.000033     0.000016  hltL1sL1SingleMu3SingleCenJet40
-TimeReport   0.000000     0.000002     0.000002  hltPreHIL2Mu3Eta2p5PuAK4CaloJet80Eta2p1
-TimeReport   0.000001     0.000020     0.000010  hltHIL1SingleMu3CenJet40Filtered
-TimeReport   0.000001     0.000031     0.000016  hltHIL2Mu3N10HitQL2FilteredWithJet40
-TimeReport   0.000000     0.000002     0.000002  hltPreHIL2Mu3Eta2p5PuAK4CaloJet100Eta2p1
-TimeReport   0.000000     0.000019     0.000019  hltSinglePuAK4CaloJet100Eta2p1
-TimeReport   0.000000     0.000002     0.000002  hltPreHIL2Mu3Eta2p5HIPhoton10Eta1p5
-TimeReport   0.000000     0.000002     0.000002  hltPreHIL2Mu3Eta2p5HIPhoton15Eta1p5
-TimeReport   0.000000     0.000002     0.000002  hltPreHIL2Mu3Eta2p5HIPhoton20Eta1p5
-TimeReport   0.000037     0.000037     0.000037  hltL1sL1SingleMu3SingleEG12
-TimeReport   0.000000     0.000002     0.000002  hltPreHIL2Mu3Eta2p5HIPhoton30Eta1p5
-TimeReport   0.000001     0.000023     0.000023  hltHIL1SingleMu3EG12Filtered
-TimeReport   0.000002     0.000034     0.000034  hltHIL2Mu3N10HitQL2FilteredWithEG12
-TimeReport   0.000031     0.000031     0.000031  hltL1sL1SingleMu3SingleEG20
+TimeReport   0.000001     0.000017     0.000017  hltHIL1SingleMu3CenJet28Filtered
+TimeReport   0.000001     0.000025     0.000025  hltHIL2Mu3N10HitQL2FilteredWithJet28
+TimeReport   0.000000     0.000014     0.000014  hltSinglePuAK4CaloJet60Eta2p1
+TimeReport   0.000025     0.000025     0.000013  hltL1sL1SingleMu3SingleCenJet40
+TimeReport   0.000000     0.000001     0.000001  hltPreHIL2Mu3Eta2p5PuAK4CaloJet80Eta2p1
+TimeReport   0.000000     0.000015     0.000007  hltHIL1SingleMu3CenJet40Filtered
+TimeReport   0.000001     0.000022     0.000011  hltHIL2Mu3N10HitQL2FilteredWithJet40
+TimeReport   0.000000     0.000001     0.000001  hltPreHIL2Mu3Eta2p5PuAK4CaloJet100Eta2p1
+TimeReport   0.000000     0.000017     0.000017  hltSinglePuAK4CaloJet100Eta2p1
+TimeReport   0.000000     0.000001     0.000001  hltPreHIL2Mu3Eta2p5HIPhoton10Eta1p5
+TimeReport   0.000000     0.000001     0.000001  hltPreHIL2Mu3Eta2p5HIPhoton15Eta1p5
+TimeReport   0.000000     0.000001     0.000001  hltPreHIL2Mu3Eta2p5HIPhoton20Eta1p5
+TimeReport   0.000029     0.000029     0.000029  hltL1sL1SingleMu3SingleEG12
+TimeReport   0.000000     0.000001     0.000001  hltPreHIL2Mu3Eta2p5HIPhoton30Eta1p5
+TimeReport   0.000001     0.000014     0.000014  hltHIL1SingleMu3EG12Filtered
+TimeReport   0.000001     0.000023     0.000023  hltHIL2Mu3N10HitQL2FilteredWithEG12
+TimeReport   0.000025     0.000025     0.000025  hltL1sL1SingleMu3SingleEG20
 TimeReport   0.000000     0.000001     0.000001  hltPreHIL2Mu3Eta2p5HIPhoton40Eta1p5
-TimeReport   0.000000     0.000022     0.000022  hltHIL1SingleMu3EG20Filtered
-TimeReport   0.000000     0.000038     0.000038  hltHIL2Mu3N10HitQL2FilteredWithEG20
-TimeReport   0.000145     0.000145     0.000145  hltFEDSelector
-TimeReport   0.001078     0.001078     0.001078  hltTriggerSummaryAOD
-TimeReport   0.000189     0.000189     0.000189  hltTriggerSummaryRAW
+TimeReport   0.000000     0.000020     0.000020  hltHIL1SingleMu3EG20Filtered
+TimeReport   0.000000     0.000029     0.000029  hltHIL2Mu3N10HitQL2FilteredWithEG20
+TimeReport   0.000132     0.000132     0.000132  hltFEDSelector
+TimeReport   0.000611     0.000611     0.000611  hltTriggerSummaryAOD
+TimeReport   0.000145     0.000145     0.000145  hltTriggerSummaryRAW
+TimeReport   0.000090     0.000090     0.000090  demo
 TimeReport   0.000002     0.000002     0.000002  hltPreAnalyzerEndpath
-TimeReport   0.006779     0.006779     0.006779  hltL1GtTrigReport
-TimeReport   0.000007     0.000007     0.000007  hltTrigReport
-TimeReport   0.000386     0.000386     0.000386  dqmOutput
-TimeReport   1.307937     1.307937     1.307937  output
-TimeReport   0.001007     0.001007     0.001007  hltbitanalysis
+TimeReport   0.005502     0.005502     0.005502  hltL1GtTrigReport
+TimeReport   0.000005     0.000005     0.000005  hltTrigReport
+TimeReport   0.000315     0.000315     0.000315  dqmOutput
+TimeReport   0.000714     0.000714     0.000714  hltbitanalysis
 TimeReport  per event     per exec    per visit  Name
 
 T---Report end!
 
 FastReport for the whole job, process TEST
-FastReport                0.000145  Pre-Event
-FastReport                2.464168  Event
-FastReport                1.088846  all Paths
-FastReport                1.375227  all EndPaths
-FastReport                0.000325  between paths
+FastReport                0.000104  Pre-Event
+FastReport                1.922784  Event
+FastReport                1.846513  all Paths
+FastReport                0.076188  all EndPaths
+FastReport                0.000254  between paths
 
 FastReport for the whole job, over all subprocesses
-FastReport                0.257112  Pre-Source
-FastReport                0.143155  Source
-FastReport                0.000145  Pre-Event
-FastReport                2.464168  Event
+FastReport                0.195425  Pre-Source
+FastReport                0.466170  Source
+FastReport                0.000104  Pre-Event
+FastReport                1.922784  Event
 
 
 =============================================
@@ -10332,7 +10542,7 @@ MessageLogger Summary
    24 FastReport           -i AfterModEndJob                         2        2
    25 FastReport           -i AfterModGlobalEn                       2        2
    26 FwkReport            -i AfterSource                          200*     200
-   27 FwkSummary           -i AfterModEndJob                      9937     9937
+   27 FwkSummary           -i AfterModEndJob                      9945     9945
    28 GCT                  -i GctRawToDigi:gct                       1*       1
    29 GCT                  -i GctRawToDigi:gct                       1*       1
    30 Geometry             -i (NoModuleName)   CSCGeometryESMod      1*       1
@@ -10447,15 +10657,15 @@ MessageLogger Summary
   139 TrackAssociator      -i EventSetupRecord                       6*       6
   140 TrackerTopologyEP    -i EventSetupRecord                       1*       1
   141 TriggerSummaryProduc -i TriggerSummaryPr                      86       86
-  142 XrdAdaptorInternal   -i (NoModuleName)                     10165*   10165
+  142 XrdAdaptorInternal   -i (NoModuleName)                        90*      90
   143 XrdAdaptorInternal   -i AfterFile                             37*      37
-  144 XrdAdaptorInternal   -i AfterModBeginStr                   20207*   20207
-  145 XrdAdaptorInternal   -i PostBeginRun                           5*       5
-  146 XrdAdaptorInternal   -i PostModuleEvent                       69*      69
-  147 XrdAdaptorInternal   -i PostProcessPath                       14*      14
-  148 XrdAdaptorInternal   -i PreProcPath DQMO                      10*      10
+  144 XrdAdaptorInternal   -i AfterModBeginStr                       4*       4
+  145 XrdAdaptorInternal   -i PostBeginRun                           2*       2
+  146 XrdAdaptorInternal   -i PostModuleEvent                       63*      63
+  147 XrdAdaptorInternal   -i PostProcessPath                       18*      18
+  148 XrdAdaptorInternal   -i PreProcPath DQMO                      12*      12
   149 XrdAdaptorInternal   -i file_open                             10*      10
-  150 XrdAdaptorInternal   -i source                                15*      15
+  150 XrdAdaptorInternal   -i source                                14*      14
   151 XrdFileInfo          -i file_close                             1*       1
   152 XrdFileInfo          -i file_open                              2*       2
   153 path                 -i AfterModConstruc                       1*       1
@@ -10613,7 +10823,7 @@ MessageLogger Summary
   142 XrdAdaptorInternal   pre-events       pre-events       pre-events
   143 XrdAdaptorInternal   pre-events       pre-events       pre-events
   144 XrdAdaptorInternal   BeforeEvents     BeforeEvents     BeforeEvents
-  145 XrdAdaptorInternal   PostBeginRun     PostBeginRun     PostBeginRun
+  145 XrdAdaptorInternal   PostBeginRun     PostBeginRun     
   146 XrdAdaptorInternal   1/5              1/5              1/177
   147 XrdAdaptorInternal   PostProcessEvent PostProcessEvent PostProcessEvent
   148 XrdAdaptorInternal   1/26             1/26             1/26
@@ -10630,6 +10840,6 @@ MessageLogger Summary
 
 Severity    # Occurrences   Total Occurrences
 --------    -------------   -----------------
-Info                52539               52539
+Info                22265               22265
 Warning                 8                   8
 System                  3                   3

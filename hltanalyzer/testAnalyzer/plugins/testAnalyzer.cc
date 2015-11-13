@@ -59,7 +59,8 @@ public:
 private:
   virtual void beginJob() override;
   virtual void analyze(const edm::Event&, const edm::EventSetup&) override;
-
+  void clearAllGlobalVectors();
+  
   // ----------member data ---------------------------
 
   edm::InputTag mInputCollection;
@@ -87,7 +88,7 @@ private:
 // constructors and destructor
 //
 testAnalyzer::testAnalyzer(const edm::ParameterSet& iConfig):
-  mInputCollection               (iConfig.getParameter<edm::InputTag>       ("jet"))
+  mInputCollection               (iConfig.getParameter<edm::InputTag>       ("src"))
   // //now do what ever initialization is needed
   // usesResource("TFileService");
 {
@@ -109,9 +110,22 @@ testAnalyzer::~testAnalyzer()
 // member functions
 //
 
+void testAnalyzer::clearAllGlobalVectors()
+{
+
+  jet_pt.clear();
+  jet_eta.clear();
+  jet_phi.clear();
+
+}
+
 // ------------ method called for each event  ------------
 void testAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
 {
+
+  clearAllGlobalVectors();
+
+  cout<<"In the analyze function"<<endl;
 
   event = iEvent.id().event();
   run = iEvent.id().run();
@@ -134,6 +148,12 @@ void testAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
   recoJets.clear();
   
   edm::Handle<CaloJetCollection>  caloJets;
+  iEvent.getByToken(caloJetsToken_, caloJets);
+
+  if (!caloJets.isValid()) {
+    return;
+  }
+  
   for (unsigned ijet=0; ijet<caloJets->size(); ijet++) {
     recoJets.push_back((*caloJets)[ijet]);
   } 
@@ -156,7 +176,10 @@ void testAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
 void  testAnalyzer::beginJob()
 {
 
-  TFileDirectory dir = fout->mkdir("hltPuAK4CaloJetsCorrectedIDPassed");
+  cout<<"In the begin job function"<<endl;
+
+  jetTree = fout->make<TTree>("jetTree","hltPuAK4CaloJetsCorrectedIDPassed");
+  
   jetTree->Branch("event", &event, "event/I");
   jetTree->Branch("run", &run, "run/I");
   jetTree->Branch("lumi", &lumi, "lumi/I");
