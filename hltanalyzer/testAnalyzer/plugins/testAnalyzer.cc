@@ -32,6 +32,8 @@
 #include "CommonTools/UtilAlgos/interface/TFileService.h"
 #include "DataFormats/JetReco/interface/CaloJet.h"
 #include "DataFormats/JetReco/interface/CaloJetCollection.h"
+#include "DataFormats/JetReco/interface/GenJet.h"
+#include "DataFormats/JetReco/interface/GenJetCollection.h"
 
 #include "TTree.h"
 #include "TROOT.h"
@@ -64,8 +66,10 @@ private:
   // ----------member data ---------------------------
 
   edm::InputTag mInputCollection;
+  edm::InputTag mInputGenCollection;
   edm::EDGetTokenT<reco::CaloJetCollection> caloJetsToken_;
-
+  edm::EDGetTokenT<reco::GenJetCollection> genJetsToken_;
+  
   edm::Service<TFileService> fout;
   TTree * jetTree;
   int event, run, lumi, hiBin;
@@ -73,6 +77,9 @@ private:
   std::vector <float> jet_pt;  
   std::vector <float> jet_eta;  
   std::vector <float> jet_phi;  
+  std::vector <float> genjet_pt;  
+  std::vector <float> genjet_eta;  
+  std::vector <float> genjet_phi;  
 
 };
 
@@ -88,12 +95,13 @@ private:
 // constructors and destructor
 //
 testAnalyzer::testAnalyzer(const edm::ParameterSet& iConfig):
-  mInputCollection               (iConfig.getParameter<edm::InputTag>       ("src"))
+  mInputCollection               (iConfig.getParameter<edm::InputTag>       ("src")),
+  mInputGenCollection            (iConfig.getParameter<edm::InputTag>       ("srcGen"))
   // //now do what ever initialization is needed
   // usesResource("TFileService");
 {
   caloJetsToken_  = consumes<reco::CaloJetCollection>(mInputCollection);
-
+  genJetsToken_ = consumes<reco::GenJetCollection>(edm::InputTag(mInputGenCollection));
 }
 
 
@@ -116,6 +124,9 @@ void testAnalyzer::clearAllGlobalVectors()
   jet_pt.clear();
   jet_eta.clear();
   jet_phi.clear();
+  genjet_pt.clear();
+  genjet_eta.clear();
+  genjet_phi.clear();
 
 }
 
@@ -125,7 +136,7 @@ void testAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
 
   clearAllGlobalVectors();
 
-  cout<<"In the analyze function"<<endl;
+  //cout<<"In the analyze function"<<endl;
 
   event = iEvent.id().event();
   run = iEvent.id().run();
@@ -167,6 +178,19 @@ void testAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
     
   }// jet loop
 
+
+  edm::Handle<GenJetCollection> genJets;
+  iEvent.getByToken(genJetsToken_, genJets);
+
+  if (!genJets.isValid()) return;
+
+  for (GenJetCollection::const_iterator gjet=genJets->begin();  gjet!=genJets->end(); gjet++)	{
+    genjet_pt.push_back(gjet->pt());
+    genjet_eta.push_back(gjet->eta());
+    genjet_phi.push_back(gjet->phi());
+  }
+
+    
   jetTree->Fill();
   
 }
@@ -176,7 +200,7 @@ void testAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
 void  testAnalyzer::beginJob()
 {
 
-  cout<<"In the begin job function"<<endl;
+  //cout<<"In the begin job function"<<endl;
 
   jetTree = fout->make<TTree>("jetTree","hltPuAK4CaloJetsCorrectedIDPassed");
   
@@ -189,6 +213,9 @@ void  testAnalyzer::beginJob()
   jetTree->Branch("jet_pt",&jet_pt);
   jetTree->Branch("jet_eta",&jet_eta);
   jetTree->Branch("jet_phi",&jet_phi);
+  jetTree->Branch("genjet_pt",&jet_pt);
+  jetTree->Branch("genjet_eta",&jet_eta);
+  jetTree->Branch("genjet_phi",&jet_phi);
 
 }
 

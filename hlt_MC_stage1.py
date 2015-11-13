@@ -4917,14 +4917,15 @@ process.HLTAnalyzerEndpath = cms.EndPath( process.hltGtDigis + process.hltPreAna
 # additions from Raghav to add the simple analyzer to read jets belonging to this particular path
 
 
-process.TFileService = cms.Service("TFileService",
-                                   fileName = cms.string("test_jettree.root")
-)
+#process.TFileService = cms.Service("TFileService",
+#                                   fileName = cms.string("test_jettree.root")
+#)
 
 
 
 process.demo = cms.EDAnalyzer('testAnalyzer',
-                              src = cms.InputTag("hltPuAK4CaloJetsCorrectedIDPassed")
+                              src = cms.InputTag("hltPuAK4CaloJetsCorrectedIDPassed"),
+                              srcGen = cms.InputTag("ak4HiGenJets")
 )
 
 
@@ -4977,7 +4978,7 @@ if 'hltDQML1SeedLogicScalers' in process.__dict__:
 
 # limit the number of events to be processed
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32( 10 )
+    input = cms.untracked.int32(-1)
 )
 
 # enable the TrigReport and TimeReport
@@ -5047,7 +5048,7 @@ process.output = cms.OutputModule("PoolOutputModule",
 )
 
 #process.DQMOutput = cms.EndPath( process.dqmOutput+process.output+process.TFileService )
-process.DQMOutput = cms.EndPath( process.dqmOutput)
+#process.DQMOutput = cms.EndPath( process.dqmOutput)
 
 # add specific customizations
 _customInfo = {}
