@@ -85,8 +85,9 @@ process.GlobalTag.toGet.extend([
     ),
 ])
 
-from HeavyIonsAnalysis.Configuration.CommonFunctions_cff import overrideJEC_PbPb2760
-overrideJEC_PbPb2760(process)
+# only have this if you are overriding the JEC, from the tag. 
+#from HeavyIonsAnalysis.Configuration.CommonFunctions_cff import overrideJEC_PbPb2760
+#overrideJEC_PbPb2760(process)
 
 process.load("RecoHI.HiCentralityAlgos.CentralityBin_cfi")
 process.centralityBin.Centrality = cms.InputTag("hiCentrality")
@@ -125,7 +126,7 @@ process.es_prefer_jec = cms.ESPrefer('PoolDBESSource','jec')
 #####################################################################################
 
 process.TFileService = cms.Service("TFileService",
-                                   fileName=cms.string("HiForest_ak4offline.root"))
+                                   fileName=cms.string("HiForest_ak4nooverride.root"))
 
 #####################################################################################
 # Additional Reconstruction and Analysis: Main Body
