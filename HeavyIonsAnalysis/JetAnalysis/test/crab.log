@@ -1,0 +1,217 @@
+DEBUG 2015-11-15 13:15:37,052: 	 Executing command: 'submit'
+DEBUG 2015-11-15 13:15:37,053: 	 Found CRAB cache file /afs/cern.ch/user/r/rkunnawa/.crab3
+DEBUG 2015-11-15 13:15:37,143: 	 Checking credentials
+DEBUG 2015-11-15 13:15:37,143: 	 Proxy file /tmp/x509up_u47972 not found
+DEBUG 2015-11-15 13:15:37,143: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2015-11-15 13:15:49,805: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 0
+DEBUG 2015-11-15 13:15:50,312: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -timeleft
+ output : 86398
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:15:50,817: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -actimeleft
+ output : 86397
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:15:51,325: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u47972 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:15:51,325: 	 Proxy created.
+INFO 2015-11-15 13:15:51,325: 	 Will use CRAB configuration file runForest_ECALStudy_PbPb_MIX_75X.py
+DEBUG 2015-11-15 13:15:51,326: 	 Loading CRAB configuration file.
+ERROR 2015-11-15 13:15:51,474: 	 Error while loading CRAB configuration:
+list index out of range
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2015-11-15 13:15:51,474: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 32, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 295, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+list index out of range
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2015-11-15 13:17:28,248: 	 Executing command: 'submit'
+DEBUG 2015-11-15 13:17:28,249: 	 Found CRAB cache file /afs/cern.ch/user/r/rkunnawa/.crab3
+DEBUG 2015-11-15 13:17:28,260: 	 Checking credentials
+DEBUG 2015-11-15 13:17:28,261: 	 Found proxy file /tmp/x509up_u47972
+DEBUG 2015-11-15 13:17:28,261: 	 Getting proxy life time left
+DEBUG 2015-11-15 13:17:29,387: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -timeleft
+ output : 86299
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:17:30,214: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -actimeleft
+ output : 86297
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:17:30,215: 	 Proxy valid for 23:58:19 hours
+INFO 2015-11-15 13:17:30,215: 	 Will use CRAB configuration file runForest_ECALStudy_PbPb_MIX_75X.py
+DEBUG 2015-11-15 13:17:30,215: 	 Loading CRAB configuration file.
+ERROR 2015-11-15 13:17:30,272: 	 Error while loading CRAB configuration:
+list index out of range
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2015-11-15 13:17:30,272: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 32, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 295, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+list index out of range
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2015-11-15 13:24:59,064: 	 Executing command: 'submit'
+DEBUG 2015-11-15 13:24:59,065: 	 Found CRAB cache file /afs/cern.ch/user/r/rkunnawa/.crab3
+DEBUG 2015-11-15 13:24:59,080: 	 Checking credentials
+DEBUG 2015-11-15 13:24:59,081: 	 Found proxy file /tmp/x509up_u47972
+DEBUG 2015-11-15 13:24:59,081: 	 Getting proxy life time left
+DEBUG 2015-11-15 13:24:59,789: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -timeleft
+ output : 85849
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:25:00,295: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -actimeleft
+ output : 85847
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:25:00,295: 	 Proxy valid for 23:50:49 hours
+INFO 2015-11-15 13:25:00,295: 	 Will use CRAB configuration file runForest_ECALStudy_PbPb_MIX_75X.py
+DEBUG 2015-11-15 13:25:00,295: 	 Loading CRAB configuration file.
+ERROR 2015-11-15 13:25:00,402: 	 Error while loading CRAB configuration:
+list index out of range
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2015-11-15 13:25:00,403: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 32, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 295, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+list index out of range
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2015-11-15 13:25:12,693: 	 Executing command: 'submit'
+DEBUG 2015-11-15 13:25:12,693: 	 Found CRAB cache file /afs/cern.ch/user/r/rkunnawa/.crab3
+DEBUG 2015-11-15 13:25:12,700: 	 Checking credentials
+DEBUG 2015-11-15 13:25:12,701: 	 Found proxy file /tmp/x509up_u47972
+DEBUG 2015-11-15 13:25:12,701: 	 Getting proxy life time left
+DEBUG 2015-11-15 13:25:13,207: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -timeleft
+ output : 85835
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:25:13,712: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -actimeleft
+ output : 85834
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:25:13,713: 	 Proxy valid for 23:50:35 hours
+INFO 2015-11-15 13:25:13,713: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2015-11-15 13:25:13,713: 	 Loading CRAB configuration file.
+ERROR 2015-11-15 13:25:13,723: 	 Error while loading CRAB configuration:
+name 'Configuration' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2015-11-15 13:25:13,723: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 32, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 295, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+name 'Configuration' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2015-11-15 13:28:13,036: 	 Executing command: 'submit'
+DEBUG 2015-11-15 13:28:13,037: 	 Found CRAB cache file /afs/cern.ch/user/r/rkunnawa/.crab3
+DEBUG 2015-11-15 13:28:13,058: 	 Checking credentials
+DEBUG 2015-11-15 13:28:13,060: 	 Found proxy file /tmp/x509up_u47972
+DEBUG 2015-11-15 13:28:13,060: 	 Getting proxy life time left
+DEBUG 2015-11-15 13:28:13,768: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -timeleft
+ output : 85655
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:28:14,274: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -actimeleft
+ output : 85653
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:28:14,274: 	 Proxy valid for 23:47:35 hours
+INFO 2015-11-15 13:28:14,274: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2015-11-15 13:28:14,274: 	 Loading CRAB configuration file.
+DEBUG 2015-11-15 13:28:14,276: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2015-11-15 13:28:14,276: 	 Working area '/afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/src/HeavyIonsAnalysis/JetAnalysis/test/crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents' already exists 
+Please change the requestName in the config file
+ERROR 2015-11-15 13:28:14,276: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 32, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 299, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1511/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 393, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/src/HeavyIonsAnalysis/JetAnalysis/test/crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents' already exists 
+Please change the requestName in the config file

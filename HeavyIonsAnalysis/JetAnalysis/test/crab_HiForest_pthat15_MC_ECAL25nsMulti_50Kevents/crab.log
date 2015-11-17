@@ -1,0 +1,220 @@
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+DEBUG 2015-11-15 13:30:13,046: 	 Executing command: 'submit'
+DEBUG 2015-11-15 13:30:13,046: 	 Found CRAB cache file /afs/cern.ch/user/r/rkunnawa/.crab3
+DEBUG 2015-11-15 13:30:13,053: 	 Checking credentials
+DEBUG 2015-11-15 13:30:13,055: 	 Found proxy file /tmp/x509up_u47972
+DEBUG 2015-11-15 13:30:13,055: 	 Getting proxy life time left
+DEBUG 2015-11-15 13:30:13,659: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -timeleft
+ output : 85535
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:30:14,165: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -actimeleft
+ output : 85533
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:30:14,165: 	 Proxy valid for 23:45:35 hours
+INFO 2015-11-15 13:30:14,165: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2015-11-15 13:30:14,165: 	 Loading CRAB configuration file.
+DEBUG 2015-11-15 13:30:14,167: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2015-11-15 13:30:14,349: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=rkunnawa/CN=748357/CN=Raghav Kunnawalkam Elayavalli
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-11-15 13:30:14,349: 	 Checking credentials
+DEBUG 2015-11-15 13:30:14,349: 	 Found proxy file /tmp/x509up_u47972
+DEBUG 2015-11-15 13:30:14,349: 	 Getting proxy life time left
+DEBUG 2015-11-15 13:30:14,855: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -timeleft
+ output : 85534
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:30:15,368: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -actimeleft
+ output : 85532
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:30:15,368: 	 Proxy valid for 23:45:34 hours
+DEBUG 2015-11-15 13:30:15,876: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u47972 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:30:16,281: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2015-11-15 13:30:16,394: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=rkunnawa/CN=748357/CN=Raghav Kunnawalkam Elayavalli
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-11-15 13:30:16,395: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-11-15 13:30:16,395: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=rkunnawa/CN=748357/CN=Raghav Kunnawalkam Elayavalli_cmsweb.cern.ch for credential name
+DEBUG 2015-11-15 13:30:16,600: 	 Executing : 
+ command : myproxy-info -l f177240e44e51f49e4026efe0693b4e2b9fc52c9 -s myproxy.cern.ch
+ output : username: f177240e44e51f49e4026efe0693b4e2b9fc52c9
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=rkunnawa/CN=748357/CN=Raghav Kunnawalkam Elayavalli
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 719:55:27  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:30:16,602: 	 Myproxy is valid: 2591727
+DEBUG 2015-11-15 13:30:16,602: 	 Command use: submit
+DEBUG 2015-11-15 13:30:16,602: 	 Options use: ['-c', 'crabConfig.py']
+DEBUG 2015-11-15 13:30:16,997: 	 CRABClient version: 3.3.1511
+DEBUG 2015-11-15 13:30:16,997: 	 Instance is prod
+DEBUG 2015-11-15 13:30:16,997: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-11-15 13:30:16,997: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-11-15 13:30:16,997: 	 Started submission
+DEBUG 2015-11-15 13:30:16,997: 	 Working on /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/src/HeavyIonsAnalysis/JetAnalysis/test/crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents
+DEBUG 2015-11-15 13:30:17,485: 	 Loading required information from the environment
+DEBUG 2015-11-15 13:30:17,485: 	 Found CMSSW_7_5_5_patch1 for slc6_amd64_gcc491 with base /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1
+DEBUG 2015-11-15 13:30:17,511: 	 UNIQUE NAME: tarUUID d5aa5367-5cdc-4aab-a12a-509d5d0c3146 
+DEBUG 2015-11-15 13:30:17,512: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferOutputs = True
+config.General.requestName = 'HiForest_pthat15_MC_ECAL25nsMulti_50Kevents'
+config.section_('JobType')
+config.JobType.psetName = 'runForest_ECALStudy_PbPb_MIX_75X.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.inputFiles = ['rssLimit']
+config.JobType.outputFiles = ['HiForest.root']
+config.section_('Data')
+config.Data.inputDataset = '/PYTHIA_QCD_TuneCUETP8M1_cfi_GEN_SIM_5020GeV/dgulhan-Pythia8_Dijet15_pp_TuneCUETP8M1_Hydjet_MinBias_5020GeV_RECODEBUG_PrivMC-4cccc1464606b0b9799122eb9219e36a/USER'
+config.Data.outputDatasetTag = 'Pythia8_Dijet_pthat15_TuneCUETP8M1_5020GeV_HYDJET_MINBIAS_HiForest_PrivMC_MultiFit25ns'
+config.Data.totalUnits = 55000
+config.Data.unitsPerJob = 100
+config.Data.inputDBS = 'phys03'
+config.Data.splitting = 'EventAwareLumiBased'
+config.Data.publication = False
+config.section_('Site')
+config.Site.whitelist = ['T2_US_MIT']
+config.Site.storageSite = 'T2_US_MIT'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2015-11-15 13:30:17,512: 	 self.config.JobType.psetName: runForest_ECALStudy_PbPb_MIX_75X.py
+INFO 2015-11-15 13:30:17,513: 	 Importing CMSSW configuration runForest_ECALStudy_PbPb_MIX_75X.py
+INFO 2015-11-15 13:30:25,724: 	 Finished importing CMSSW configuration runForest_ECALStudy_PbPb_MIX_75X.py
+DEBUG 2015-11-15 13:30:25,724: 	 Writing CMSSW configuration to /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/src/HeavyIonsAnalysis/JetAnalysis/test/crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents/inputs/PSet.py
+DEBUG 2015-11-15 13:30:28,312: 	 The following EDM output files will be collected: []
+DEBUG 2015-11-15 13:30:28,313: 	 The following TFile output files will be collected: ['HiForest.root']
+DEBUG 2015-11-15 13:30:28,313: 	 The following user output files will be collected: []
+DEBUG 2015-11-15 13:30:28,313: 	 Loading required information from the environment
+DEBUG 2015-11-15 13:30:28,313: 	 Found CMSSW_7_5_5_patch1 for slc6_amd64_gcc491 with base /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1
+DEBUG 2015-11-15 13:30:28,313: 	 Making tarball in /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/src/HeavyIonsAnalysis/JetAnalysis/test/crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents/inputs/d5aa5367-5cdc-4aab-a12a-509d5d0c3146default.tgz
+DEBUG 2015-11-15 13:30:28,314: 	 Checking directory /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/lib
+DEBUG 2015-11-15 13:30:28,314: 	 Adding directory /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/lib to tarball
+DEBUG 2015-11-15 13:30:28,939: 	 Checking directory /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/biglib
+DEBUG 2015-11-15 13:30:28,939: 	 Adding directory /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/biglib to tarball
+DEBUG 2015-11-15 13:30:28,939: 	 Checking directory /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/module
+DEBUG 2015-11-15 13:30:29,017: 	 Adding data directory /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/src/HeavyIonsAnalysis/Configuration/data to tarball
+DEBUG 2015-11-15 13:30:29,036: 	 Adding data directory /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/src/HeavyIonsAnalysis/EventAnalysis/interface to tarball
+DEBUG 2015-11-15 13:30:29,039: 	 Adding data directory /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/src/HeavyIonsAnalysis/JetAnalysis/interface to tarball
+DEBUG 2015-11-15 13:30:29,095: 	 Adding data directory /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/src/HeavyIonsAnalysis/MuonAnalysis/interface to tarball
+DEBUG 2015-11-15 13:30:29,098: 	 Adding data directory /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/src/HeavyIonsAnalysis/PhotonAnalysis/interface to tarball
+DEBUG 2015-11-15 13:30:29,101: 	 Adding data directory /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/src/HeavyIonsAnalysis/TrackAnalysis/interface to tarball
+DEBUG 2015-11-15 13:30:29,104: 	 Adding data directory /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/src/HeavyIonsAnalysis/VertexAnalysis/interface to tarball
+DEBUG 2015-11-15 13:30:29,106: 	 Adding file rssLimit to tarball
+DEBUG 2015-11-15 13:30:29,579: 	 Uploading archive /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/src/HeavyIonsAnalysis/JetAnalysis/test/crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents/inputs/d5aa5367-5cdc-4aab-a12a-509d5d0c3146default.tgz to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2015-11-15 13:30:30,518: 	 Result uploading input files: 6da13c24f03595bfea701d85a234157b2d8ac3e0b50c0d0844cad377e27dbde6.tar.gz 
+INFO 2015-11-15 13:30:30,518: 	 Sending the request to the server
+DEBUG 2015-11-15 13:30:30,518: 	 Submitting {'maxjobruntime': 1250, 'adduserfiles': ['rssLimit'], 'ignorelocality': 0, 'savelogsflag': 0, 'useparent': 0, 'asyncdest': 'T2_US_MIT', 'algoargs': 100, 'cachefilename': '6da13c24f03595bfea701d85a234157b2d8ac3e0b50c0d0844cad377e27dbde6.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_7_5_5_patch1', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/PYTHIA_QCD_TuneCUETP8M1_cfi_GEN_SIM_5020GeV/dgulhan-Pythia8_Dijet15_pp_TuneCUETP8M1_Hydjet_MinBias_5020GeV_RECODEBUG_PrivMC-4cccc1464606b0b9799122eb9219e36a/USER', 'dryrun': 0, 'workflow': 'crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents', 'sitewhitelist': ['T2_US_MIT'], 'nonprodsw': 0, 'tfileoutfiles': ['HiForest.root'], 'oneEventMode': 0, 'cacheurl': 'https://cmsweb.cern.ch/crabcache', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc491', 'totalunits': 55000, 'splitalgo': 'EventAwareLumiBased', 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': 'Pythia8_Dijet_pthat15_TuneCUETP8M1_5020GeV_HYDJET_MINBIAS_HiForest_PrivMC_MultiFit25ns'} 
+DEBUG 2015-11-15 13:30:30,518: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=0&useparent=0&asyncdest=T2_US_MIT&algoargs=100&cachefilename=6da13c24f03595bfea701d85a234157b2d8ac3e0b50c0d0844cad377e27dbde6.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_7_5_5_patch1&primarydataset=&inputdata=%2FPYTHIA_QCD_TuneCUETP8M1_cfi_GEN_SIM_5020GeV%2Fdgulhan-Pythia8_Dijet15_pp_TuneCUETP8M1_Hydjet_MinBias_5020GeV_RECODEBUG_PrivMC-4cccc1464606b0b9799122eb9219e36a%2FUSER&dryrun=0&workflow=crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents&nonprodsw=0&oneEventMode=0&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc491&totalunits=55000&splitalgo=EventAwareLumiBased&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=Pythia8_Dijet_pthat15_TuneCUETP8M1_5020GeV_HYDJET_MINBIAS_HiForest_PrivMC_MultiFit25ns&adduserfiles=rssLimit&sitewhitelist=T2_US_MIT&tfileoutfiles=HiForest.root
+DEBUG 2015-11-15 13:30:31,762: 	 Result: {'result': [{'RequestName': '151115_123031:rkunnawa_crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents'}]}
+INFO 2015-11-15 13:30:31,766: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2015-11-15 13:30:31,766: 	 Task name: 151115_123031:rkunnawa_crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents
+INFO 2015-11-15 13:30:31,766: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2015-11-15 13:30:31,766: 	 About to return
+INFO 2015-11-15 13:30:31,771: 	 Log file is /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/src/HeavyIonsAnalysis/JetAnalysis/test/crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents/crab.log
+DEBUG 2015-11-15 13:30:57,782: 	 Executing command: 'status'
+DEBUG 2015-11-15 13:30:57,782: 	 Found CRAB cache file /afs/cern.ch/user/r/rkunnawa/.crab3
+DEBUG 2015-11-15 13:30:57,797: 	 Checking credentials
+DEBUG 2015-11-15 13:30:57,797: 	 Found proxy file /tmp/x509up_u47972
+DEBUG 2015-11-15 13:30:57,797: 	 Getting proxy life time left
+DEBUG 2015-11-15 13:30:58,409: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -timeleft
+ output : 85490
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:30:58,917: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -actimeleft
+ output : 85489
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:30:58,918: 	 Proxy valid for 23:44:50 hours
+DEBUG 2015-11-15 13:30:59,034: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=rkunnawa/CN=748357/CN=Raghav Kunnawalkam Elayavalli
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-11-15 13:30:59,035: 	 Checking credentials
+DEBUG 2015-11-15 13:30:59,035: 	 Found proxy file /tmp/x509up_u47972
+DEBUG 2015-11-15 13:30:59,035: 	 Getting proxy life time left
+DEBUG 2015-11-15 13:30:59,540: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -timeleft
+ output : 85489
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:31:00,045: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u47972 -actimeleft
+ output : 85488
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:31:00,045: 	 Proxy valid for 23:44:49 hours
+DEBUG 2015-11-15 13:31:00,449: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2015-11-15 13:31:00,563: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=rkunnawa/CN=748357/CN=Raghav Kunnawalkam Elayavalli
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/ef35842be28ecca6d10195ea8182a5ac/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1p/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-11-15 13:31:00,564: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-11-15 13:31:00,564: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=rkunnawa/CN=748357/CN=Raghav Kunnawalkam Elayavalli_cmsweb.cern.ch for credential name
+DEBUG 2015-11-15 13:31:00,970: 	 Executing : 
+ command : myproxy-info -l f177240e44e51f49e4026efe0693b4e2b9fc52c9 -s myproxy.cern.ch
+ output : username: f177240e44e51f49e4026efe0693b4e2b9fc52c9
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=rkunnawa/CN=748357/CN=Raghav Kunnawalkam Elayavalli
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 719:54:43  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-11-15 13:31:00,971: 	 Myproxy is valid: 2591683
+DEBUG 2015-11-15 13:31:00,971: 	 Command use: status
+DEBUG 2015-11-15 13:31:00,971: 	 Options use: ['-d', 'crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents/']
+DEBUG 2015-11-15 13:31:01,332: 	 CRABClient version: 3.3.1511
+DEBUG 2015-11-15 13:31:01,332: 	 Instance is prod
+DEBUG 2015-11-15 13:31:01,332: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-11-15 13:31:01,332: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-11-15 13:31:01,332: 	 Looking up detailed status of task 151115_123031:rkunnawa_crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents
+DEBUG 2015-11-15 13:31:02,402: 	 {'status': 'QUEUED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '151115_123031:rkunnawa_crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'jobdefErrors': [], 'collector': 'cmssrv221.fnal.gov,vocms099.cern.ch', 'jobList': []}
+INFO 2015-11-15 13:31:02,402: 	 CRAB project directory:		/afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/src/HeavyIonsAnalysis/JetAnalysis/test/crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents
+INFO 2015-11-15 13:31:02,402: 	 Task name:			151115_123031:rkunnawa_crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents
+INFO 2015-11-15 13:31:02,402: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2015-11-15 13:31:02,403: 	 Task status:			QUEUED
+INFO 2015-11-15 13:31:02,403: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=151115_123031%3Arkunnawa_crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents
+INFO 2015-11-15 13:31:02,403: 	 
+No jobs created yet!
+INFO 2015-11-15 13:31:02,405: 	 Log file is /afs/cern.ch/work/r/rkunnawa/Run2_ECAL/CMSSW_7_5_5_patch1/src/HeavyIonsAnalysis/JetAnalysis/test/crab_HiForest_pthat15_MC_ECAL25nsMulti_50Kevents/crab.log
