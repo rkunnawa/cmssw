@@ -14,7 +14,9 @@
 #include "FWCore/Framework/interface/MakerMacros.h"
 
 #include "TFile.h"
+#include "TVector2.h"
 #include "TTree.h"
+#include "TLorentzVector.h"
 #include "TH1.h"
 #include "CommonTools/UtilAlgos/interface/TFileService.h"
 #include "FWCore/ServiceRegistry/interface/Service.h"
@@ -82,6 +84,9 @@ private:
   int TaggedJet(reco::Jet calojet, edm::Handle<reco::JetTagCollection > jetTags );
   float getTau(unsigned num, const reco::GenJet object) const;
   void analyzeSubjets(const reco::Jet jet);
+  void fillNewJetVarsRecoJet(const reco::Jet jet);
+  void fillNewJetVarsRefJet(const reco::GenJet jet);
+  void fillNewJetVarsGenJet(const reco::GenJet jet);
   int  getGroomedGenJetIndex(const reco::GenJet jet) const;
   void analyzeRefSubjets(const reco::GenJet jet);
   void analyzeGenSubjets(const reco::GenJet jet);
@@ -218,6 +223,21 @@ private:
     float jtpu[MAXJETS];
     float jtm[MAXJETS];
     float jtarea[MAXJETS];
+    int jtnCands[MAXJETS];
+    int jtnChCands[MAXJETS];
+    int jtnNeCands[MAXJETS];
+    float jtMByPt[MAXJETS];
+    float jtRMSCand[MAXJETS];
+    float jtAxis1[MAXJETS];
+    float jtAxis2[MAXJETS];
+    float jtSigma[MAXJETS];
+    float jtR[MAXJETS];
+    float jtpTD[MAXJETS];
+    float jtrm0p5[MAXJETS];
+    float jtrm1[MAXJETS];
+    float jtrm2[MAXJETS];
+    float jtrm3[MAXJETS];
+    float jtpull[MAXJETS];
 
     float jtPfCHF[MAXJETS];
     float jtPfNHF[MAXJETS];
@@ -415,7 +435,23 @@ private:
     float refparton_pt[MAXJETS];
     int refparton_flavor[MAXJETS];
     int refparton_flavorForB[MAXJETS];
+    int refnCands[MAXJETS];
+    int refnChCands[MAXJETS];
+    int refnNeCands[MAXJETS];
+    float refMByPt[MAXJETS];
+    float refRMSCand[MAXJETS];
+    float refAxis1[MAXJETS];
+    float refAxis2[MAXJETS];
+    float refSigma[MAXJETS];
+    float refR[MAXJETS];
+    float refpTD[MAXJETS];
+    float refrm0p5[MAXJETS];
+    float refrm1[MAXJETS];
+    float refrm2[MAXJETS];
+    float refrm3[MAXJETS];
+    float refpull[MAXJETS];
 
+    
     float refptG[MAXJETS];
     float refetaG[MAXJETS];
     float refphiG[MAXJETS];
@@ -442,6 +478,22 @@ private:
     float gendrjt[MAXJETS];
     int gensubid[MAXJETS];
 
+    int gennCands[MAXJETS];
+    int gennChCands[MAXJETS];
+    int gennNeCands[MAXJETS];
+    float genMByPt[MAXJETS];
+    float genRMSCand[MAXJETS];
+    float genAxis1[MAXJETS];
+    float genAxis2[MAXJETS];
+    float genSigma[MAXJETS];
+    float genR[MAXJETS];
+    float genpTD[MAXJETS];
+    float genrm0p5[MAXJETS];
+    float genrm1[MAXJETS];
+    float genrm2[MAXJETS];
+    float genrm3[MAXJETS];
+    float genpull[MAXJETS];
+    
     float genptG[MAXJETS];
     float genetaG[MAXJETS];
     float genphiG[MAXJETS];
