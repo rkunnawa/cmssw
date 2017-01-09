@@ -250,7 +250,14 @@ HiInclusiveJetAnalyzer::beginJob() {
   t->Branch("jtrm1",jets_.jtrm1,"jtrm1[nref]/F");
   t->Branch("jtrm2",jets_.jtrm2,"jtrm2[nref]/F");
   t->Branch("jtrm3",jets_.jtrm3,"jtrm3[nref]/F");
-
+  t->Branch("jtSDm",jets_.jtSDm, "jtSDm[nref]/F");
+  t->Branch("jtSDpt",jets_.jtSDpt, "jtSDpt[nref]/F");
+  t->Branch("jtSDptFrac",jets_.jtSDptFrac, "jtSDptFrac[nref]/F");
+  t->Branch("jtSDrm0p5",jets_.jtSDrm0p5, "jtSDrm0p5[nref]/F");
+  t->Branch("jtSDrm1",jets_.jtSDrm1, "jtSDrm1[nref]/F");
+  t->Branch("jtSDrm2",jets_.jtSDrm2, "jtSDrm2[nref]/F");
+  t->Branch("jtSDrm3",jets_.jtSDrm3, "jtSDrm3[nref]/F");
+  
   t->Branch("jtPfCHF",jets_.jtPfCHF,"jtPfCHF[nref]/F");
   t->Branch("jtPfNHF",jets_.jtPfNHF,"jtPfNHF[nref]/F");
   t->Branch("jtPfCEF",jets_.jtPfCEF,"jtPfCEF[nref]/F");
@@ -466,7 +473,16 @@ HiInclusiveJetAnalyzer::beginJob() {
     t->Branch("refrm1",jets_.refrm1,"refrm1[nref]/F");
     t->Branch("refrm2",jets_.refrm2,"refrm2[nref]/F");
     t->Branch("refrm3",jets_.refrm3,"refrm3[nref]/F");
-  
+
+    t->Branch("refSDm",jets_.refSDm, "refSDm[nref]/F");
+    t->Branch("refSDpt",jets_.refSDpt, "refSDpt[nref]/F");
+    t->Branch("refSDptFrac",jets_.refSDptFrac, "refSDptFrac[nref]/F");
+    t->Branch("refSDrm0p5",jets_.refSDrm0p5, "refSDrm0p5[nref]/F");
+    t->Branch("refSDrm1",jets_.refSDrm1, "refSDrm1[nref]/F");
+    t->Branch("refSDrm2",jets_.refSDrm2, "refSDrm2[nref]/F");
+    t->Branch("refSDrm3",jets_.refSDrm3, "refSDrm3[nref]/F");
+
+    
     if(doGenTaus_) {
       t->Branch("reftau1",jets_.reftau1,"reftau1[nref]/F");
       t->Branch("reftau2",jets_.reftau2,"reftau2[nref]/F");
@@ -531,6 +547,15 @@ HiInclusiveJetAnalyzer::beginJob() {
       t->Branch("genrm1",jets_.genrm1,"genrm1[nref]/F");
       t->Branch("genrm2",jets_.genrm2,"genrm2[nref]/F");
       t->Branch("genrm3",jets_.genrm3,"genrm3[nref]/F");
+
+      t->Branch("genSDm",jets_.genSDm, "genSDm[nref]/F");
+      t->Branch("genSDpt",jets_.genSDpt, "genSDpt[nref]/F");
+      t->Branch("genSDptFrac",jets_.genSDptFrac, "genSDptFrac[nref]/F");
+      t->Branch("genSDrm0p5",jets_.genSDrm0p5, "genSDrm0p5[nref]/F");
+      t->Branch("genSDrm1",jets_.genSDrm1, "genSDrm1[nref]/F");
+      t->Branch("genSDrm2",jets_.genSDrm2, "genSDrm2[nref]/F");
+      t->Branch("genSDrm3",jets_.genSDrm3, "genSDrm3[nref]/F");
+
       
       if(doGenSubJets_) {
         t->Branch("genptG",jets_.genptG,"genptG[ngen]/F");
@@ -1312,6 +1337,13 @@ HiInclusiveJetAnalyzer::analyze(const Event& iEvent,
 	jets_.refR[jets_.nref] = -999.;
 	jets_.refpull[jets_.nref] = -999.;
 	jets_.refpTD[jets_.nref] = -999.;
+	jets_.refSDm[jets_.nref] = -999;
+	jets_.refSDpt[jets_.nref] = -999;
+	jets_.refSDptFrac[jets_.nref] = -999;
+	jets_.refSDrm0p5[jets_.nref] = -999;
+	jets_.refSDrm1[jets_.nref] = -999;
+	jets_.refSDrm2[jets_.nref] = -999;
+	jets_.refSDrm3[jets_.nref] = -999;
 	
         if(doGenSubJets_) {
           jets_.refptG[jets_.nref]  = -999.;
@@ -1450,8 +1482,6 @@ HiInclusiveJetAnalyzer::analyze(const Event& iEvent,
         }
       }
 
-      fillNewJetVarsGenJet(genjet);
-      
       // threshold to reduce size of output in minbias PbPb
       if(genjet_pt>genPtMin_){
 	jets_.genpt[jets_.ngen] = genjet_pt;
@@ -1459,6 +1489,7 @@ HiInclusiveJetAnalyzer::analyze(const Event& iEvent,
 	jets_.genphi[jets_.ngen] = genjet.phi();
         jets_.genm[jets_.ngen] = genjet.mass();
 	jets_.geny[jets_.ngen] = genjet.eta();
+	fillNewJetVarsGenJet(genjet);      
 
         if(doGenTaus_) {
           jets_.gentau1[jets_.ngen] = tau1;
@@ -1779,6 +1810,16 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsRecoJet(const reco::Jet jet){
   TVector2 t_Vect(0,0);
   TVector2 r(0,0);
   float pull = 0.0;
+
+  float sd_m = 0.0;
+  float sd_pt = 0.0;
+  float sd_ptfrac = 0.0;
+  float sd_rm0p5 = 0.0;
+  float sd_rm1 = 0.0;
+  float sd_rm2 = 0.0;
+  float sd_rm3 = 0.0;
+  
+  vector<fastjet::PseudoJet> jetconsts;
   
   if(jet.numberOfDaughters()>0) {
     nCands = jet.numberOfDaughters();
@@ -1811,6 +1852,7 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsRecoJet(const reco::Jet jet){
       //! Pull
       TLorentzVector pfvec;
       pfvec.SetPtEtaPhiE(dp.pt(), dp.eta(), dp.phi(), dp.energy());
+      jetconsts.push_back(fastjet::PseudoJet(dp.px(), dp.py(), dp.pz(), dp.energy()));
       float pfy = pfvec.Rapidity();
       float dy = pfy - jet.y();
       r.Set( dy, dphi );
@@ -1822,48 +1864,78 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsRecoJet(const reco::Jet jet){
       rm2+=(dp.pt()*pow(dr,2))/jet.pt();
       rm3+=(dp.pt()*pow(dr,3))/jet.pt();      
     }
-
-    RMSCand = sqrt ( rmscand_n / rmscand_d );
-      
-    M12 = -1.*M12;
-    M21 = -1.*M21;
-      
-    //! eign values
-    float trace = M11 + M22;
-    float detrm = (M11*M22) - (M12*M21);
-      
-    float lam1 = trace/2. + sqrt( pow(trace,2)/4. - detrm );
-    float lam2 = trace/2. - sqrt( pow(trace,2)/4. - detrm );
-      
-    Axis1 = sqrt( lam1 / tot_wt );
-    Axis2 = sqrt( lam2 / tot_wt );
-      
-    Sigma = sqrt( pow(Axis1,2) + pow(Axis2,2) );
-      
-    R = maxCandPt / sumCandPt;
-      
-    pTD = sqrt( sumCandPtSq ) / sumCandPt;
-      
-    pull = t_Vect.Mod();
-    
-    jets_.jtnCands[jets_.nref] = nCands;
-    jets_.jtnChCands[jets_.nref] = nChCands;
-    jets_.jtnNeCands[jets_.nref] = nNeCands;
-    jets_.jtMByPt[jets_.nref] = jetMByPt;
-    jets_.jtRMSCand[jets_.nref] = RMSCand;
-    jets_.jtAxis1[jets_.nref] = Axis1;
-    jets_.jtAxis2[jets_.nref] = Axis2;
-    jets_.jtSigma[jets_.nref] = Sigma;
-    jets_.jtrm3[jets_.nref] = rm3;
-    jets_.jtrm2[jets_.nref] = rm2;
-    jets_.jtrm1[jets_.nref] = rm1;
-    jets_.jtrm0p5[jets_.nref] = rm0p5;
-    jets_.jtR[jets_.nref] = R;
-    jets_.jtpull[jets_.nref] = pull;
-    jets_.jtpTD[jets_.nref] = pTD;
-    
   }
-
+  fastjet::JetDefinition jetDef(fastjet::antikt_algorithm, 999);
+  fastjet::ClusterSequence thisClustering_basic(jetconsts, jetDef);
+  std::vector<fastjet::PseudoJet> out_jets_basic = thisClustering_basic.inclusive_jets(0);
+  if(out_jets_basic.size() == 1){ 
+    fastjet::contrib::RecursiveSymmetryCutBase::SymmetryMeasure  symmetry_measure = fastjet::contrib::RecursiveSymmetryCutBase::scalar_z;
+    fastjet::contrib::SoftDrop sd(0, 0.1, symmetry_measure, rParam);
+    fastjet::PseudoJet sd_jet = sd(out_jets_basic[0]);
+    if(sd_jet != 0){
+      sd_m = sd_jet.m();
+      sd_pt = sd_jet.pt();
+      sd_ptfrac = sd_jet.pt()/jet.pt();    
+      std::vector<fastjet::PseudoJet> sd_jetconsts = sd_jet.constituents();
+      if(sd_jetconsts.size()!=0){
+	for (unsigned k = 0; k < sd_jetconsts.size(); ++k) {
+	  fastjet::PseudoJet dp = sd_jetconsts.at(k);
+	  float dr = deltaR(dp.eta(), dp.phi(), jet.eta(), jet.phi());
+	  sd_rm0p5+=(dp.pt()*pow(dr,0.5))/sd_jet.pt();
+	  sd_rm1+=(dp.pt()*pow(dr,1))/sd_jet.pt();
+	  sd_rm2+=(dp.pt()*pow(dr,2))/sd_jet.pt();
+	  sd_rm3+=(dp.pt()*pow(dr,3))/sd_jet.pt();
+	}
+      }
+    }
+  }
+  
+  RMSCand = sqrt ( rmscand_n / rmscand_d );
+  
+  M12 = -1.*M12;
+  M21 = -1.*M21;
+  
+  //! eign values
+  float trace = M11 + M22;
+  float detrm = (M11*M22) - (M12*M21);
+  
+  float lam1 = trace/2. + sqrt( pow(trace,2)/4. - detrm );
+  float lam2 = trace/2. - sqrt( pow(trace,2)/4. - detrm );
+  
+  Axis1 = sqrt( lam1 / tot_wt );
+  Axis2 = sqrt( lam2 / tot_wt );
+  
+  Sigma = sqrt( pow(Axis1,2) + pow(Axis2,2) );
+  
+  R = maxCandPt / sumCandPt;
+  
+  pTD = sqrt( sumCandPtSq ) / sumCandPt;
+  
+  pull = t_Vect.Mod();
+  
+  jets_.jtnCands[jets_.nref] = nCands;
+  jets_.jtnChCands[jets_.nref] = nChCands;
+  jets_.jtnNeCands[jets_.nref] = nNeCands;
+  jets_.jtMByPt[jets_.nref] = jetMByPt;
+  jets_.jtRMSCand[jets_.nref] = RMSCand;
+  jets_.jtAxis1[jets_.nref] = Axis1;
+  jets_.jtAxis2[jets_.nref] = Axis2;
+  jets_.jtSigma[jets_.nref] = Sigma;
+  jets_.jtrm3[jets_.nref] = rm3;
+  jets_.jtrm2[jets_.nref] = rm2;
+  jets_.jtrm1[jets_.nref] = rm1;
+  jets_.jtrm0p5[jets_.nref] = rm0p5;
+  jets_.jtR[jets_.nref] = R;
+  jets_.jtpull[jets_.nref] = pull;
+  jets_.jtpTD[jets_.nref] = pTD;
+  jets_.jtSDm[jets_.nref] = sd_m;
+  jets_.jtSDpt[jets_.nref] = sd_pt;
+  jets_.jtSDptFrac[jets_.nref] = sd_ptfrac;
+  jets_.jtSDrm0p5[jets_.nref] = sd_rm0p5;
+  jets_.jtSDrm1[jets_.nref] = sd_rm1;
+  jets_.jtSDrm2[jets_.nref] = sd_rm2;
+  jets_.jtSDrm3[jets_.nref] = sd_rm3;
+  
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -1902,7 +1974,17 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsRefJet(const reco::GenJet jet){
   TVector2 t_Vect(0,0);
   TVector2 r(0,0);
   float pull = 0.0;
-  
+
+  float sd_m = 0.0;
+  float sd_pt = 0.0;
+  float sd_ptfrac = 0.0;
+  float sd_rm0p5 = 0.0;
+  float sd_rm1 = 0.0;
+  float sd_rm2 = 0.0;
+  float sd_rm3 = 0.0;
+
+  vector<fastjet::PseudoJet> jetconsts;
+
   if(jet.numberOfDaughters()>0) {
     nCands = jet.numberOfDaughters();
     for (unsigned k = 0; k < jet.numberOfDaughters(); ++k) {
@@ -1934,6 +2016,8 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsRefJet(const reco::GenJet jet){
       //! Pull
       TLorentzVector pfvec;
       pfvec.SetPtEtaPhiE(dp.pt(), dp.eta(), dp.phi(), dp.energy());
+      jetconsts.push_back(fastjet::PseudoJet(dp.px(), dp.py(), dp.pz(), dp.energy()));
+
       float pfy = pfvec.Rapidity();
       float dy = pfy - jet.y();
       r.Set( dy, dphi );
@@ -1945,47 +2029,79 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsRefJet(const reco::GenJet jet){
       rm2+=(dp.pt()*pow(dr,2))/jet.pt();
       rm3+=(dp.pt()*pow(dr,3))/jet.pt();      
     }
-
-    RMSCand = sqrt ( rmscand_n / rmscand_d );
-      
-    M12 = -1.*M12;
-    M21 = -1.*M21;
-      
-    //! eign values
-    float trace = M11 + M22;
-    float detrm = (M11*M22) - (M12*M21);
-      
-    float lam1 = trace/2. + sqrt( pow(trace,2)/4. - detrm );
-    float lam2 = trace/2. - sqrt( pow(trace,2)/4. - detrm );
-      
-    Axis1 = sqrt( lam1 / tot_wt );
-    Axis2 = sqrt( lam2 / tot_wt );
-      
-    Sigma = sqrt( pow(Axis1,2) + pow(Axis2,2) );
-      
-    R = maxCandPt / sumCandPt;
-      
-    pTD = sqrt( sumCandPtSq ) / sumCandPt;
-      
-    pull = t_Vect.Mod();
-    
-    jets_.refnCands[jets_.nref] = nCands;
-    jets_.refnChCands[jets_.nref] = nChCands;
-    jets_.refnNeCands[jets_.nref] = nNeCands;
-    jets_.refMByPt[jets_.nref] = jetMByPt;
-    jets_.refRMSCand[jets_.nref] = RMSCand;
-    jets_.refAxis1[jets_.nref] = Axis1;
-    jets_.refAxis2[jets_.nref] = Axis2;
-    jets_.refSigma[jets_.nref] = Sigma;
-    jets_.refrm3[jets_.nref] = rm3;
-    jets_.refrm2[jets_.nref] = rm2;
-    jets_.refrm1[jets_.nref] = rm1;
-    jets_.refrm0p5[jets_.nref] = rm0p5;
-    jets_.refR[jets_.nref] = R;
-    jets_.refpull[jets_.nref] = pull;
-    jets_.refpTD[jets_.nref] = pTD;
-    
   }
+
+  fastjet::JetDefinition jetDef(fastjet::antikt_algorithm, 999);
+  fastjet::ClusterSequence thisClustering_basic(jetconsts, jetDef);
+  std::vector<fastjet::PseudoJet> out_jets_basic = thisClustering_basic.inclusive_jets(0);
+  if(out_jets_basic.size() == 1){ 
+    fastjet::contrib::RecursiveSymmetryCutBase::SymmetryMeasure  symmetry_measure = fastjet::contrib::RecursiveSymmetryCutBase::scalar_z;
+    fastjet::contrib::SoftDrop sd(0, 0.1, symmetry_measure, rParam);
+    fastjet::PseudoJet sd_jet = sd(out_jets_basic[0]);
+    if(sd_jet != 0){
+      sd_m = sd_jet.m();
+      sd_pt = sd_jet.pt();
+      sd_ptfrac = sd_jet.pt()/jet.pt();    
+      std::vector<fastjet::PseudoJet> sd_jetconsts = sd_jet.constituents();
+      if(sd_jetconsts.size()!=0){
+	for (unsigned k = 0; k < sd_jetconsts.size(); ++k) {
+	  fastjet::PseudoJet dp = sd_jetconsts.at(k);
+	  float dr = deltaR(dp.eta(), dp.phi(), jet.eta(), jet.phi());
+	  sd_rm0p5+=(dp.pt()*pow(dr,0.5))/sd_jet.pt();
+	  sd_rm1+=(dp.pt()*pow(dr,1))/sd_jet.pt();
+	  sd_rm2+=(dp.pt()*pow(dr,2))/sd_jet.pt();
+	  sd_rm3+=(dp.pt()*pow(dr,3))/sd_jet.pt();
+	}
+      }
+    }
+  }
+  
+  RMSCand = sqrt ( rmscand_n / rmscand_d );
+      
+  M12 = -1.*M12;
+  M21 = -1.*M21;
+      
+  //! eign values
+  float trace = M11 + M22;
+  float detrm = (M11*M22) - (M12*M21);
+      
+  float lam1 = trace/2. + sqrt( pow(trace,2)/4. - detrm );
+  float lam2 = trace/2. - sqrt( pow(trace,2)/4. - detrm );
+      
+  Axis1 = sqrt( lam1 / tot_wt );
+  Axis2 = sqrt( lam2 / tot_wt );
+      
+  Sigma = sqrt( pow(Axis1,2) + pow(Axis2,2) );
+      
+  R = maxCandPt / sumCandPt;
+      
+  pTD = sqrt( sumCandPtSq ) / sumCandPt;
+      
+  pull = t_Vect.Mod();
+    
+  jets_.refnCands[jets_.nref] = nCands;
+  jets_.refnChCands[jets_.nref] = nChCands;
+  jets_.refnNeCands[jets_.nref] = nNeCands;
+  jets_.refMByPt[jets_.nref] = jetMByPt;
+  jets_.refRMSCand[jets_.nref] = RMSCand;
+  jets_.refAxis1[jets_.nref] = Axis1;
+  jets_.refAxis2[jets_.nref] = Axis2;
+  jets_.refSigma[jets_.nref] = Sigma;
+  jets_.refrm3[jets_.nref] = rm3;
+  jets_.refrm2[jets_.nref] = rm2;
+  jets_.refrm1[jets_.nref] = rm1;
+  jets_.refrm0p5[jets_.nref] = rm0p5;
+  jets_.refR[jets_.nref] = R;
+  jets_.refpull[jets_.nref] = pull;
+  jets_.refpTD[jets_.nref] = pTD;
+  jets_.refSDm[jets_.nref] = sd_m;
+  jets_.refSDpt[jets_.nref] = sd_pt;
+  jets_.refSDptFrac[jets_.nref] = sd_ptfrac;
+  jets_.refSDrm0p5[jets_.nref] = sd_rm0p5;
+  jets_.refSDrm1[jets_.nref] = sd_rm1;
+  jets_.refSDrm2[jets_.nref] = sd_rm2;
+  jets_.refSDrm3[jets_.nref] = sd_rm3;    
+  
 
 }
 
@@ -2026,6 +2142,17 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsGenJet(const reco::GenJet jet){
   TVector2 r(0,0);
   float pull = 0.0;
   
+
+  float sd_m = 0.0;
+  float sd_pt = 0.0;
+  float sd_ptfrac = 0.0;
+  float sd_rm0p5 = 0.0;
+  float sd_rm1 = 0.0;
+  float sd_rm2 = 0.0;
+  float sd_rm3 = 0.0;
+
+  vector<fastjet::PseudoJet> jetconsts;
+
   if(jet.numberOfDaughters()>0) {
     nCands = jet.numberOfDaughters();
     for (unsigned k = 0; k < jet.numberOfDaughters(); ++k) {
@@ -2068,47 +2195,76 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsGenJet(const reco::GenJet jet){
       rm2+=(dp.pt()*pow(dr,2))/jet.pt();
       rm3+=(dp.pt()*pow(dr,3))/jet.pt();      
     }
-
-    RMSCand = sqrt ( rmscand_n / rmscand_d );
-      
-    M12 = -1.*M12;
-    M21 = -1.*M21;
-      
-    //! eign values
-    float trace = M11 + M22;
-    float detrm = (M11*M22) - (M12*M21);
-      
-    float lam1 = trace/2. + sqrt( pow(trace,2)/4. - detrm );
-    float lam2 = trace/2. - sqrt( pow(trace,2)/4. - detrm );
-      
-    Axis1 = sqrt( lam1 / tot_wt );
-    Axis2 = sqrt( lam2 / tot_wt );
-      
-    Sigma = sqrt( pow(Axis1,2) + pow(Axis2,2) );
-      
-    R = maxCandPt / sumCandPt;
-      
-    pTD = sqrt( sumCandPtSq ) / sumCandPt;
-      
-    pull = t_Vect.Mod();
-    
-    jets_.gennCands[jets_.nref] = nCands;
-    jets_.gennChCands[jets_.nref] = nChCands;
-    jets_.gennNeCands[jets_.nref] = nNeCands;
-    jets_.genMByPt[jets_.nref] = jetMByPt;
-    jets_.genRMSCand[jets_.nref] = RMSCand;
-    jets_.genAxis1[jets_.nref] = Axis1;
-    jets_.genAxis2[jets_.nref] = Axis2;
-    jets_.genSigma[jets_.nref] = Sigma;
-    jets_.genrm3[jets_.nref] = rm3;
-    jets_.genrm2[jets_.nref] = rm2;
-    jets_.genrm1[jets_.nref] = rm1;
-    jets_.genrm0p5[jets_.nref] = rm0p5;
-    jets_.genR[jets_.nref] = R;
-    jets_.genpull[jets_.nref] = pull;
-    jets_.genpTD[jets_.nref] = pTD;
-    
   }
+  fastjet::JetDefinition jetDef(fastjet::antikt_algorithm, 999);
+  fastjet::ClusterSequence thisClustering_basic(jetconsts, jetDef);
+  std::vector<fastjet::PseudoJet> out_jets_basic = thisClustering_basic.inclusive_jets(0);
+  if(out_jets_basic.size() == 1){ 
+    fastjet::contrib::RecursiveSymmetryCutBase::SymmetryMeasure  symmetry_measure = fastjet::contrib::RecursiveSymmetryCutBase::scalar_z;
+    fastjet::contrib::SoftDrop sd(0, 0.1, symmetry_measure, rParam);
+    fastjet::PseudoJet sd_jet = sd(out_jets_basic[0]);
+    if(sd_jet != 0){
+      sd_m = sd_jet.m();
+      sd_pt = sd_jet.pt();
+      sd_ptfrac = sd_jet.pt()/jet.pt();    
+      std::vector<fastjet::PseudoJet> sd_jetconsts = sd_jet.constituents();
+      if(sd_jetconsts.size()!=0){
+	for (unsigned k = 0; k < sd_jetconsts.size(); ++k) {
+	  fastjet::PseudoJet dp = sd_jetconsts.at(k);
+	  float dr = deltaR(dp.eta(), dp.phi(), jet.eta(), jet.phi());
+	  sd_rm0p5+=(dp.pt()*pow(dr,0.5))/sd_jet.pt();
+	  sd_rm1+=(dp.pt()*pow(dr,1))/sd_jet.pt();
+	  sd_rm2+=(dp.pt()*pow(dr,2))/sd_jet.pt();
+	  sd_rm3+=(dp.pt()*pow(dr,3))/sd_jet.pt();
+	}
+      }
+    }
+  }
+  RMSCand = sqrt ( rmscand_n / rmscand_d );
+      
+  M12 = -1.*M12;
+  M21 = -1.*M21;
+      
+  //! eign values
+  float trace = M11 + M22;
+  float detrm = (M11*M22) - (M12*M21);
+      
+  float lam1 = trace/2. + sqrt( pow(trace,2)/4. - detrm );
+  float lam2 = trace/2. - sqrt( pow(trace,2)/4. - detrm );
+      
+  Axis1 = sqrt( lam1 / tot_wt );
+  Axis2 = sqrt( lam2 / tot_wt );
+      
+  Sigma = sqrt( pow(Axis1,2) + pow(Axis2,2) );
+      
+  R = maxCandPt / sumCandPt;
+      
+  pTD = sqrt( sumCandPtSq ) / sumCandPt;
+      
+  pull = t_Vect.Mod();
+    
+  jets_.gennCands[jets_.nref] = nCands;
+  jets_.gennChCands[jets_.nref] = nChCands;
+  jets_.gennNeCands[jets_.nref] = nNeCands;
+  jets_.genMByPt[jets_.nref] = jetMByPt;
+  jets_.genRMSCand[jets_.nref] = RMSCand;
+  jets_.genAxis1[jets_.nref] = Axis1;
+  jets_.genAxis2[jets_.nref] = Axis2;
+  jets_.genSigma[jets_.nref] = Sigma;
+  jets_.genrm3[jets_.nref] = rm3;
+  jets_.genrm2[jets_.nref] = rm2;
+  jets_.genrm1[jets_.nref] = rm1;
+  jets_.genrm0p5[jets_.nref] = rm0p5;
+  jets_.genR[jets_.nref] = R;
+  jets_.genpull[jets_.nref] = pull;
+  jets_.genpTD[jets_.nref] = pTD;
+  jets_.genSDm[jets_.nref] = sd_m;
+  jets_.genSDpt[jets_.nref] = sd_pt;
+  jets_.genSDptFrac[jets_.nref] = sd_ptfrac;
+  jets_.genSDrm0p5[jets_.nref] = sd_rm0p5;
+  jets_.genSDrm1[jets_.nref] = sd_rm1;
+  jets_.genSDrm2[jets_.nref] = sd_rm2;
+  jets_.genSDrm3[jets_.nref] = sd_rm3; 
 
 }
 

@@ -238,6 +238,13 @@ private:
     float jtrm2[MAXJETS];
     float jtrm3[MAXJETS];
     float jtpull[MAXJETS];
+    float jtSDm[MAXJETS];
+    float jtSDpt[MAXJETS];
+    float jtSDptFrac[MAXJETS];
+    float jtSDrm0p5[MAXJETS];
+    float jtSDrm1[MAXJETS];
+    float jtSDrm2[MAXJETS];
+    float jtSDrm3[MAXJETS];
 
     float jtPfCHF[MAXJETS];
     float jtPfNHF[MAXJETS];
@@ -450,6 +457,13 @@ private:
     float refrm2[MAXJETS];
     float refrm3[MAXJETS];
     float refpull[MAXJETS];
+    float refSDm[MAXJETS];
+    float refSDpt[MAXJETS];
+    float refSDptFrac[MAXJETS];
+    float refSDrm0p5[MAXJETS];
+    float refSDrm1[MAXJETS];
+    float refSDrm2[MAXJETS];
+    float refSDrm3[MAXJETS];
 
     
     float refptG[MAXJETS];
@@ -493,6 +507,15 @@ private:
     float genrm2[MAXJETS];
     float genrm3[MAXJETS];
     float genpull[MAXJETS];
+
+    float genSDm[MAXJETS];
+    float genSDpt[MAXJETS];
+    float genSDptFrac[MAXJETS];
+    float genSDrm0p5[MAXJETS];
+    float genSDrm1[MAXJETS];
+    float genSDrm2[MAXJETS];
+    float genSDrm3[MAXJETS];
+
     
     float genptG[MAXJETS];
     float genetaG[MAXJETS];
