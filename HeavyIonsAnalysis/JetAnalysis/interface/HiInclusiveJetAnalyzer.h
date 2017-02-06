@@ -161,6 +161,7 @@ private:
   double jetPtMin_;
   bool doGenTaus_;
   bool doSubJets_;
+  bool doJetConstituents_;
   bool doGenSubJets_;
 
   TTree *t;
@@ -266,7 +267,18 @@ private:
     std::vector<std::vector<float>> jtSubJetEta;
     std::vector<std::vector<float>> jtSubJetPhi;
     std::vector<std::vector<float>> jtSubJetM;
-    
+
+    std::vector<std::vector<float>> jtConstituentsE;
+    std::vector<std::vector<float>> jtConstituentsPt;
+    std::vector<std::vector<float>> jtConstituentsEta;
+    std::vector<std::vector<float>> jtConstituentsPhi;
+    std::vector<std::vector<float>> jtConstituentsM;
+    std::vector<std::vector<float>> jtSDConstituentsE;
+    std::vector<std::vector<float>> jtSDConstituentsPt;
+    std::vector<std::vector<float>> jtSDConstituentsEta;
+    std::vector<std::vector<float>> jtSDConstituentsPhi;
+    std::vector<std::vector<float>> jtSDConstituentsM;
+
     float trackMax[MAXJETS];
     float trackSum[MAXJETS];
     int trackN[MAXJETS];
@@ -475,6 +487,16 @@ private:
     std::vector<std::vector<float>> refSubJetPhi;
     std::vector<std::vector<float>> refSubJetM;
     
+    std::vector<std::vector<float>> refConstituentsE;
+    std::vector<std::vector<float>> refConstituentsPt;
+    std::vector<std::vector<float>> refConstituentsEta;
+    std::vector<std::vector<float>> refConstituentsPhi;
+    std::vector<std::vector<float>> refConstituentsM;
+    std::vector<std::vector<float>> refSDConstituentsE;
+    std::vector<std::vector<float>> refSDConstituentsPt;
+    std::vector<std::vector<float>> refSDConstituentsEta;
+    std::vector<std::vector<float>> refSDConstituentsPhi;
+    std::vector<std::vector<float>> refSDConstituentsM;
 
     float pthat;
     int beamId1, beamId2;
@@ -526,7 +548,18 @@ private:
     std::vector<std::vector<float>> genSubJetPhi;
     std::vector<std::vector<float>> genSubJetM;
     std::vector<std::vector<float>> genSubJetArea;
-    
+
+    std::vector<std::vector<float>> genConstituentsE;
+    std::vector<std::vector<float>> genConstituentsPt;
+    std::vector<std::vector<float>> genConstituentsEta;
+    std::vector<std::vector<float>> genConstituentsPhi;
+    std::vector<std::vector<float>> genConstituentsM;
+    std::vector<std::vector<float>> genSDConstituentsE;
+    std::vector<std::vector<float>> genSDConstituentsPt;
+    std::vector<std::vector<float>> genSDConstituentsEta;
+    std::vector<std::vector<float>> genSDConstituentsPhi;
+    std::vector<std::vector<float>> genSDConstituentsM;
+
     // hlt
     int nHLTBit;
     bool hltBit[MAXHLTBITS];

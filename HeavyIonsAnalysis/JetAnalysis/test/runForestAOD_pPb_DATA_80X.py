@@ -4,7 +4,14 @@
 # Input: AOD
 
 import FWCore.ParameterSet.Config as cms
+import FWCore.ParameterSet.VarParsing as VarParsing
+
 process = cms.Process('HiForest')
+options = VarParsing.VarParsing ('analysis')
+options.outputFile = 'HiForestAOD-Data.root'
+options.inputFiles = 'file:/afs/cern.ch/user/r/rkunnawa/eoscms/cms/tier0/store/hidata/PARun2016C/PAEGJet1/AOD/PromptReco-v1/000/285/956/00000/D0D90241-88B5-E611-8B58-02163E0125F4.root'
+options.parseArguments()
+
 process.options = cms.untracked.PSet()
 
 #####################################################################################
@@ -27,7 +34,7 @@ process.HiForest.HiForestVersion = cms.string(version)
 process.source = cms.Source("PoolSource",
                             duplicateCheckMode = cms.untracked.string("noDuplicateCheck"),
                             fileNames = cms.untracked.vstring(
-				'file:/afs/cern.ch/user/k/kjung/run2Validation/HLTchecks/CMSSW_8_0_22/src/pPb_5TeVEpos_RECO.root'
+				options.inputFiles
 				)
 )
 
@@ -58,8 +65,8 @@ process = overrideJEC_pPb8TeV(process)
 
 process.GlobalTag.toGet.extend([
 	cms.PSet(record = cms.string("HeavyIonRcd"),
-		 #tag = cms.string("CentralityTable_HFtowersPlusTrunc200_EPOS8TeV_v80x01_mc"),
-                 tag = cms.string("CentralityTable_HFtowersPlusTrunc200_EPOS5TeV_v80x01_mc"),
+		 tag = cms.string("CentralityTable_HFtowersPlusTrunc200_EPOS8TeV_v80x01_mc"),
+                 #tag = cms.string("CentralityTable_HFtowersPlusTrunc200_EPOS5TeV_v80x01_mc"),
                  connect = cms.string("frontier://FrontierProd/CMS_CONDITIONS"),
                  label = cms.untracked.string("HFtowersPlusTruncEpos")
              ),
@@ -74,7 +81,7 @@ process.GlobalTag.toGet.extend([
 #####################################################################################
 
 process.TFileService = cms.Service("TFileService",
-                                   fileName=cms.string("HiForestAOD.root"))
+                                   fileName=cms.string(options.outputFile))
 
 #####################################################################################
 # Additional Reconstruction and Analysis: Main Body
@@ -108,7 +115,7 @@ process.hiEvtAnalyzer.Vertex = cms.InputTag("offlinePrimaryVertices")
 process.hiEvtAnalyzer.doCentrality = cms.bool(True)
 process.hiEvtAnalyzer.CentralitySrc = cms.InputTag("pACentrality")
 process.hiEvtAnalyzer.CentralityBinSrc = cms.InputTag("centralityBin","HFtowersPlusTrunc")
-process.hiEvtAnalyzer.doEvtPlane = cms.bool(False)
+process.hiEvtAnalyzer.doEvtPlane = cms.bool(True)
 process.hiEvtAnalyzer.doMC = cms.bool(True) #general MC info
 process.hiEvtAnalyzer.doHiMC = cms.bool(False) #HI specific MC info
 
@@ -193,12 +200,12 @@ process.ana_step = cms.Path(process.hltanalysis *
                             process.centralityBin *
 			    process.hiEvtAnalyzer *
                             process.jetSequences +
-                            process.egmGsfElectronIDSequence + #Should be added in the path for VID module
-                            process.ggHiNtuplizer +
-                            process.ggHiNtuplizerGED +
+                            #process.egmGsfElectronIDSequence + #Should be added in the path for VID module
+                            #process.ggHiNtuplizer +
+                            #process.ggHiNtuplizerGED +
                             process.hiFJRhoAnalyzer +
 			    process.pfcandAnalyzer +
-			    process.hltMuTree +
+			    #process.hltMuTree +
                             process.HiForest +
 			    process.trackSequencesPP +
                             process.runAnalyzer +

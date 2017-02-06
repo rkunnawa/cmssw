@@ -75,6 +75,7 @@ HiInclusiveJetAnalyzer::HiInclusiveJetAnalyzer(const edm::ParameterSet& iConfig)
   jetName_ = iConfig.getUntrackedParameter<string>("jetName");
   doGenTaus_ = iConfig.getUntrackedParameter<bool>("doGenTaus",0);
   doSubJets_ = iConfig.getUntrackedParameter<bool>("doSubJets",0);
+  doJetConstituents_ = iConfig.getUntrackedParameter<bool>("doJetConstituents",0);
   doGenSubJets_ = iConfig.getUntrackedParameter<bool>("doGenSubJets",false);
   subjetGenTag_ = consumes<reco::JetView> (iConfig.getUntrackedParameter<InputTag>("subjetGenTag"));
 
@@ -280,7 +281,19 @@ HiInclusiveJetAnalyzer::beginJob() {
     t->Branch("jtSubJetPhi",&jets_.jtSubJetPhi);
     t->Branch("jtSubJetM",&jets_.jtSubJetM);
   }
-  
+
+  if(doJetConstituents_){
+    t->Branch("jtConstituentsE",&jets_.jtConstituentsE);
+    t->Branch("jtConstituentsPt",&jets_.jtConstituentsPt);
+    t->Branch("jtConstituentsEta",&jets_.jtConstituentsEta);
+    t->Branch("jtConstituentsPhi",&jets_.jtConstituentsPhi);
+    t->Branch("jtConstituentsM",&jets_.jtConstituentsM);  
+    t->Branch("jtSDConstituentsE",&jets_.jtSDConstituentsE);
+    t->Branch("jtSDConstituentsPt",&jets_.jtSDConstituentsPt);
+    t->Branch("jtSDConstituentsEta",&jets_.jtSDConstituentsEta);
+    t->Branch("jtSDConstituentsPhi",&jets_.jtSDConstituentsPhi);
+    t->Branch("jtSDConstituentsM",&jets_.jtSDConstituentsM);  
+  }
   // jet ID information, jet composition
   if(doHiJetID_){
     t->Branch("discr_jetID_cuts", jets_.discr_jetID_cuts,"discr_jetID_cuts[nref]/F");
@@ -505,6 +518,20 @@ HiInclusiveJetAnalyzer::beginJob() {
       t->Branch("refSubJetPhi",&jets_.refSubJetPhi);
       t->Branch("refSubJetM",&jets_.refSubJetM);
     }
+
+    if(doJetConstituents_){
+      t->Branch("refConstituentsE",&jets_.refConstituentsE);
+      t->Branch("refConstituentsPt",&jets_.refConstituentsPt);
+      t->Branch("refConstituentsEta",&jets_.refConstituentsEta);
+      t->Branch("refConstituentsPhi",&jets_.refConstituentsPhi);
+      t->Branch("refConstituentsM",&jets_.refConstituentsM);  
+      t->Branch("refSDConstituentsE",&jets_.refSDConstituentsE);
+      t->Branch("refSDConstituentsPt",&jets_.refSDConstituentsPt);
+      t->Branch("refSDConstituentsEta",&jets_.refSDConstituentsEta);
+      t->Branch("refSDConstituentsPhi",&jets_.refSDConstituentsPhi);
+      t->Branch("refSDConstituentsM",&jets_.refSDConstituentsM);  
+    }
+
     
     t->Branch("genChargedSum", jets_.genChargedSum,"genChargedSum[nref]/F");
     t->Branch("genHardSum", jets_.genHardSum,"genHardSum[nref]/F");
@@ -568,6 +595,19 @@ HiInclusiveJetAnalyzer::beginJob() {
         t->Branch("genSubJetM",&jets_.genSubJetM);
       }
 
+      if(doJetConstituents_){
+	t->Branch("genConstituentsE",&jets_.genConstituentsE);
+	t->Branch("genConstituentsPt",&jets_.genConstituentsPt);
+	t->Branch("genConstituentsEta",&jets_.genConstituentsEta);
+	t->Branch("genConstituentsPhi",&jets_.genConstituentsPhi);
+	t->Branch("genConstituentsM",&jets_.genConstituentsM);  
+	t->Branch("genSDConstituentsE",&jets_.genSDConstituentsE);
+	t->Branch("genSDConstituentsPt",&jets_.genSDConstituentsPt);
+	t->Branch("genSDConstituentsEta",&jets_.genSDConstituentsEta);
+	t->Branch("genSDConstituentsPhi",&jets_.genSDConstituentsPhi);
+	t->Branch("genSDConstituentsM",&jets_.genSDConstituentsM);  
+      }
+      
       if(doSubEvent_){
 	t->Branch("gensubid",jets_.gensubid,"gensubid[ngen]/I");
       }
@@ -1820,7 +1860,17 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsRecoJet(const reco::Jet jet){
   float sd_rm3 = 0.0;
   
   vector<fastjet::PseudoJet> jetconsts;
-  
+  std::vector<float> jcE;
+  std::vector<float> jcpt;
+  std::vector<float> jceta;
+  std::vector<float> jcphi;
+  std::vector<float> jcm;
+  std::vector<float> jcSDE;
+  std::vector<float> jcSDpt;
+  std::vector<float> jcSDeta;
+  std::vector<float> jcSDphi;
+  std::vector<float> jcSDm;
+
   if(jet.numberOfDaughters()>0) {
     nCands = jet.numberOfDaughters();
     for (unsigned k = 0; k < jet.numberOfDaughters(); ++k) {
@@ -1830,7 +1880,8 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsRecoJet(const reco::Jet jet){
       else
 	nChCands++;
 
-      if( dp.pt() > maxCandPt )maxCandPt=dp.pt();
+      if( dp.pt() > maxCandPt )
+	maxCandPt=dp.pt();
       sumCandPt   += dp.pt();
       sumCandPtSq += pow(dp.pt(),2);
 	
@@ -1852,7 +1903,14 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsRecoJet(const reco::Jet jet){
       //! Pull
       TLorentzVector pfvec;
       pfvec.SetPtEtaPhiE(dp.pt(), dp.eta(), dp.phi(), dp.energy());
-      jetconsts.push_back(fastjet::PseudoJet(dp.px(), dp.py(), dp.pz(), dp.energy()));
+      fastjet::PseudoJet jc = fastjet::PseudoJet(dp.px(), dp.py(), dp.pz(), dp.energy());
+      jetconsts.push_back(jc);
+      jcE.push_back(jc.e());
+      jcpt.push_back(jc.pt());
+      jcphi.push_back(jc.phi());
+      jceta.push_back(jc.eta());
+      jcm.push_back(jc.m());
+      
       float pfy = pfvec.Rapidity();
       float dy = pfy - jet.y();
       r.Set( dy, dphi );
@@ -1880,6 +1938,11 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsRecoJet(const reco::Jet jet){
       if(sd_jetconsts.size()!=0){
 	for (unsigned k = 0; k < sd_jetconsts.size(); ++k) {
 	  fastjet::PseudoJet dp = sd_jetconsts.at(k);
+	  jcSDE.push_back(dp.e());
+	  jcSDpt.push_back(dp.pt());
+	  jcSDphi.push_back(dp.phi());
+	  jcSDeta.push_back(dp.eta());
+	  jcSDm.push_back(dp.m());
 	  float dr = deltaR(dp.eta(), dp.phi(), jet.eta(), jet.phi());
 	  sd_rm0p5+=(dp.pt()*pow(dr,0.5))/sd_jet.pt();
 	  sd_rm1+=(dp.pt()*pow(dr,1))/sd_jet.pt();
@@ -1935,6 +1998,16 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsRecoJet(const reco::Jet jet){
   jets_.jtSDrm1[jets_.nref] = sd_rm1;
   jets_.jtSDrm2[jets_.nref] = sd_rm2;
   jets_.jtSDrm3[jets_.nref] = sd_rm3;
+  jets_.jtConstituentsE.push_back(jcE);
+  jets_.jtConstituentsPt.push_back(jcpt);
+  jets_.jtConstituentsEta.push_back(jceta);
+  jets_.jtConstituentsPhi.push_back(jcphi);
+  jets_.jtConstituentsM.push_back(jcm);
+  jets_.jtSDConstituentsE.push_back(jcSDE);
+  jets_.jtSDConstituentsPt.push_back(jcSDpt);
+  jets_.jtSDConstituentsEta.push_back(jcSDeta);
+  jets_.jtSDConstituentsPhi.push_back(jcSDphi);
+  jets_.jtSDConstituentsM.push_back(jcSDm);
   
 }
 
@@ -1984,6 +2057,16 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsRefJet(const reco::GenJet jet){
   float sd_rm3 = 0.0;
 
   vector<fastjet::PseudoJet> jetconsts;
+  std::vector<float> jcE;
+  std::vector<float> jcpt;
+  std::vector<float> jceta;
+  std::vector<float> jcphi;
+  std::vector<float> jcm;
+  std::vector<float> jcSDE;
+  std::vector<float> jcSDpt;
+  std::vector<float> jcSDeta;
+  std::vector<float> jcSDphi;
+  std::vector<float> jcSDm;
 
   if(jet.numberOfDaughters()>0) {
     nCands = jet.numberOfDaughters();
@@ -2016,7 +2099,13 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsRefJet(const reco::GenJet jet){
       //! Pull
       TLorentzVector pfvec;
       pfvec.SetPtEtaPhiE(dp.pt(), dp.eta(), dp.phi(), dp.energy());
-      jetconsts.push_back(fastjet::PseudoJet(dp.px(), dp.py(), dp.pz(), dp.energy()));
+      fastjet::PseudoJet jc = fastjet::PseudoJet(dp.px(), dp.py(), dp.pz(), dp.energy());
+      jetconsts.push_back(jc);
+      jcE.push_back(jc.e());
+      jcpt.push_back(jc.pt());
+      jcphi.push_back(jc.phi());
+      jceta.push_back(jc.eta());
+      jcm.push_back(jc.m());
 
       float pfy = pfvec.Rapidity();
       float dy = pfy - jet.y();
@@ -2046,6 +2135,11 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsRefJet(const reco::GenJet jet){
       if(sd_jetconsts.size()!=0){
 	for (unsigned k = 0; k < sd_jetconsts.size(); ++k) {
 	  fastjet::PseudoJet dp = sd_jetconsts.at(k);
+	  jcSDE.push_back(dp.e());
+	  jcSDpt.push_back(dp.pt());
+	  jcSDphi.push_back(dp.phi());
+	  jcSDeta.push_back(dp.eta());
+	  jcSDm.push_back(dp.m());
 	  float dr = deltaR(dp.eta(), dp.phi(), jet.eta(), jet.phi());
 	  sd_rm0p5+=(dp.pt()*pow(dr,0.5))/sd_jet.pt();
 	  sd_rm1+=(dp.pt()*pow(dr,1))/sd_jet.pt();
@@ -2101,6 +2195,16 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsRefJet(const reco::GenJet jet){
   jets_.refSDrm1[jets_.nref] = sd_rm1;
   jets_.refSDrm2[jets_.nref] = sd_rm2;
   jets_.refSDrm3[jets_.nref] = sd_rm3;    
+  jets_.refConstituentsE.push_back(jcE);
+  jets_.refConstituentsPt.push_back(jcpt);
+  jets_.refConstituentsEta.push_back(jceta);
+  jets_.refConstituentsPhi.push_back(jcphi);
+  jets_.refConstituentsM.push_back(jcm);
+  jets_.refSDConstituentsE.push_back(jcSDE);
+  jets_.refSDConstituentsPt.push_back(jcSDpt);
+  jets_.refSDConstituentsEta.push_back(jcSDeta);
+  jets_.refSDConstituentsPhi.push_back(jcSDphi);
+  jets_.refSDConstituentsM.push_back(jcSDm);
   
 
 }
@@ -2152,7 +2256,17 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsGenJet(const reco::GenJet jet){
   float sd_rm3 = 0.0;
 
   vector<fastjet::PseudoJet> jetconsts;
-
+  std::vector<float> jcE;
+  std::vector<float> jcpt;
+  std::vector<float> jceta;
+  std::vector<float> jcphi;
+  std::vector<float> jcm;
+  std::vector<float> jcSDE;
+  std::vector<float> jcSDpt;
+  std::vector<float> jcSDeta;
+  std::vector<float> jcSDphi;
+  std::vector<float> jcSDm;
+  
   if(jet.numberOfDaughters()>0) {
     nCands = jet.numberOfDaughters();
     for (unsigned k = 0; k < jet.numberOfDaughters(); ++k) {
@@ -2184,6 +2298,14 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsGenJet(const reco::GenJet jet){
       //! Pull
       TLorentzVector pfvec;
       pfvec.SetPtEtaPhiE(dp.pt(), dp.eta(), dp.phi(), dp.energy());
+      fastjet::PseudoJet jc = fastjet::PseudoJet(dp.px(), dp.py(), dp.pz(), dp.energy());
+      jetconsts.push_back(jc);
+      jcE.push_back(jc.e());
+      jcpt.push_back(jc.pt());
+      jcphi.push_back(jc.phi());
+      jceta.push_back(jc.eta());
+      jcm.push_back(jc.m());
+
       float pfy = pfvec.Rapidity();
       float dy = pfy - jet.y();
       r.Set( dy, dphi );
@@ -2211,6 +2333,11 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsGenJet(const reco::GenJet jet){
       if(sd_jetconsts.size()!=0){
 	for (unsigned k = 0; k < sd_jetconsts.size(); ++k) {
 	  fastjet::PseudoJet dp = sd_jetconsts.at(k);
+	  jcSDE.push_back(dp.e());
+	  jcSDpt.push_back(dp.pt());
+	  jcSDphi.push_back(dp.phi());
+	  jcSDeta.push_back(dp.eta());
+	  jcSDm.push_back(dp.m());
 	  float dr = deltaR(dp.eta(), dp.phi(), jet.eta(), jet.phi());
 	  sd_rm0p5+=(dp.pt()*pow(dr,0.5))/sd_jet.pt();
 	  sd_rm1+=(dp.pt()*pow(dr,1))/sd_jet.pt();
@@ -2265,7 +2392,16 @@ void HiInclusiveJetAnalyzer::fillNewJetVarsGenJet(const reco::GenJet jet){
   jets_.genSDrm1[jets_.nref] = sd_rm1;
   jets_.genSDrm2[jets_.nref] = sd_rm2;
   jets_.genSDrm3[jets_.nref] = sd_rm3; 
-
+  jets_.genConstituentsE.push_back(jcE);
+  jets_.genConstituentsPt.push_back(jcpt);
+  jets_.genConstituentsEta.push_back(jceta);
+  jets_.genConstituentsPhi.push_back(jcphi);
+  jets_.genConstituentsM.push_back(jcm);
+  jets_.genSDConstituentsE.push_back(jcSDE);
+  jets_.genSDConstituentsPt.push_back(jcSDpt);
+  jets_.genSDConstituentsEta.push_back(jcSDeta);
+  jets_.genSDConstituentsPhi.push_back(jcSDphi);
+  jets_.genSDConstituentsM.push_back(jcSDm);
 }
 
 

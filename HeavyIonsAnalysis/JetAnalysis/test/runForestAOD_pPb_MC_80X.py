@@ -27,7 +27,7 @@ process.HiForest.HiForestVersion = cms.string(version)
 process.source = cms.Source("PoolSource",
                             duplicateCheckMode = cms.untracked.string("noDuplicateCheck"),
                             fileNames = cms.untracked.vstring(
-				'file:/afs/cern.ch/user/k/kjung/run2Validation/HLTchecks/CMSSW_8_0_22/src/pPb_5TeVEpos_RECO.root'
+			        'root://cms-xrd-global.cern.ch//store/user/gsfs/EPOSpPb_MinBias4080_4080_DataBS_v2/EPOS_RECODEBUG_20170105/170105_121113/0000/step3_Debug_pPb_8TeV_RAW2DIGI_L1Reco_RECO_10.root'
 				)
 )
 
@@ -49,7 +49,7 @@ process.load("CondCore.DBCommon.CondDBCommon_cfi")
  
 from Configuration.AlCa.GlobalTag_condDBv2 import GlobalTag
 #process.GlobalTag = GlobalTag(process.GlobalTag, '80X_mcRun2_asymptotic_2016_miniAODv2_v1', '')
-process.GlobalTag = GlobalTag(process.GlobalTag, '80X_mcRun2_asymptotic_v20', '')
+process.GlobalTag = GlobalTag(process.GlobalTag, '80X_mcRun2_pA_v4', '')
 process.HiForest.GlobalTagLabel = process.GlobalTag.globaltag
 
 
@@ -59,8 +59,8 @@ process = overrideJEC_pPb8TeV(process)
 
 process.GlobalTag.toGet.extend([
 	cms.PSet(record = cms.string("HeavyIonRcd"),
-		 #tag = cms.string("CentralityTable_HFtowersPlusTrunc200_EPOS8TeV_v80x01_mc"),
-                 tag = cms.string("CentralityTable_HFtowersPlusTrunc200_EPOS5TeV_v80x01_mc"),
+		 tag = cms.string("CentralityTable_HFtowersPlusTrunc200_EPOS8TeV_v80x01_mc"),
+                 #tag = cms.string("CentralityTable_HFtowersPlusTrunc200_EPOS5TeV_v80x01_mc"),
                  connect = cms.string("frontier://FrontierProd/CMS_CONDITIONS"),
                  label = cms.untracked.string("HFtowersPlusTruncEpos")
              ),
@@ -75,7 +75,7 @@ process.GlobalTag.toGet.extend([
 #####################################################################################
 
 process.TFileService = cms.Service("TFileService",
-                                   fileName=cms.string("HiForestAOD.root"))
+                                   fileName=cms.string("HiForestAOD_MC.root"))
 
 #####################################################################################
 # Additional Reconstruction and Analysis: Main Body
@@ -96,28 +96,34 @@ process.load("HeavyIonsAnalysis.JetAnalysis.FullJetSequence_JECPPb")
 ############################
 # Event Analysis
 ############################
-
-## temporary centrality bin
-process.load("RecoHI.HiCentralityAlgos.CentralityBin_cfi")
-process.centralityBin.Centrality = cms.InputTag("pACentrality")
-process.centralityBin.centralityVariable = cms.string("HFtowersPlusTrunc")
-#process.centralityBin.nonDefaultGlauberModel = cms.string("Hydjet_Drum")
-process.centralityBin.nonDefaultGlauberModel = cms.string("Epos")
-
 process.load('HeavyIonsAnalysis.EventAnalysis.hltanalysis_cff')
 process.load('HeavyIonsAnalysis.EventAnalysis.hltobject_pPb_cfi')
 process.load('HeavyIonsAnalysis.EventAnalysis.hievtanalyzer_data_cfi') #use data version to avoid PbPb MC
 process.hiEvtAnalyzer.Vertex = cms.InputTag("offlinePrimaryVertices")
-process.hiEvtAnalyzer.doCentrality = cms.bool(True)
-process.hiEvtAnalyzer.CentralitySrc = cms.InputTag("pACentrality")
-process.hiEvtAnalyzer.CentralityBinSrc = cms.InputTag("centralityBin","HFtowersPlusTrunc")
-process.hiEvtAnalyzer.doEvtPlane = cms.bool(False)
+process.hiEvtAnalyzer.doEvtPlane = cms.bool(True)
 process.hiEvtAnalyzer.doMC = cms.bool(True) #general MC info
 process.hiEvtAnalyzer.doHiMC = cms.bool(False) #HI specific MC info
+
+## run the centrality producer on the fly
+#process.load('RecoHI.HiCentralityAlgos.pACentrality_cfi')
+
+## temporary centrality bin
+process.hiEvtAnalyzer.doCentrality = cms.bool(False) #wasTrue
+process.load("RecoHI.HiCentralityAlgos.CentralityBin_cfi")
+process.centralityBin.Centrality = cms.InputTag("pACentrality")
+process.centralityBin.centralityVariable = cms.string("HFtowersPlusTrunc")
+##process.centralityBin.nonDefaultGlauberModel = cms.string("Hydjet_Drum")
+process.centralityBin.nonDefaultGlauberModel = cms.string("Epos")
+#process.hiEvtAnalyzer.CentralitySrc = cms.InputTag("pACentrality")
+##process.hiEvtAnalyzer.CentralityBinSrc = cms.InputTag("pACentralityBin","HFtowersPlusTrunc")
+
 
 process.load('HeavyIonsAnalysis.JetAnalysis.HiGenAnalyzer_cfi')
 process.HiGenParticleAna.genParticleSrc = cms.untracked.InputTag("genParticles")
 process.HiGenParticleAna.doHI = False
+process.HiGenParticleAna.src = cms.untracked.InputTag("generatorSmeared")
+process.HiGenParticleAna.useHepMCProduct = cms.untracked.bool(True)
+
 process.load('HeavyIonsAnalysis.EventAnalysis.runanalyzer_cff')
 process.load("HeavyIonsAnalysis.JetAnalysis.pfcandAnalyzer_pp_cfi")
 process.pfcandAnalyzer.skipCharged = False
@@ -199,14 +205,15 @@ process.hltMuTree.genparticle = cms.InputTag("genParticles")
 #########################
 process.ana_step = cms.Path(process.hltanalysis *
 			    process.hltobject *
-                            process.centralityBin *
+                            #process.pACentrality *
+                            #process.centralityBin *
 			    process.hiEvtAnalyzer *
                             process.HiGenParticleAna*
                             process.jetSequences +
                             process.egmGsfElectronIDSequence + #Should be added in the path for VID module
                             process.ggHiNtuplizer +
                             process.ggHiNtuplizerGED +
-                            process.hiFJRhoAnalyzer +
+                            #process.hiFJRhoAnalyzer +
 			    process.pfcandAnalyzer +
 			    process.hltMuTree +
                             process.HiForest +
