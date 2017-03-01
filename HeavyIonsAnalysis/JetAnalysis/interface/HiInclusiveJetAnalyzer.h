@@ -71,6 +71,7 @@ public:
 			const edm::Event &event) const;
 
 
+
 private:
 
   int getPFJetMuon(const pat::Jet& pfJet, const reco::PFCandidateCollection *pfCandidateColl);
@@ -93,6 +94,15 @@ private:
   float getAboveCharmThresh(reco::TrackRefVector& selTracks, const reco::TrackIPTagInfo& ipData, int sigOrVal);
  
   std::auto_ptr<fastjet::contrib::Njettiness>   routine_;
+
+  class ExtraInfo : public fastjet::PseudoJet::UserInfoBase {
+  public:
+  ExtraInfo(int id) : _index(id){}
+    int part_id() const { return _index; }
+  protected:
+    int _index;
+  };
+
   
   // edm::InputTag   jetTag_, vtxTag_, genjetTag_, eventInfoTag_, L1gtReadout_, pfCandidateLabel_, trackTag_, matchTag_;
   edm::InputTag   jetTagLabel_;
@@ -162,6 +172,7 @@ private:
   bool doGenTaus_;
   bool doSubJets_;
   bool doJetConstituents_;
+  bool doNewJetVars_;
   bool doGenSubJets_;
 
   TTree *t;
@@ -200,7 +211,7 @@ private:
   edm::EDGetTokenT<reco::JetTagCollection> NegativeSoftPFMuonByPtBJetTags_;
   edm::EDGetTokenT<reco::JetTagCollection> PositiveSoftPFMuonByPtBJetTags_;
 
-  static const int MAXJETS = 500;
+  static const int MAXJETS = 1000;
   static const int MAXTRACKS = 5000;
   static const int MAXHLTBITS = 5000;
   static const int MAXBFRAG = 500;
@@ -227,6 +238,21 @@ private:
     int jtnCands[MAXJETS];
     int jtnChCands[MAXJETS];
     int jtnNeCands[MAXJETS];
+    float jtchargedSumConst[MAXJETS];
+    int   jtchargedNConst  [MAXJETS];
+    float jteSumConst      [MAXJETS];
+    int   jteNConst        [MAXJETS];
+    float jtmuSumConst     [MAXJETS];
+    int   jtmuNConst       [MAXJETS];
+    float jtphotonSumConst [MAXJETS];
+    int   jtphotonNConst   [MAXJETS];
+    float jtneutralSumConst[MAXJETS];
+    int   jtneutralNConst  [MAXJETS];
+    float jthfhadSumConst  [MAXJETS];
+    int   jthfhadNConst    [MAXJETS];
+    float jthfemSumConst   [MAXJETS];
+    int   jthfemNConst     [MAXJETS];
+
     float jtMByPt[MAXJETS];
     float jtRMSCand[MAXJETS];
     float jtAxis1[MAXJETS];
@@ -241,11 +267,47 @@ private:
     float jtpull[MAXJETS];
     float jtSDm[MAXJETS];
     float jtSDpt[MAXJETS];
+    float jtSDeta[MAXJETS];
+    float jtSDphi[MAXJETS];
     float jtSDptFrac[MAXJETS];
     float jtSDrm0p5[MAXJETS];
     float jtSDrm1[MAXJETS];
     float jtSDrm2[MAXJETS];
     float jtSDrm3[MAXJETS];
+    
+    float jtTbeta20p2[MAXJETS];
+    float jtTbeta20p3[MAXJETS];
+    float jtTbeta20p4[MAXJETS];
+    float jtTbeta20p5[MAXJETS];
+    float jtTbeta30p2[MAXJETS];
+    float jtTbeta30p3[MAXJETS];
+    float jtTbeta30p4[MAXJETS];
+    float jtTbeta30p5[MAXJETS];
+    float jtCbeta20p2[MAXJETS];
+    float jtCbeta20p3[MAXJETS];
+    float jtCbeta20p4[MAXJETS];
+    float jtCbeta20p5[MAXJETS];
+    float jtZ11[MAXJETS];
+    float jtZ20[MAXJETS];
+    float jtZ22[MAXJETS];
+    float jtZ31[MAXJETS];
+    float jtZ33[MAXJETS];
+    float jtZ40[MAXJETS];
+    float jtZ42[MAXJETS];
+    float jtZ44[MAXJETS];
+    float jtZ51[MAXJETS];
+    float jtZ53[MAXJETS];
+    float jtZ55[MAXJETS];
+    float jtPhi1[MAXJETS];
+    float jtPhi2[MAXJETS];
+    float jtPhi3[MAXJETS];
+    float jtPhi4[MAXJETS];
+    float jtPhi5[MAXJETS];
+    float jtPhi6[MAXJETS];
+    float jtPhi7[MAXJETS];
+    float jtSkx[MAXJETS];
+    float jtSky[MAXJETS];
+
 
     float jtPfCHF[MAXJETS];
     float jtPfNHF[MAXJETS];
@@ -268,11 +330,13 @@ private:
     std::vector<std::vector<float>> jtSubJetPhi;
     std::vector<std::vector<float>> jtSubJetM;
 
+    std::vector<std::vector<int>> jtConstituentsId;
     std::vector<std::vector<float>> jtConstituentsE;
     std::vector<std::vector<float>> jtConstituentsPt;
     std::vector<std::vector<float>> jtConstituentsEta;
     std::vector<std::vector<float>> jtConstituentsPhi;
     std::vector<std::vector<float>> jtConstituentsM;
+    std::vector<std::vector<int>> jtSDConstituentsId;
     std::vector<std::vector<float>> jtSDConstituentsE;
     std::vector<std::vector<float>> jtSDConstituentsPt;
     std::vector<std::vector<float>> jtSDConstituentsEta;
@@ -457,6 +521,21 @@ private:
     int refnCands[MAXJETS];
     int refnChCands[MAXJETS];
     int refnNeCands[MAXJETS];
+    float refchargedSumConst[MAXJETS];
+    int   refchargedNConst  [MAXJETS];
+    float refeSumConst      [MAXJETS];
+    int   refeNConst        [MAXJETS];
+    float refmuSumConst     [MAXJETS];
+    int   refmuNConst       [MAXJETS];
+    float refphotonSumConst [MAXJETS];
+    int   refphotonNConst   [MAXJETS];
+    float refneutralSumConst[MAXJETS];
+    int   refneutralNConst  [MAXJETS];
+    float refhfhadSumConst  [MAXJETS];
+    int   refhfhadNConst    [MAXJETS];
+    float refhfemSumConst   [MAXJETS];
+    int   refhfemNConst     [MAXJETS];
+
     float refMByPt[MAXJETS];
     float refRMSCand[MAXJETS];
     float refAxis1[MAXJETS];
@@ -471,12 +550,45 @@ private:
     float refpull[MAXJETS];
     float refSDm[MAXJETS];
     float refSDpt[MAXJETS];
+    float refSDeta[MAXJETS];
+    float refSDphi[MAXJETS];
     float refSDptFrac[MAXJETS];
     float refSDrm0p5[MAXJETS];
     float refSDrm1[MAXJETS];
     float refSDrm2[MAXJETS];
     float refSDrm3[MAXJETS];
-
+    float refTbeta20p2[MAXJETS];
+    float refTbeta20p3[MAXJETS];
+    float refTbeta20p4[MAXJETS];
+    float refTbeta20p5[MAXJETS];
+    float refTbeta30p2[MAXJETS];
+    float refTbeta30p3[MAXJETS];
+    float refTbeta30p4[MAXJETS];
+    float refTbeta30p5[MAXJETS];
+    float refCbeta20p2[MAXJETS];
+    float refCbeta20p3[MAXJETS];
+    float refCbeta20p4[MAXJETS];
+    float refCbeta20p5[MAXJETS];
+    float refZ11[MAXJETS];
+    float refZ20[MAXJETS];
+    float refZ22[MAXJETS];
+    float refZ31[MAXJETS];
+    float refZ33[MAXJETS];
+    float refZ40[MAXJETS];
+    float refZ42[MAXJETS];
+    float refZ44[MAXJETS];
+    float refZ51[MAXJETS];
+    float refZ53[MAXJETS];
+    float refZ55[MAXJETS];
+    float refPhi1[MAXJETS];
+    float refPhi2[MAXJETS];
+    float refPhi3[MAXJETS];
+    float refPhi4[MAXJETS];
+    float refPhi5[MAXJETS];
+    float refPhi6[MAXJETS];
+    float refPhi7[MAXJETS];
+    float refSkx[MAXJETS];
+    float refSky[MAXJETS];
     
     float refptG[MAXJETS];
     float refetaG[MAXJETS];
@@ -487,11 +599,13 @@ private:
     std::vector<std::vector<float>> refSubJetPhi;
     std::vector<std::vector<float>> refSubJetM;
     
+    std::vector<std::vector<int>> refConstituentsId;
     std::vector<std::vector<float>> refConstituentsE;
     std::vector<std::vector<float>> refConstituentsPt;
     std::vector<std::vector<float>> refConstituentsEta;
     std::vector<std::vector<float>> refConstituentsPhi;
     std::vector<std::vector<float>> refConstituentsM;
+    std::vector<std::vector<int>> refSDConstituentsId;
     std::vector<std::vector<float>> refSDConstituentsE;
     std::vector<std::vector<float>> refSDConstituentsPt;
     std::vector<std::vector<float>> refSDConstituentsEta;
@@ -517,6 +631,21 @@ private:
     int gennCands[MAXJETS];
     int gennChCands[MAXJETS];
     int gennNeCands[MAXJETS];
+    float genchargedSumConst[MAXJETS];
+    int   genchargedNConst  [MAXJETS];
+    float geneSumConst      [MAXJETS];
+    int   geneNConst        [MAXJETS];
+    float genmuSumConst     [MAXJETS];
+    int   genmuNConst       [MAXJETS];
+    float genphotonSumConst [MAXJETS];
+    int   genphotonNConst   [MAXJETS];
+    float genneutralSumConst[MAXJETS];
+    int   genneutralNConst  [MAXJETS];
+    float genhfhadSumConst  [MAXJETS];
+    int   genhfhadNConst    [MAXJETS];
+    float genhfemSumConst   [MAXJETS];
+    int   genhfemNConst     [MAXJETS];
+
     float genMByPt[MAXJETS];
     float genRMSCand[MAXJETS];
     float genAxis1[MAXJETS];
@@ -532,12 +661,46 @@ private:
 
     float genSDm[MAXJETS];
     float genSDpt[MAXJETS];
+    float genSDeta[MAXJETS];
+    float genSDphi[MAXJETS];
     float genSDptFrac[MAXJETS];
     float genSDrm0p5[MAXJETS];
     float genSDrm1[MAXJETS];
     float genSDrm2[MAXJETS];
     float genSDrm3[MAXJETS];
 
+    float genTbeta20p2[MAXJETS];
+    float genTbeta20p3[MAXJETS];
+    float genTbeta20p4[MAXJETS];
+    float genTbeta20p5[MAXJETS];
+    float genTbeta30p2[MAXJETS];
+    float genTbeta30p3[MAXJETS];
+    float genTbeta30p4[MAXJETS];
+    float genTbeta30p5[MAXJETS];
+    float genCbeta20p2[MAXJETS];
+    float genCbeta20p3[MAXJETS];
+    float genCbeta20p4[MAXJETS];
+    float genCbeta20p5[MAXJETS];
+    float genZ11[MAXJETS];
+    float genZ20[MAXJETS];
+    float genZ22[MAXJETS];
+    float genZ31[MAXJETS];
+    float genZ33[MAXJETS];
+    float genZ40[MAXJETS];
+    float genZ42[MAXJETS];
+    float genZ44[MAXJETS];
+    float genZ51[MAXJETS];
+    float genZ53[MAXJETS];
+    float genZ55[MAXJETS];
+    float genPhi1[MAXJETS];
+    float genPhi2[MAXJETS];
+    float genPhi3[MAXJETS];
+    float genPhi4[MAXJETS];
+    float genPhi5[MAXJETS];
+    float genPhi6[MAXJETS];
+    float genPhi7[MAXJETS];
+    float genSkx[MAXJETS];
+    float genSky[MAXJETS];
     
     float genptG[MAXJETS];
     float genetaG[MAXJETS];
@@ -549,11 +712,13 @@ private:
     std::vector<std::vector<float>> genSubJetM;
     std::vector<std::vector<float>> genSubJetArea;
 
+    std::vector<std::vector<int>> genConstituentsId;
     std::vector<std::vector<float>> genConstituentsE;
     std::vector<std::vector<float>> genConstituentsPt;
     std::vector<std::vector<float>> genConstituentsEta;
     std::vector<std::vector<float>> genConstituentsPhi;
     std::vector<std::vector<float>> genConstituentsM;
+    std::vector<std::vector<int>> genSDConstituentsId;
     std::vector<std::vector<float>> genSDConstituentsE;
     std::vector<std::vector<float>> genSDConstituentsPt;
     std::vector<std::vector<float>> genSDConstituentsEta;
